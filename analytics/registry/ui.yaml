@@ -1,0 +1,15 @@
+events:
+  - name: settings_sidebar_button_clicked
+    section: Settings
+    description: Fires in the browser when a person clicks an item in the settings sidebar (VerticalTabItem link), on the
+      click itself and before navigation or any custom onClick handler runs. It fires only for items that were given
+      trackingMetadata; items without it send nothing. The item's trackingMetadata object is sent as the event's
+      properties unchanged. It fires on every click, including a click on the page already open, and does not confirm the
+      destination page loaded.
+    question: Which settings sections and pages do people open from the sidebar, and which are rarely used?
+    track_via: client
+    properties: []
+    changelog:
+      - date: 2026-10-31
+        ref: install-audit
+        change: Drafted from code; nothing arriving

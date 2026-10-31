@@ -1,0 +1,26 @@
+events:
+  - name: event_type_app_switch_toggled
+    section: Event type apps
+    description: "Fires in the browser each time a person flips the enable/disable switch on an installed app's card (or a
+      credential-owner app card) inside an event type's Apps settings. It fires from the Switch's onCheckedChange handler,
+      immediately on the click, before the optional switchOnClick callback and before the app's `enabled` value is written
+      to the event type form via setAppData. Nothing confirms the change was saved: the event type is saved separately. It
+      does not fire when the switch is disabled (app not enabled, managed event type locked, or disableSwitch), and it
+      does not fire for the Install button shown on apps that aren't installed."
+    question: Which apps do people switch on or off for their event types, and how often do they turn them off again?
+    track_via: client
+    properties:
+      - name: app_slug
+        type: string
+        example: UNCONFIRMED
+        description: Slug of the app whose switch was flipped (app.slug from the app store metadata, also used in the
+          /apps/<slug> URL). The full list of slugs isn't in this call.
+      - name: enabled
+        type: boolean
+        example: true | false
+        description: "New state of the switch after the click: true when the person turned the app on, false when off. The draft
+          listed it as a string, but the code passes the boolean from onCheckedChange."
+    changelog:
+      - date: 2026-10-31
+        ref: install-audit
+        change: Drafted from code; nothing arriving

@@ -1,0 +1,1279 @@
+# Written by the Datalyze Tracking Agent's first audit; changed only in reviewed pull requests.
+# Anchors are path#Symbol (never line numbers). The registry is the source of truth.
+area: web
+surfaces:
+  - id: user-type-embed
+    kind: route
+    anchor: apps/web/app/(booking-page-wrapper)/[user]/[type]/embed/page.tsx#ServerPage
+    path: /[user]/[type]/embed
+    actions:
+      - name: Book a time slot for an event type (embedded)
+        importance: core
+        events: []
+      - name: Select a date and time on the booker
+        importance: core
+        events: []
+  - id: user-type
+    kind: route
+    anchor: apps/web/app/(booking-page-wrapper)/[user]/[type]/page.tsx#ServerPage
+    path: /[user]/[type]
+    actions:
+      - name: Book a time slot for an event type
+        importance: core
+        events: []
+      - name: Select a date and time on the booker
+        importance: core
+        events: []
+  - id: user-embed
+    kind: route
+    anchor: apps/web/app/(booking-page-wrapper)/[user]/embed/page.tsx#ServerPage
+    path: /[user]/embed
+    actions:
+      - name: Choose an event type from a user's profile (embedded)
+        importance: core
+        events: []
+  - id: user
+    kind: route
+    anchor: apps/web/app/(booking-page-wrapper)/[user]/page.tsx#ServerPage
+    path: /[user]
+    actions:
+      - name: Choose an event type from a user's profile
+        importance: core
+        events: []
+  - id: booking-successful-uid
+    kind: route
+    anchor: apps/web/app/(booking-page-wrapper)/booking-successful/[uid]/page.tsx#BookingSuccessful
+    path: /booking-successful/[uid]
+    actions:
+      - name: View confirmation of a decoy (spam) booking
+        importance: incidental
+        events: []
+  - id: booking-uid-embed
+    kind: route
+    anchor: apps/web/app/(booking-page-wrapper)/booking/[uid]/embed/page.tsx#ServerPage
+    path: /booking/[uid]/embed
+    actions:
+      - name: View booking confirmation (embedded)
+        importance: secondary
+        events: []
+      - name: Cancel or reschedule a booking (embedded)
+        importance: core
+        events: []
+  - id: booking-uid
+    kind: route
+    anchor: apps/web/app/(booking-page-wrapper)/booking/[uid]/page.tsx#ServerPage
+    path: /booking/[uid]
+    actions:
+      - name: View booking confirmation
+        importance: secondary
+        events: []
+      - name: Cancel a booking
+        importance: core
+        events: []
+      - name: Reschedule a booking
+        importance: core
+        events: []
+      - name: Add booking to calendar
+        importance: incidental
+        events: []
+  - id: booking-dry-run-successful
+    kind: route
+    anchor: apps/web/app/(booking-page-wrapper)/booking/dry-run-successful/page.tsx#Page
+    path: /booking/dry-run-successful
+    actions:
+      - name: View dry-run booking success message
+        importance: incidental
+        events: []
+  - id: d-link-slug
+    kind: route
+    anchor: apps/web/app/(booking-page-wrapper)/d/[link]/[slug]/page.tsx#ServerPage
+    path: /d/[link]/[slug]
+    actions:
+      - name: Book a time slot through a private hashed link
+        importance: core
+        events: []
+  - id: action-revalidateavailabilitylist
+    kind: handler
+    anchor: apps/web/app/(use-page-wrapper)/(main-nav)/availability/actions.ts#revalidateAvailabilityList
+    path: action revalidateAvailabilityList
+    actions: []
+  - id: action-revalidateeventtypeslist
+    kind: handler
+    anchor: apps/web/app/(use-page-wrapper)/(main-nav)/event-types/actions.ts#revalidateEventTypesList
+    path: action revalidateEventTypesList
+    actions: []
+  - id: action-revalidateattributeslist
+    kind: handler
+    anchor: apps/web/app/(use-page-wrapper)/(main-nav)/members/actions.ts#revalidateAttributesList
+    path: action revalidateAttributesList
+    actions: []
+  - id: apps-slug-setup
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/apps/[slug]/setup/page.tsx#ServerPage
+    path: /apps/[slug]/setup
+    actions:
+      - name: Configure an installed app on its setup page
+        importance: secondary
+        events: []
+  - id: apps-installation-step
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/apps/installation/[[...step]]/page.tsx#ServerPage
+    path: /apps/installation/[[...step]]
+    actions:
+      - name: Complete app installation steps (choose accounts, event types, configure)
+        importance: secondary
+        events: []
+  - id: apps-installed-category
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/apps/installed/[category]/page.tsx#InstalledAppsWrapper
+    path: /apps/installed/[category]
+    actions:
+      - name: Review installed apps and connected calendars in a category
+        importance: secondary
+        events: []
+      - name: Disconnect or manage an installed app
+        importance: secondary
+        events: []
+  - id: auth-error
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/auth/error/page.tsx#ServerPage
+    path: /auth/error
+    actions:
+      - name: Return to login after an auth error
+        importance: incidental
+        events: []
+  - id: auth-forgot-password-id
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/auth/forgot-password/[id]/page.tsx#ServerPage
+    path: /auth/forgot-password/[id]
+    actions:
+      - name: Set a new password from a reset link
+        importance: core
+        events: []
+  - id: auth-forgot-password
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/auth/forgot-password/page.tsx#ServerPage
+    path: /auth/forgot-password
+    actions:
+      - name: Request a password reset email
+        importance: core
+        events: []
+  - id: auth-login
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/auth/login/page.tsx#ServerPage
+    path: /auth/login
+    actions:
+      - name: Sign in with email and password
+        importance: core
+        events: []
+      - name: Sign in with an identity provider (Google or SAML)
+        importance: core
+        events: []
+  - id: auth-logout
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/auth/logout/page.tsx#Page
+    path: /auth/logout
+    actions:
+      - name: Sign back in after logging out
+        importance: incidental
+        events: []
+  - id: auth-oauth2-authorize
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/auth/oauth2/authorize/page.tsx#ServerPageWrapper
+    path: /auth/oauth2/authorize
+    actions:
+      - name: Authorize an OAuth app to access the account
+        importance: core
+        events: []
+      - name: Decline an OAuth app's access request
+        importance: secondary
+        events: []
+  - id: auth-signin
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/auth/signin/page.tsx#ServerPage
+    path: /auth/signin
+    actions:
+      - name: Sign in with an auth provider
+        importance: core
+        events: []
+  - id: auth-verify-email-change
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/auth/verify-email-change/page.tsx#ServerPage
+    path: /auth/verify-email-change
+    actions:
+      - name: Confirm an email address change
+        importance: secondary
+        events: []
+  - id: auth-verify
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/auth/verify/page.tsx#ServerPage
+    path: /auth/verify
+    actions:
+      - name: Resend the verification email
+        importance: core
+        events: []
+      - name: Continue after email verification
+        importance: core
+        events: []
+  - id: action-revalidateschedulepage
+    kind: handler
+    anchor: apps/web/app/(use-page-wrapper)/availability/[schedule]/actions.ts#revalidateSchedulePage
+    path: action revalidateSchedulePage
+    actions: []
+  - id: availability-troubleshoot
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/availability/troubleshoot/page.tsx#ServerPage
+    path: /availability/troubleshoot
+    actions: []
+  - id: enterprise
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/enterprise/page.tsx#ServerPageWrapper
+    path: /enterprise
+    actions: []
+  - id: action-revalidateeventtypeeditpage
+    kind: handler
+    anchor: apps/web/app/(use-page-wrapper)/event-types/[type]/actions.ts#revalidateEventTypeEditPage
+    path: action revalidateEventTypeEditPage
+    actions: []
+  - id: maintenance
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/maintenance/page.tsx#default
+    path: /maintenance
+    actions:
+      - name: Contact support from the maintenance page
+        importance: incidental
+        events: []
+  - id: onboarding-personal-profile
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/onboarding/personal/profile/page.tsx#ServerPage
+    path: /onboarding/personal/profile
+    actions:
+      - name: Save personal profile details and continue onboarding
+        importance: core
+        events: []
+      - name: Upload a profile picture
+        importance: secondary
+        events: []
+      - name: Choose a username
+        importance: core
+        events: []
+      - name: Go back to getting started
+        importance: incidental
+        events: []
+  - id: onboarding-personal-settings
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/onboarding/personal/settings/page.tsx#ServerPage
+    path: /onboarding/personal/settings
+    actions:
+      - name: Save personal profile details and continue onboarding
+        importance: core
+        events: []
+      - name: Upload a profile picture
+        importance: secondary
+        events: []
+      - name: Choose a username
+        importance: core
+        events: []
+      - name: Go back to getting started
+        importance: incidental
+        events: []
+  - id: payment-uid
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/payment/[uid]/page.tsx#ServerPage
+    path: /payment/[uid]
+    actions:
+      - name: Pay for a booking
+        importance: core
+        events: []
+      - name: Authorize a no-show fee hold
+        importance: core
+        events: []
+      - name: Follow the sign-up link in branding footer
+        importance: incidental
+        events: []
+  - id: settings-admin-flags
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/settings/(admin-layout)/admin/flags/page.tsx#Page
+    path: /settings/admin/flags
+    actions:
+      - name: Toggle a feature flag
+        importance: secondary
+        events: []
+  - id: settings-admin-lockedsms
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/settings/(admin-layout)/admin/lockedSMS/page.tsx#Page
+    path: /settings/admin/lockedSMS
+    actions:
+      - name: Lock SMS sending for a user
+        importance: secondary
+        events: []
+      - name: Lock SMS sending for a team
+        importance: secondary
+        events: []
+  - id: settings-admin-oauth
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/settings/(admin-layout)/admin/oauth/page.tsx#Page
+    path: /settings/admin/oauth
+    actions:
+      - name: Create an OAuth client
+        importance: secondary
+        events: []
+      - name: Approve or reject an OAuth client
+        importance: secondary
+        events: []
+  - id: settings-admin
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/settings/(admin-layout)/admin/page.tsx#Page
+    path: /settings/admin
+    actions: []
+  - id: settings-admin-playground-date-range-filter
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/settings/(admin-layout)/admin/playground/date-range-filter/page.tsx#DateRangeFilterPlayground
+    path: /settings/admin/playground/date-range-filter
+    actions: []
+  - id: settings-admin-playground
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/settings/(admin-layout)/admin/playground/page.tsx#Page
+    path: /settings/admin/playground
+    actions:
+      - name: Open a playground test page (date range filter)
+        importance: incidental
+        events: []
+  - id: settings-admin-users-id-edit
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/settings/(admin-layout)/admin/users/[id]/edit/page.tsx#Page
+    path: /settings/admin/users/[id]/edit
+    actions:
+      - name: Edit a user as admin
+        importance: secondary
+        events: []
+  - id: settings-admin-users-add
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/settings/(admin-layout)/admin/users/add/page.tsx#Page
+    path: /settings/admin/users/add
+    actions:
+      - name: Add a new user as admin
+        importance: secondary
+        events: []
+  - id: settings-admin-users
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/settings/(admin-layout)/admin/users/page.tsx#Page
+    path: /settings/admin/users
+    actions:
+      - name: Browse and search users as admin
+        importance: incidental
+        events: []
+      - name: Start adding a new user
+        importance: secondary
+        events: []
+  - id: action-revalidateapikeyslist
+    kind: handler
+    anchor: apps/web/app/(use-page-wrapper)/settings/(settings-layout)/developer/api-keys/actions.ts#revalidateApiKeysList
+    path: action revalidateApiKeysList
+    actions: []
+  - id: settings-developer-api-keys
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/settings/(settings-layout)/developer/api-keys/page.tsx#Page
+    path: /settings/developer/api-keys
+    actions:
+      - name: Create an API key
+        importance: secondary
+        events: []
+      - name: Delete an API key
+        importance: secondary
+        events: []
+  - id: settings-developer-oauth
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/settings/(settings-layout)/developer/oauth/page.tsx#Page
+    path: /settings/developer/oauth
+    actions:
+      - name: Create an OAuth client
+        importance: secondary
+        events: []
+      - name: Manage OAuth clients
+        importance: secondary
+        events: []
+  - id: action-revalidatewebhookslist
+    kind: webhook
+    anchor: apps/web/app/(use-page-wrapper)/settings/(settings-layout)/developer/webhooks/(with-loader)/actions.ts#revalidateWebhooksList
+    path: action revalidateWebhooksList
+    actions: []
+  - id: settings-developer-webhooks
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/settings/(settings-layout)/developer/webhooks/(with-loader)/page.tsx#WebhooksViewServerWrapper
+    path: /settings/developer/webhooks
+    actions:
+      - name: Create a webhook
+        importance: secondary
+        events: []
+      - name: View webhooks list
+        importance: incidental
+        events: []
+  - id: settings-developer-webhooks-id
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/settings/(settings-layout)/developer/webhooks/[id]/page.tsx#Page
+    path: /settings/developer/webhooks/[id]
+    actions:
+      - name: Edit a webhook
+        importance: secondary
+        events: []
+      - name: Test a webhook subscriber URL
+        importance: secondary
+        events: []
+  - id: settings-developer-webhooks-new
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/settings/(settings-layout)/developer/webhooks/new/page.tsx#Page
+    path: /settings/developer/webhooks/new
+    actions:
+      - name: Create a webhook
+        importance: secondary
+        events: []
+  - id: action-revalidatesettingsappearance
+    kind: handler
+    anchor: apps/web/app/(use-page-wrapper)/settings/(settings-layout)/my-account/appearance/actions.ts#revalidateSettingsAppearance
+    path: action revalidateSettingsAppearance
+    actions: []
+  - id: settings-my-account-appearance
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/settings/(settings-layout)/my-account/appearance/page.tsx#Page
+    path: /settings/my-account/appearance
+    actions:
+      - name: Update booking page theme and brand colors
+        importance: secondary
+        events: []
+      - name: Toggle hiding the Cal.com branding
+        importance: incidental
+        events: []
+  - id: settings-my-account-calendars
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/settings/(settings-layout)/my-account/calendars/page.tsx#Page
+    path: /settings/my-account/calendars
+    actions:
+      - name: Connect a calendar
+        importance: core
+        events: []
+      - name: Disconnect a calendar
+        importance: secondary
+        events: []
+      - name: Choose which calendars check for conflicts
+        importance: secondary
+        events: []
+  - id: settings-my-account-conferencing
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/settings/(settings-layout)/my-account/conferencing/page.tsx#Page
+    path: /settings/my-account/conferencing
+    actions:
+      - name: Install a conferencing app
+        importance: secondary
+        events: []
+      - name: Set default conferencing app
+        importance: secondary
+        events: []
+      - name: Remove a conferencing app
+        importance: secondary
+        events: []
+  - id: action-revalidatesettingsgeneral
+    kind: handler
+    anchor: apps/web/app/(use-page-wrapper)/settings/(settings-layout)/my-account/general/actions.ts#revalidateSettingsGeneral
+    path: action revalidateSettingsGeneral
+    actions: []
+  - id: settings-my-account-general
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/settings/(settings-layout)/my-account/general/page.tsx#Page
+    path: /settings/my-account/general
+    actions:
+      - name: Update language, timezone and time format
+        importance: secondary
+        events: []
+      - name: Add a travel schedule
+        importance: incidental
+        events: []
+  - id: settings-my-account-push-notifications
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/settings/(settings-layout)/my-account/push-notifications/page.tsx#Page
+    path: /settings/my-account/push-notifications
+    actions:
+      - name: Enable or disable push notifications
+        importance: secondary
+        events: []
+  - id: settings-security-password
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/settings/(settings-layout)/security/password/page.tsx#Page
+    path: /settings/security/password
+    actions:
+      - name: Change password
+        importance: secondary
+        events: []
+  - id: settings-security-two-factor-auth
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/settings/(settings-layout)/security/two-factor-auth/page.tsx#Page
+    path: /settings/security/two-factor-auth
+    actions:
+      - name: Enable two-factor authentication
+        importance: secondary
+        events: []
+      - name: Disable two-factor authentication
+        importance: secondary
+        events: []
+  - id: video-uid
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/video/[uid]/page.tsx#ServerPage
+    path: /video/[uid]
+    actions:
+      - name: Join a video meeting
+        importance: core
+        events: []
+      - name: Continue to the meeting as a guest
+        importance: secondary
+        events: []
+      - name: Sign in to join the meeting
+        importance: secondary
+        events: []
+      - name: Leave the meeting
+        importance: secondary
+        events: []
+  - id: video-meeting-ended-uid
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/video/meeting-ended/[uid]/page.tsx#ServerPage
+    path: /video/meeting-ended/[uid]
+    actions:
+      - name: Return home to event types
+        importance: incidental
+        events: []
+  - id: video-meeting-not-started-uid
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/video/meeting-not-started/[uid]/page.tsx#ServerPage
+    path: /video/meeting-not-started/[uid]
+    actions:
+      - name: Return home to event types
+        importance: incidental
+        events: []
+  - id: video-no-meeting-found
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/video/no-meeting-found/page.tsx#ServerPage
+    path: /video/no-meeting-found
+    actions:
+      - name: Return home to event types
+        importance: incidental
+        events: []
+  - id: post-api-auth-forgot-password
+    kind: handler
+    anchor: apps/web/app/api/auth/forgot-password/route.ts#POST
+    path: POST /api/auth/forgot-password
+    actions:
+      - name: Request a password reset email
+        importance: core
+        events: []
+  - id: get-api-auth-oauth-me
+    kind: handler
+    anchor: apps/web/app/api/auth/oauth/me/route.ts#GET
+    path: GET /api/auth/oauth/me
+    actions:
+      - name: Fetch the OAuth-authorized user's profile
+        importance: incidental
+        events: []
+  - id: post-api-auth-oauth-me
+    kind: handler
+    anchor: apps/web/app/api/auth/oauth/me/route.ts#POST
+    path: POST /api/auth/oauth/me
+    actions:
+      - name: Fetch the OAuth-authorized user's profile
+        importance: incidental
+        events: []
+  - id: post-api-auth-oauth-refreshtoken
+    kind: handler
+    anchor: apps/web/app/api/auth/oauth/refreshToken/route.ts#POST
+    path: POST /api/auth/oauth/refreshToken
+    actions:
+      - name: Refresh an OAuth access token
+        importance: secondary
+        events: []
+  - id: post-api-auth-oauth-token
+    kind: handler
+    anchor: apps/web/app/api/auth/oauth/token/route.ts#POST
+    path: POST /api/auth/oauth/token
+    actions:
+      - name: Exchange an authorization code for an OAuth access token
+        importance: core
+        events: []
+  - id: post-api-auth-reset-password
+    kind: handler
+    anchor: apps/web/app/api/auth/reset-password/route.ts#POST
+    path: POST /api/auth/reset-password
+    actions:
+      - name: Reset a password with an emailed token
+        importance: core
+        events: []
+  - id: post-api-auth-setup
+    kind: handler
+    anchor: apps/web/app/api/auth/setup/route.ts#POST
+    path: POST /api/auth/setup
+    actions:
+      - name: Create the first admin user during setup
+        importance: core
+        events: []
+  - id: post-api-auth-signup
+    kind: handler
+    anchor: apps/web/app/api/auth/signup/route.ts#POST
+    path: POST /api/auth/signup
+    actions:
+      - name: Sign up for an account
+        importance: core
+        events: []
+  - id: post-api-auth-two-factor-totp-disable
+    kind: handler
+    anchor: apps/web/app/api/auth/two-factor/totp/disable/route.ts#POST
+    path: POST /api/auth/two-factor/totp/disable
+    actions:
+      - name: Disable two-factor authentication
+        importance: secondary
+        events: []
+  - id: post-api-auth-two-factor-totp-enable
+    kind: handler
+    anchor: apps/web/app/api/auth/two-factor/totp/enable/route.ts#POST
+    path: POST /api/auth/two-factor/totp/enable
+    actions:
+      - name: Enable two-factor authentication
+        importance: secondary
+        events: []
+  - id: post-api-auth-two-factor-totp-setup
+    kind: handler
+    anchor: apps/web/app/api/auth/two-factor/totp/setup/route.ts#POST
+    path: POST /api/auth/two-factor/totp/setup
+    actions:
+      - name: Start two-factor authentication setup
+        importance: secondary
+        events: []
+  - id: post-api-availability-calendar
+    kind: handler
+    anchor: apps/web/app/api/availability/calendar/route.ts#POST
+    path: POST /api/availability/calendar
+    actions:
+      - name: Select a calendar to check for conflicts
+        importance: secondary
+        events: []
+  - id: delete-api-availability-calendar
+    kind: handler
+    anchor: apps/web/app/api/availability/calendar/route.ts#DELETE
+    path: DELETE /api/availability/calendar
+    actions:
+      - name: Unselect a calendar from conflict checking
+        importance: secondary
+        events: []
+  - id: get-api-availability-calendar
+    kind: handler
+    anchor: apps/web/app/api/availability/calendar/route.ts#GET
+    path: GET /api/availability/calendar
+    actions:
+      - name: List connected calendars with selection state
+        importance: incidental
+        events: []
+  - id: get-api-avatar-uuid
+    kind: handler
+    anchor: apps/web/app/api/avatar/[uuid]/route.ts#GET
+    path: GET /api/avatar/[uuid]
+    actions:
+      - name: Fetch a user avatar image
+        importance: incidental
+        events: []
+  - id: delete-api-cancel
+    kind: handler
+    anchor: apps/web/app/api/cancel/route.ts#DELETE
+    path: DELETE /api/cancel
+    actions:
+      - name: Cancel a booking
+        importance: core
+        events: []
+  - id: post-api-cancel
+    kind: handler
+    anchor: apps/web/app/api/cancel/route.ts#POST
+    path: POST /api/cancel
+    actions:
+      - name: Cancel a booking
+        importance: core
+        events: []
+  - id: post-api-cron-bookingreminder
+    kind: handler
+    anchor: apps/web/app/api/cron/bookingReminder/route.ts#POST
+    path: POST /api/cron/bookingReminder
+    actions:
+      - name: Send reminders for pending booking requests
+        importance: secondary
+        events: []
+  - id: post-api-cron-changetimezone
+    kind: handler
+    anchor: apps/web/app/api/cron/changeTimeZone/route.ts#POST
+    path: POST /api/cron/changeTimeZone
+    actions:
+      - name: Update user time zones in bulk
+        importance: incidental
+        events: []
+  - id: post-api-cron-syncappmeta
+    kind: handler
+    anchor: apps/web/app/api/cron/syncAppMeta/route.ts#POST
+    path: POST /api/cron/syncAppMeta
+    actions:
+      - name: Sync app metadata
+        importance: incidental
+        events: []
+  - id: post-api-cron-webhooktriggers
+    kind: webhook
+    anchor: apps/web/app/api/cron/webhookTriggers/route.ts#POST
+    path: POST /api/cron/webhookTriggers
+    actions:
+      - name: Fire scheduled webhook triggers
+        importance: secondary
+        events: []
+  - id: get-api-csrf
+    kind: handler
+    anchor: apps/web/app/api/csrf/route.ts#GET
+    path: GET /api/csrf
+    actions:
+      - name: Issue a CSRF token
+        importance: incidental
+        events: []
+  - id: get-api-email
+    kind: handler
+    anchor: apps/web/app/api/email/route.ts#GET
+    path: GET /api/email
+    actions:
+      - name: Preview an email template
+        importance: incidental
+        events: []
+  - id: get-api-geolocation
+    kind: handler
+    anchor: apps/web/app/api/geolocation/route.ts#GET
+    path: GET /api/geolocation
+    actions:
+      - name: Look up visitor geolocation
+        importance: incidental
+        events: []
+  - id: get-api-ip
+    kind: handler
+    anchor: apps/web/app/api/ip/route.ts#GET
+    path: GET /api/ip
+    actions:
+      - name: Look up requester IP address
+        importance: incidental
+        events: []
+  - id: get-api-link
+    kind: handler
+    anchor: apps/web/app/api/link/route.ts#GET
+    path: GET /api/link
+    actions:
+      - name: Accept or reject a booking from an email link
+        importance: core
+        events: []
+  - id: get-api-logo
+    kind: handler
+    anchor: apps/web/app/api/logo/route.ts#GET
+    path: GET /api/logo
+    actions:
+      - name: Fetch a logo image
+        importance: incidental
+        events: []
+  - id: get-api-me
+    kind: handler
+    anchor: apps/web/app/api/me/route.ts#GET
+    path: GET /api/me
+    actions:
+      - name: Fetch the signed-in user's identity
+        importance: incidental
+        events: []
+  - id: post-api-recorded-daily-video
+    kind: handler
+    anchor: apps/web/app/api/recorded-daily-video/route.ts#POST
+    path: POST /api/recorded-daily-video
+    actions:
+      - name: Receive a Daily recording or transcript ready notification
+        importance: secondary
+        events: []
+  - id: get-api-social-og-image
+    kind: handler
+    anchor: apps/web/app/api/social/og/image/route.tsx#GET
+    path: GET /api/social/og/image
+    actions:
+      - name: Generate a social share preview image
+        importance: incidental
+        events: []
+  - id: post-api-sync-helpscout
+    kind: handler
+    anchor: apps/web/app/api/sync/helpscout/route.ts#POST
+    path: POST /api/sync/helpscout
+    actions:
+      - name: Sync support data from Help Scout
+        importance: incidental
+        events: []
+  - id: get-api-user-referrals-token
+    kind: handler
+    anchor: apps/web/app/api/user/referrals-token/route.ts#GET
+    path: GET /api/user/referrals-token
+    actions:
+      - name: Fetch referral program embed token
+        importance: incidental
+        events: []
+  - id: post-api-username
+    kind: handler
+    anchor: apps/web/app/api/username/route.ts#POST
+    path: POST /api/username
+    actions:
+      - name: Check username availability
+        importance: secondary
+        events: []
+  - id: get-api-verify-booking-token
+    kind: handler
+    anchor: apps/web/app/api/verify-booking-token/route.ts#GET
+    path: GET /api/verify-booking-token
+    actions:
+      - name: Accept a booking from an email link
+        importance: core
+        events: []
+  - id: post-api-verify-booking-token
+    kind: handler
+    anchor: apps/web/app/api/verify-booking-token/route.ts#POST
+    path: POST /api/verify-booking-token
+    actions:
+      - name: Accept a booking from an email link
+        importance: core
+        events: []
+      - name: Reject a booking with a reason from an email link
+        importance: core
+        events: []
+  - id: get-api-version
+    kind: handler
+    anchor: apps/web/app/api/version/route.ts#GET
+    path: GET /api/version
+    actions: []
+  - id: post-api-video-guest-session
+    kind: handler
+    anchor: apps/web/app/api/video/guest-session/route.ts#POST
+    path: POST /api/video/guest-session
+    actions:
+      - name: Join a video call as a guest
+        importance: core
+        events: []
+  - id: get-api-video-recording
+    kind: handler
+    anchor: apps/web/app/api/video/recording/route.ts#GET
+    path: GET /api/video/recording
+    actions:
+      - name: Download a call recording
+        importance: secondary
+        events: []
+  - id: post-api-webhook-app-credential
+    kind: webhook
+    anchor: apps/web/app/api/webhook/app-credential/route.ts#POST
+    path: POST /api/webhook/app-credential
+    actions:
+      - name: Receive synced app credentials
+        importance: secondary
+        events: []
+  - id: post-api-webhooks-calendar-subscription-provider
+    kind: webhook
+    anchor: apps/web/app/api/webhooks/calendar-subscription/[provider]/route.ts#POST
+    path: POST /api/webhooks/calendar-subscription/[provider]
+    actions:
+      - name: Receive calendar change notification
+        importance: secondary
+        events: []
+  - id: action-getcachedhasteamplan
+    kind: handler
+    anchor: apps/web/app/cache/membership.ts#getCachedHasTeamPlan
+    path: action getCachedHasTeamPlan
+    actions: []
+  - id: action-revalidatehasteamplan
+    kind: handler
+    anchor: apps/web/app/cache/membership.ts#revalidateHasTeamPlan
+    path: action revalidateHasTeamPlan
+    actions: []
+  - id: action-revalidatesettingsprofile
+    kind: handler
+    anchor: apps/web/app/cache/path/settings/my-account/index.ts#revalidateSettingsProfile
+    path: action revalidateSettingsProfile
+    actions: []
+  - id: action-revalidatesettingscalendars
+    kind: handler
+    anchor: apps/web/app/cache/path/settings/my-account/index.ts#revalidateSettingsCalendars
+    path: action revalidateSettingsCalendars
+    actions: []
+  - id: action-gettravelschedule
+    kind: handler
+    anchor: apps/web/app/cache/travelSchedule.ts#getTravelSchedule
+    path: action getTravelSchedule
+    actions: []
+  - id: action-revalidatetravelschedules
+    kind: handler
+    anchor: apps/web/app/cache/travelSchedule.ts#revalidateTravelSchedules
+    path: action revalidateTravelSchedules
+    actions: []
+  - id: icons
+    kind: route
+    anchor: apps/web/app/icons/page.tsx#IconsPage
+    path: /icons
+    actions: []
+  - id: home
+    kind: route
+    anchor: apps/web/app/page.tsx#RedirectPage
+    path: /
+    actions: []
+  - id: reschedule-uid-embed
+    kind: route
+    anchor: apps/web/app/reschedule/[uid]/embed/page.tsx#Page
+    path: /reschedule/[uid]/embed
+    actions: []
+  - id: reschedule-uid
+    kind: route
+    anchor: apps/web/app/reschedule/[uid]/page.tsx#Page
+    path: /reschedule/[uid]
+    actions: []
+  - id: auth-verify-email-2
+    kind: route
+    anchor: apps/web/lib/pages/auth/verify-email.ts
+    path: /auth/verify-email
+    actions:
+      - name: Verify email address from link
+        importance: core
+        events: []
+      - name: Confirm a changed primary email
+        importance: secondary
+        events: []
+      - name: Verify a secondary email
+        importance: secondary
+        events: []
+  - id: all-api-auth-nextauth
+    kind: handler
+    anchor: apps/web/pages/api/auth/[...nextauth].ts#handler
+    path: ALL /api/auth/[...nextauth]
+    actions:
+      - name: Sign in or sign up via NextAuth
+        importance: core
+        events: []
+      - name: Sign out
+        importance: secondary
+        events: []
+  - id: all-api-auth-verify-email
+    kind: handler
+    anchor: apps/web/pages/api/auth/verify-email.ts#default
+    path: ALL /api/auth/verify-email
+    actions:
+      - name: Verify email address
+        importance: core
+        events: []
+  - id: all-api-book-event
+    kind: handler
+    anchor: apps/web/pages/api/book/event.ts#default
+    path: ALL /api/book/event
+    actions:
+      - name: Create a booking
+        importance: core
+        events: []
+  - id: all-api-book-recurring-event
+    kind: handler
+    anchor: apps/web/pages/api/book/recurring-event.ts#default
+    path: ALL /api/book/recurring-event
+    actions:
+      - name: Create a recurring booking
+        importance: core
+        events: []
+  - id: all-api-integrations-args
+    kind: handler
+    anchor: apps/web/pages/api/integrations/[...args].ts#handler
+    path: ALL /api/integrations/[...args]
+    actions:
+      - name: Install or connect an app integration
+        importance: secondary
+        events: []
+      - name: Complete an integration OAuth callback
+        importance: secondary
+        events: []
+  - id: all-api-integrations-alby-webhook
+    kind: webhook
+    anchor: apps/web/pages/api/integrations/alby/webhook.ts#default
+    path: ALL /api/integrations/alby/webhook
+    actions:
+      - name: Receive an Alby (Lightning) booking payment
+        importance: core
+        events: []
+  - id: all-api-integrations-btcpayserver-webhook
+    kind: webhook
+    anchor: apps/web/pages/api/integrations/btcpayserver/webhook.ts#default
+    path: ALL /api/integrations/btcpayserver/webhook
+    actions:
+      - name: Receive a BTCPay Server booking payment
+        importance: core
+        events: []
+  - id: all-api-integrations-paypal-webhook
+    kind: webhook
+    anchor: apps/web/pages/api/integrations/paypal/webhook.ts#default
+    path: ALL /api/integrations/paypal/webhook
+    actions:
+      - name: Receive a PayPal booking payment
+        importance: core
+        events: []
+  - id: all-api-integrations-stripepayment-webhook
+    kind: webhook
+    anchor: apps/web/pages/api/integrations/stripepayment/webhook.ts#handler
+    path: ALL /api/integrations/stripepayment/webhook
+    actions: []
+  - id: all-api-stripe-webhook
+    kind: webhook
+    anchor: apps/web/pages/api/stripe/webhook.ts#handler
+    path: ALL /api/stripe/webhook
+    actions: []
+  - id: all-api-trpc-admin-trpc
+    kind: handler
+    anchor: apps/web/pages/api/trpc/admin/[trpc].ts#default
+    path: ALL /api/trpc/admin/[trpc]
+    actions: []
+  - id: all-api-trpc-apikeys-trpc
+    kind: handler
+    anchor: apps/web/pages/api/trpc/apiKeys/[trpc].ts#default
+    path: ALL /api/trpc/apiKeys/[trpc]
+    actions: []
+  - id: all-api-trpc-apps-trpc
+    kind: handler
+    anchor: apps/web/pages/api/trpc/apps/[trpc].ts#default
+    path: ALL /api/trpc/apps/[trpc]
+    actions: []
+  - id: all-api-trpc-appsrouter-trpc
+    kind: handler
+    anchor: apps/web/pages/api/trpc/appsRouter/[trpc].ts#default
+    path: ALL /api/trpc/appsRouter/[trpc]
+    actions: []
+  - id: all-api-trpc-auth-trpc
+    kind: handler
+    anchor: apps/web/pages/api/trpc/auth/[trpc].ts#default
+    path: ALL /api/trpc/auth/[trpc]
+    actions: []
+  - id: all-api-trpc-availability-trpc
+    kind: handler
+    anchor: apps/web/pages/api/trpc/availability/[trpc].ts#default
+    path: ALL /api/trpc/availability/[trpc]
+    actions: []
+  - id: all-api-trpc-bookings-trpc
+    kind: handler
+    anchor: apps/web/pages/api/trpc/bookings/[trpc].ts#default
+    path: ALL /api/trpc/bookings/[trpc]
+    actions: []
+  - id: all-api-trpc-calvideo-trpc
+    kind: handler
+    anchor: apps/web/pages/api/trpc/calVideo/[trpc].ts#default
+    path: ALL /api/trpc/calVideo/[trpc]
+    actions: []
+  - id: all-api-trpc-calendars-trpc
+    kind: handler
+    anchor: apps/web/pages/api/trpc/calendars/[trpc].ts#default
+    path: ALL /api/trpc/calendars/[trpc]
+    actions: []
+  - id: all-api-trpc-credentials-trpc
+    kind: handler
+    anchor: apps/web/pages/api/trpc/credentials/[trpc].ts#default
+    path: ALL /api/trpc/credentials/[trpc]
+    actions: []
+  - id: all-api-trpc-deploymentsetup-trpc
+    kind: handler
+    anchor: apps/web/pages/api/trpc/deploymentSetup/[trpc].ts#default
+    path: ALL /api/trpc/deploymentSetup/[trpc]
+    actions: []
+  - id: all-api-trpc-eventtypes-trpc
+    kind: handler
+    anchor: apps/web/pages/api/trpc/eventTypes/[trpc].ts#default
+    path: ALL /api/trpc/eventTypes/[trpc]
+    actions: []
+  - id: all-api-trpc-eventtypesheavy-trpc
+    kind: handler
+    anchor: apps/web/pages/api/trpc/eventTypesHeavy/[trpc].ts#default
+    path: ALL /api/trpc/eventTypesHeavy/[trpc]
+    actions: []
+  - id: all-api-trpc-features-trpc
+    kind: handler
+    anchor: apps/web/pages/api/trpc/features/[trpc].ts#default
+    path: ALL /api/trpc/features/[trpc]
+    actions: []
+  - id: all-api-trpc-feedback-trpc
+    kind: handler
+    anchor: apps/web/pages/api/trpc/feedback/[trpc].ts#default
+    path: ALL /api/trpc/feedback/[trpc]
+    actions: []
+  - id: all-api-trpc-googleworkspace-trpc
+    kind: handler
+    anchor: apps/web/pages/api/trpc/googleWorkspace/[trpc].ts#default
+    path: ALL /api/trpc/googleWorkspace/[trpc]
+    actions:
+      - name: Connect or manage Google Workspace integration
+        importance: secondary
+        events: []
+  - id: all-api-trpc-holidays-trpc
+    kind: handler
+    anchor: apps/web/pages/api/trpc/holidays/[trpc].ts#default
+    path: ALL /api/trpc/holidays/[trpc]
+    actions:
+      - name: Look up public holidays
+        importance: incidental
+        events: []
+  - id: all-api-trpc-i18n-trpc
+    kind: handler
+    anchor: apps/web/pages/api/trpc/i18n/[trpc].ts#default
+    path: ALL /api/trpc/i18n/[trpc]
+    actions:
+      - name: Load translations
+        importance: incidental
+        events: []
+  - id: all-api-trpc-loggedinviewerrouter-trpc
+    kind: handler
+    anchor: apps/web/pages/api/trpc/loggedInViewerRouter/[trpc].ts#default
+    path: ALL /api/trpc/loggedInViewerRouter/[trpc]
+    actions:
+      - name: Manage account, event types, bookings and settings
+        importance: core
+        events: []
+  - id: all-api-trpc-me-trpc
+    kind: handler
+    anchor: apps/web/pages/api/trpc/me/[trpc].ts#default
+    path: ALL /api/trpc/me/[trpc]
+    actions:
+      - name: Fetch current user profile
+        importance: incidental
+        events: []
+  - id: all-api-trpc-oauth-trpc
+    kind: handler
+    anchor: apps/web/pages/api/trpc/oAuth/[trpc].ts#default
+    path: ALL /api/trpc/oAuth/[trpc]
+    actions:
+      - name: Manage OAuth clients and authorize access
+        importance: secondary
+        events: []
+  - id: all-api-trpc-ooo-trpc
+    kind: handler
+    anchor: apps/web/pages/api/trpc/ooo/[trpc].ts#default
+    path: ALL /api/trpc/ooo/[trpc]
+    actions:
+      - name: Create or manage out-of-office entries
+        importance: secondary
+        events: []
+  - id: all-api-trpc-public-trpc
+    kind: handler
+    anchor: apps/web/pages/api/trpc/public/[trpc].ts#default
+    path: ALL /api/trpc/public/[trpc]
+    actions:
+      - name: View public booking page data and book
+        importance: core
+        events: []
+  - id: all-api-trpc-slots-trpc
+    kind: handler
+    anchor: apps/web/pages/api/trpc/slots/[trpc].ts#default
+    path: ALL /api/trpc/slots/[trpc]
+    actions:
+      - name: Check available slots and reserve a slot
+        importance: core
+        events: []
+  - id: all-api-trpc-timezones-trpc
+    kind: handler
+    anchor: apps/web/pages/api/trpc/timezones/[trpc].ts#default
+    path: ALL /api/trpc/timezones/[trpc]
+    actions:
+      - name: Look up timezones
+        importance: incidental
+        events: []
+  - id: all-api-trpc-travelschedules-trpc
+    kind: handler
+    anchor: apps/web/pages/api/trpc/travelSchedules/[trpc].ts#default
+    path: ALL /api/trpc/travelSchedules/[trpc]
+    actions:
+      - name: Manage travel schedules
+        importance: secondary
+        events: []
+  - id: all-api-trpc-users-trpc
+    kind: handler
+    anchor: apps/web/pages/api/trpc/users/[trpc].ts#default
+    path: ALL /api/trpc/users/[trpc]
+    actions:
+      - name: Administer users
+        importance: secondary
+        events: []
+  - id: all-api-trpc-viewer-trpc
+    kind: handler
+    anchor: apps/web/pages/api/trpc/viewer/[trpc].ts#default
+    path: ALL /api/trpc/viewer/[trpc]
+    actions:
+      - name: Manage account, event types, bookings and settings
+        importance: core
+        events: []
+  - id: all-api-trpc-webhook-trpc
+    kind: webhook
+    anchor: apps/web/pages/api/trpc/webhook/[trpc].ts#default
+    path: ALL /api/trpc/webhook/[trpc]
+    actions:
+      - name: Create, edit, delete or test a webhook subscription
+        importance: secondary
+        events: []
+  - id: router-embed
+    kind: route
+    anchor: apps/web/pages/router/embed.tsx#default
+    path: /router/embed
+    actions: []
+  - id: router
+    kind: route
+    anchor: apps/web/pages/router/index.tsx#Router
+    path: /router
+    actions:
+      - name: View routing form result message
+        importance: incidental
+        events: []
+  - id: cron-5-api-cron-calendar-subscriptions
+    kind: job
+    anchor: apps/web/app/api/cron/calendar-subscriptions/route.ts#GET
+    path: cron */5 * * * * /api/cron/calendar-subscriptions
+    actions:
+      - name: Check for and set up new calendar subscriptions
+        importance: incidental
+        events: []
+  - id: cron-0-3-api-cron-calendar-subscriptions-cleanup
+    kind: job
+    anchor: apps/web/app/api/cron/calendar-subscriptions-cleanup/route.ts#GET
+    path: cron 0 3 * * * /api/cron/calendar-subscriptions-cleanup
+    actions:
+      - name: Clean up stale calendar cache
+        importance: incidental
+        events: []
+  - id: cron-0-12-api-cron-queuedformresponsecleanup
+    kind: job
+    anchor: apps/web/vercel.json#"/api/cron/queuedFormResponseCleanup"
+    path: cron 0 */12 * * * /api/cron/queuedFormResponseCleanup
+    actions:
+      - name: Clean up queued form responses
+        importance: incidental
+        events: []
+  - id: cron-api-tasks-cron
+    kind: job
+    anchor: apps/web/app/api/tasks/cron/route.ts#GET
+    path: cron * * * * * /api/tasks/cron
+    actions:
+      - name: Run scheduled background tasks
+        importance: incidental
+        events: []
+  - id: cron-0-0-api-tasks-cleanup
+    kind: job
+    anchor: apps/web/app/api/tasks/cleanup/route.ts#GET
+    path: cron 0 0 * * * /api/tasks/cleanup
+    actions:
+      - name: Clean up finished background tasks
+        importance: incidental
+        events: []
+  - id: cron-5-api-cron-credentials
+    kind: job
+    anchor: apps/web/vercel.json#"/api/cron/credentials"
+    path: cron */5 * * * * /api/cron/credentials
+    actions:
+      - name: Check calendar and app credentials
+        importance: incidental
+        events: []
+  - id: cron-5-api-cron-selected-calendars
+    kind: job
+    anchor: apps/web/app/api/cron/selected-calendars/route.ts#GET
+    path: cron */5 * * * * /api/cron/selected-calendars
+    actions:
+      - name: Create selected calendars for delegation credential users
+        importance: secondary
+        events: []
+events: {}

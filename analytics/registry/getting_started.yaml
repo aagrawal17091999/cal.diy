@@ -1,0 +1,47 @@
+events:
+  - name: onboarding_app_connect_clicked
+    section: Getting started
+    description: Fires on the client when the user clicks the Connect button next to an app (conferencing/calendar app) in
+      the onboarding getting-started step, before the install flow begins. It fires on the click itself, before the
+      install request and before the app is actually installed, so it does not mean the connection succeeded. The button
+      is disabled when the app is already installed or has an uninstalled dependency, so clicks in those states don't fire
+      it. Install success or failure is not tracked by this event.
+    question: Which apps do new users try to connect during onboarding?
+    track_via: client
+    properties:
+      - name: app_slug
+        type: string
+        example: UNCONFIRMED
+        required: false
+        description: Slug of the app being connected. It comes from an optional prop, so it can be undefined.
+      - name: app_title
+        type: string
+        example: UNCONFIRMED
+        description: Display title of the app shown in the list
+      - name: app_type
+        type: string
+        example: UNCONFIRMED
+        description: The app's type identifier, taken from App['type'] in the app store
+      - name: has_dependency
+        type: boolean
+        example: "false"
+        description: True if the app has a dependency that isn't installed yet. The button is disabled in that case, so this is
+          effectively always false when the event fires.
+    changelog:
+      - date: 2026-10-31
+        ref: install-audit
+        change: Drafted from code; nothing arriving
+  - name: onboarding_completed
+    section: Getting started
+    description: "Fires on the client once the final onboarding step succeeds. This is the step where the user saves their
+      profile (bio) and the updateProfile mutation sets completedOnboarding: true and returns success. It fires in the
+      mutation's onSuccess handler, after the default event types are created when the user has none, and before the
+      profile refetch and the redirect. It doesn't fire if the mutation fails (the user sees an error toast) or if the
+      user leaves onboarding without finishing. It fires once per completed submit and carries no properties."
+    question: How many users who start onboarding finish it?
+    track_via: client
+    properties: []
+    changelog:
+      - date: 2026-10-31
+        ref: install-audit
+        change: Drafted from code; nothing arriving

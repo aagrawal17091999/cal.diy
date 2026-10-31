@@ -1,0 +1,455 @@
+# Written by the Datalyze Tracking Agent's first audit; changed only in reviewed pull requests.
+# Anchors are path#Symbol (never line numbers). The registry is the source of truth.
+area: modules
+surfaces:
+  - id: availability
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/(main-nav)/availability/page.tsx#Page
+    path: /availability
+    actions:
+      - name: Create a new schedule
+        importance: core
+        events: []
+      - name: Edit a schedule (set as default)
+        importance: secondary
+        events: []
+      - name: Duplicate a schedule
+        importance: secondary
+        events: []
+      - name: Delete a schedule
+        importance: secondary
+        events: []
+  - id: booking-uid-logs
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/(main-nav)/booking/[uid]/logs/page.tsx#Page
+    path: /booking/[uid]/logs
+    actions:
+      - name: View booking history
+        importance: incidental
+        events: []
+  - id: bookings-status
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/(main-nav)/bookings/[status]/page.tsx#Page
+    path: /bookings/[status]
+    actions:
+      - name: View bookings by status
+        importance: secondary
+        events: []
+      - name: Filter bookings
+        importance: secondary
+        events: []
+      - name: Save a filter segment
+        importance: secondary
+        events:
+          - insights_routing_save_filter_clicked
+      - name: Cancel, confirm, reject or reschedule a booking
+        importance: core
+        events: []
+  - id: apps
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/apps/(homepage)/page.tsx#ServerPage
+    path: /apps
+    actions:
+      - name: Browse app store
+        importance: secondary
+        events: []
+      - name: Open app details
+        importance: secondary
+        events:
+          - app_card_details_clicked
+      - name: Install an app
+        importance: core
+        events:
+          - app_install_button_clicked
+  - id: apps-slug
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/apps/[slug]/page.tsx#Page
+    path: /apps/[slug]
+    actions:
+      - name: View app details
+        importance: incidental
+        events: []
+      - name: Install an app
+        importance: core
+        events: []
+  - id: apps-categories-category
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/apps/categories/[category]/page.tsx#Page
+    path: /apps/categories/[category]
+    actions:
+      - name: Open app details
+        importance: secondary
+        events:
+          - app_card_details_clicked
+      - name: Install an app
+        importance: core
+        events:
+          - app_install_button_clicked
+  - id: apps-categories
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/apps/categories/page.tsx#ServerPage
+    path: /apps/categories
+    actions:
+      - name: Browse app categories
+        importance: incidental
+        events: []
+  - id: auth-verify-email
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/auth/verify-email/page.tsx#ServerPageWrapper
+    path: /auth/verify-email
+    actions:
+      - name: Resend verification email
+        importance: core
+        events:
+          - verify_email_resend_clicked
+      - name: Continue to onboarding after email already verified
+        importance: core
+        events:
+          - verify_email_already_verified
+      - name: Open email client
+        importance: incidental
+        events: []
+      - name: Sign up with a different email
+        importance: incidental
+        events: []
+  - id: availability-schedule
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/availability/[schedule]/page.tsx#Page
+    path: /availability/[schedule]
+    actions:
+      - name: Edit an availability schedule (working hours, date overrides, timezone)
+        importance: secondary
+        events: []
+      - name: Manage travel schedules
+        importance: secondary
+        events: []
+      - name: Navigate via the app shell
+        importance: incidental
+        events:
+          - navigation_item_clicked
+      - name: Open refer and earn
+        importance: incidental
+        events:
+          - refer_and_earn_clicked
+  - id: getting-started-step
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/getting-started/[[...step]]/page.tsx#ServerPage
+    path: /getting-started/[[...step]]
+    actions:
+      - name: Complete an onboarding step
+        importance: core
+        events:
+          - onboarding_step_completed
+      - name: Connect a calendar or app during onboarding
+        importance: core
+        events:
+          - onboarding_app_connect_clicked
+      - name: Finish onboarding by saving profile
+        importance: core
+        events:
+          - onboarding_completed
+      - name: Sign out during onboarding
+        importance: incidental
+        events:
+          - onboarding_sign_out_clicked
+  - id: more
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/more/page.tsx#ServerPageWrapper
+    path: /more
+    actions:
+      - name: Navigate via the more menu
+        importance: incidental
+        events:
+          - navigation_item_clicked
+      - name: Open refer and earn
+        importance: incidental
+        events:
+          - refer_and_earn_clicked
+  - id: onboarding-getting-started
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/onboarding/getting-started/page.tsx#ServerPage
+    path: /onboarding/getting-started
+    actions:
+      - name: Select a plan type (personal, team, organization)
+        importance: core
+        events:
+          - onboarding_plan_selected
+      - name: Continue with the selected plan
+        importance: core
+        events:
+          - onboarding_plan_continue_clicked
+  - id: refer
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/refer/page.tsx#ReferralsPage
+    path: /refer
+    actions:
+      - name: View the referral program and refer others
+        importance: secondary
+        events: []
+      - name: Navigate via the app shell
+        importance: incidental
+        events:
+          - navigation_item_clicked
+      - name: Open refer and earn
+        importance: incidental
+        events:
+          - refer_and_earn_clicked
+  - id: settings-my-account-out-of-office
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/settings/(settings-layout)/my-account/out-of-office/page.tsx#Page
+    path: /settings/my-account/out-of-office
+    actions:
+      - name: Set an out-of-office period
+        importance: secondary
+        events: []
+      - name: Delete or edit an out-of-office entry
+        importance: secondary
+        events: []
+  - id: settings-my-account-profile
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/settings/(settings-layout)/my-account/profile/page.tsx#Page
+    path: /settings/my-account/profile
+    actions:
+      - name: Update profile details
+        importance: secondary
+        events: []
+      - name: Upgrade from the company email banner
+        importance: secondary
+        events:
+          - company_email_banner_upgrade_clicked
+      - name: Dismiss the company email banner
+        importance: incidental
+        events:
+          - company_email_banner_dismissed
+  - id: signup
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/signup/page.tsx#ServerPage
+    path: /signup
+    actions:
+      - name: Sign up with email form
+        importance: core
+        events:
+          - signup_form_submitted
+          - signup_form_submit_error
+      - name: Choose to sign up with email
+        importance: core
+        events:
+          - signup_email_button_clicked
+      - name: Sign up with Google
+        importance: core
+        events:
+          - signup_google_button_clicked
+      - name: Sign up with Microsoft
+        importance: core
+        events:
+          - signup_microsoft_button_clicked
+  - id: upgrade
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/upgrade/page.tsx#ServerPage
+    path: /upgrade
+    actions:
+      - name: Upgrade organization
+        importance: core
+        events: []
+      - name: Contact support
+        importance: incidental
+        events: []
+events:
+  add_organization_member_clicked:
+    fires_in: apps/web/modules/users/components/UserTable/UserListTable.tsx#UserListTableContent
+    trigger: An admin or owner clicks the "Add" button above the organization members table, which opens the invite-member modal.
+    moment: before the request
+    conditions:
+      - The user can invite (permissions.canInvite, or admin/owner when permissions are absent)
+    path:
+      - apps/web/modules/users/components/UserTable/UserListTable.tsx#UserListTable
+      - apps/web/modules/users/components/UserTable/UserListTable.tsx#UserListTableContent.onClick
+    certainty: unsure
+  app_card_details_clicked:
+    fires_in: apps/web/modules/apps/components/AppCard.tsx#AppCard
+    trigger: A user clicks "Details" on an app card in the app store, just before going to the app's page.
+    moment: before the request
+    path:
+      - apps/web/app/(use-page-wrapper)/apps/categories/[category]/page.tsx#Page
+      - apps/web/modules/apps/categories/[category]/category-view.tsx#Apps
+      - apps/web/modules/apps/components/AppCard.tsx#AppCard.onClick
+    certainty: sure
+  app_install_button_clicked:
+    fires_in: apps/web/modules/apps/components/AppCard.tsx#AppCard
+    trigger: A user clicks the install button on an app card, before any install request or redirect starts.
+    moment: before the request
+    conditions:
+      - The install button is rendered (the app isn't global, and either has credentials with multiple installs allowed or is a redirect
+        app, or it isn't installed yet)
+    path:
+      - apps/web/app/(use-page-wrapper)/apps/categories/[category]/page.tsx#Page
+      - apps/web/modules/apps/categories/[category]/category-view.tsx#Apps
+      - apps/web/modules/apps/components/AppCard.tsx#AppCard.handleAppInstall
+    certainty: sure
+  company_email_banner_dismissed:
+    fires_in: apps/web/modules/settings/my-account/components/CompanyEmailOrganizationBanner.tsx#CompanyEmailOrganizationBanner
+    trigger: A user clicks "Dismiss" on the banner that suggests an organization plan to people with a company email.
+    moment: before the request
+    conditions:
+      - The banner is shown (onboarding-v3 flag on)
+    path:
+      - apps/web/app/(use-page-wrapper)/settings/(settings-layout)/my-account/profile/page.tsx#Page
+      - apps/web/modules/settings/my-account/profile-view.tsx#ProfileView
+      - apps/web/modules/settings/my-account/components/CompanyEmailOrganizationBanner.tsx#CompanyEmailOrganizationBanner.handleDismiss
+    certainty: sure
+  company_email_banner_upgrade_clicked:
+    fires_in: apps/web/modules/settings/my-account/components/CompanyEmailOrganizationBanner.tsx#CompanyEmailOrganizationBanner
+    trigger: A user clicks "Upgrade" on the company-email banner, just before navigating to the organization setup.
+    moment: before the request
+    conditions:
+      - The banner is shown (onboarding-v3 flag on)
+    path:
+      - apps/web/app/(use-page-wrapper)/settings/(settings-layout)/my-account/profile/page.tsx#Page
+      - apps/web/modules/settings/my-account/profile-view.tsx#ProfileView
+      - apps/web/modules/settings/my-account/components/CompanyEmailOrganizationBanner.tsx#CompanyEmailOrganizationBanner.handleLearnMore
+    certainty: sure
+  insights_routing_save_filter_clicked:
+    fires_in: apps/web/modules/data-table/components/segment/SaveFilterSegmentButton.tsx#SaveFilterSegmentButton
+    trigger: A user clicks the enabled "Save" bookmark button in the data-table filter-segment control, which opens the save-segment dialog.
+    moment: before the request
+    conditions:
+      - Segments are enabled
+      - There is something to save (canSaveSegment)
+    path:
+      - apps/web/modules/data-table/components/segment/index.ts#DataTableSegment
+      - apps/web/modules/data-table/components/segment/SaveFilterSegmentButton.tsx#SaveFilterSegmentButton.onClick
+    certainty: unsure
+  navigation_item_clicked:
+    fires_in: apps/web/modules/shell/navigation/NavigationItem.tsx#trackNavigationClick
+    trigger: "A user clicks an item in the side navigation: a top-level item without children, or a child item in an expanded or tooltip group."
+    moment: before the request
+    conditions:
+      - The navigation item is displayed
+    path:
+      - apps/web/app/(use-page-wrapper)/refer/page.tsx#ReferralsPage
+      - apps/web/modules/shell/Shell.tsx#Layout
+      - apps/web/modules/shell/SideBar.tsx#SideBarContainer
+      - apps/web/modules/shell/SideBar.tsx#SideBar
+      - apps/web/modules/shell/navigation/Navigation.tsx#Navigation
+      - apps/web/modules/shell/navigation/NavigationItem.tsx#NavigationItem
+      - apps/web/modules/shell/navigation/NavigationItem.tsx#trackNavigationClick
+    certainty: sure
+  onboarding_plan_continue_clicked:
+    fires_in: apps/web/modules/onboarding/getting-started/onboarding-view.tsx#OnboardingView
+    trigger: A user clicks Continue on the plan-selection onboarding step, just before routing to that plan's details page.
+    moment: before the request
+    conditions:
+      - A plan is selected
+    path:
+      - apps/web/app/(use-page-wrapper)/onboarding/getting-started/page.tsx#ServerPage
+      - apps/web/modules/onboarding/getting-started/onboarding-view.tsx#OnboardingView.handleContinue
+    certainty: sure
+  onboarding_plan_selected:
+    fires_in: apps/web/modules/onboarding/getting-started/onboarding-view.tsx#OnboardingView
+    trigger: A user picks a plan in the plan-selection radio group on the onboarding step.
+    moment: before the request
+    path:
+      - apps/web/app/(use-page-wrapper)/onboarding/getting-started/page.tsx#ServerPage
+      - apps/web/modules/onboarding/getting-started/onboarding-view.tsx#OnboardingView.onValueChange
+    certainty: sure
+  onboarding_sign_out_clicked:
+    fires_in: apps/web/modules/getting-started/[[...step]]/onboarding-view.tsx#OnboardingPage
+    trigger: A user clicks "Sign out" in the getting-started onboarding flow, just before signOut redirects to /auth/logout.
+    moment: before the request
+    path:
+      - apps/web/app/(use-page-wrapper)/getting-started/[[...step]]/page.tsx#ServerPage
+      - apps/web/modules/getting-started/[[...step]]/onboarding-view.tsx#OnboardingPage.onClick
+    certainty: sure
+  onboarding_step_completed:
+    fires_in: apps/web/modules/getting-started/[[...step]]/onboarding-view.tsx#OnboardingPage
+    trigger: A user continues from an onboarding step (or clicks skip), just before routing to the next step.
+    moment: before the request
+    path:
+      - apps/web/app/(use-page-wrapper)/getting-started/[[...step]]/page.tsx#ServerPage
+      - apps/web/modules/getting-started/[[...step]]/onboarding-view.tsx#OnboardingPage.goToNextStep
+    certainty: sure
+  refer_and_earn_clicked:
+    fires_in: apps/web/modules/shell/useBottomNavItems.ts#useBottomNavItems
+    trigger: A user clicks the "Refer and earn" item in the bottom navigation, which links to /refer.
+    moment: before the request
+    conditions:
+      - IS_DUB_REFERRALS_ENABLED is on
+    path:
+      - apps/web/app/(use-page-wrapper)/refer/page.tsx#ReferralsPage
+      - apps/web/modules/shell/Shell.tsx#Layout
+      - apps/web/modules/shell/SideBar.tsx#SideBarContainer
+      - apps/web/modules/shell/SideBar.tsx#SideBar
+      - apps/web/modules/shell/useBottomNavItems.ts#useBottomNavItems.onClick
+    certainty: sure
+  signup_email_button_clicked:
+    fires_in: apps/web/modules/signup-view.tsx#Signup
+    trigger: A user clicks "Continue with email" on the signup page, which reveals the email form.
+    moment: before the request
+    conditions:
+      - The social sign-up buttons row is shown and neither Google nor Microsoft loading is in progress (the button is disabled while they
+        load)
+    path:
+      - apps/web/app/(use-page-wrapper)/signup/page.tsx#ServerPage
+      - apps/web/modules/signup-view.tsx#Signup.onClick
+    certainty: sure
+  signup_form_submit_error:
+    fires_in: apps/web/modules/signup-view.tsx#Signup
+    trigger: The signup submit handler throws, because the signup request returned a non-ok result that isn't handled or the follow-up sign-in
+      failed.
+    moment: after failure
+    conditions:
+      - The signup handler threw inside its try block.
+      - The error message is not the Cloudflare invalid-token error. That case returns silently.
+      - The user-already-exists and checkout-session cases return before the throw, so they don't fire it.
+    path:
+      - apps/web/app/(use-page-wrapper)/signup/page.tsx#ServerPage
+      - apps/web/modules/signup-view.tsx#Signup.signUp
+    certainty: sure
+  signup_form_submitted:
+    fires_in: apps/web/modules/signup-view.tsx#Signup
+    trigger: The person submits the signup form and the submit handler starts.
+    moment: before the request
+    path:
+      - apps/web/app/(use-page-wrapper)/signup/page.tsx#ServerPage
+      - apps/web/modules/signup-view.tsx#Signup.signUp
+    certainty: sure
+  signup_google_button_clicked:
+    fires_in: apps/web/modules/signup-view.tsx#Signup
+    trigger: The visitor clicks Continue with Google on the signup page.
+    moment: before the request
+    conditions:
+      - Google login is enabled.
+      - The email form is not displayed.
+    path:
+      - apps/web/app/(use-page-wrapper)/signup/page.tsx#ServerPage
+      - apps/web/modules/signup-view.tsx#Signup.onClick
+    certainty: sure
+  signup_microsoft_button_clicked:
+    fires_in: apps/web/modules/signup-view.tsx#Signup
+    trigger: The visitor clicks Continue with Microsoft on the signup page.
+    moment: before the request
+    conditions:
+      - Outlook/Microsoft login is enabled.
+      - The email form is not displayed.
+    path:
+      - apps/web/app/(use-page-wrapper)/signup/page.tsx#ServerPage
+      - apps/web/modules/signup-view.tsx#Signup.onClick
+    certainty: sure
+  verify_email_already_verified:
+    fires_in: apps/web/modules/auth/verify-email-view.tsx#VerifyEmailPage
+    trigger: An already-verified user opens the verify-email page and the check returns verified; they are then redirected to getting-started.
+    moment: on mount
+    conditions:
+      - The email-verify check returned isVerified = true
+    path:
+      - apps/web/app/(use-page-wrapper)/auth/verify-email/page.tsx#ServerPageWrapper
+      - apps/web/modules/auth/verify-email-view.tsx#VerifyEmailPage
+    certainty: sure
+  verify_email_resend_clicked:
+    fires_in: apps/web/modules/auth/verify-email-view.tsx#VerifyEmailPage
+    trigger: A user clicks "Resend email" on the verify-email page.
+    moment: before the request
+    path:
+      - apps/web/app/(use-page-wrapper)/auth/verify-email/page.tsx#ServerPageWrapper
+      - apps/web/modules/auth/verify-email-view.tsx#VerifyEmailPage.onClick
+    certainty: sure

@@ -1,0 +1,24 @@
+# How this codebase sends analytics, written by the install audit and read by the scanner and the implementer.
+# Changing it changes what the checks see: route it to the analytics owner (CODEOWNERS). A PR's edits count once merged.
+version: 1
+stack:
+  - { path: ., language: typescript }
+sdks:
+  []
+wrappers:
+  []
+calls:
+  []
+direct_sdk: allow
+paths:
+  server: []
+  client: []
+notes: []
+dynamic_names: []
+sdk_exceptions:
+  - {
+      file: apps/web/modules/formbricks/lib/trackFormbricksAction.ts,
+      pattern: formbricks\.track\(,
+      reason: "Formbricks survey-trigger action, not product analytics; the helper trackFormbricksAction has no callers in the
+        repo"
+    }

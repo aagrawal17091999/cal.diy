@@ -1,0 +1,1402 @@
+# Written by the Datalyze Tracking Agent's first audit; changed only in reviewed pull requests.
+# Anchors are path#Symbol (never line numbers). The registry is the source of truth.
+area: api
+surfaces:
+  - id: get-health
+    kind: handler
+    anchor: apps/api/v2/src/app.controller.ts#AppController.getHealth
+    path: GET /health
+    actions: []
+  - id: post-v2-api-keys-refresh
+    kind: handler
+    anchor: apps/api/v2/src/modules/api-keys/controllers/api-keys.controller.ts#ApiKeysController.refresh
+    path: POST /v2/api-keys/refresh
+    actions:
+      - name: Refresh an API key
+        importance: secondary
+        events: []
+  - id: get-v2-atoms-conferencing
+    kind: handler
+    anchor: apps/api/v2/src/modules/atoms/controllers/atoms.conferencing-apps.controller.ts#AtomsConferencingAppsController.listUserInstalledConferencingApps
+    path: GET /v2/atoms/conferencing
+    actions:
+      - name: List installed conferencing apps
+        importance: incidental
+        events: []
+  - id: get-v2-atoms-event-types-list-with-team
+    kind: handler
+    anchor: apps/api/v2/src/modules/atoms/controllers/atoms.event-types.controller.ts#AtomsEventTypesController.listEventTypesWithTeam
+    path: GET /v2/atoms/event-types/list-with-team
+    actions:
+      - name: List event types with team
+        importance: incidental
+        events: []
+  - id: get-v2-atoms-event-types-eventslug-public
+    kind: handler
+    anchor: apps/api/v2/src/modules/atoms/controllers/atoms.event-types.controller.ts#AtomsEventTypesController.getPublicEventType
+    path: GET /v2/atoms/event-types/:eventSlug/public
+    actions:
+      - name: View a public event type
+        importance: incidental
+        events: []
+  - id: get-v2-atoms-event-types-eventtypeid
+    kind: handler
+    anchor: apps/api/v2/src/modules/atoms/controllers/atoms.event-types.controller.ts#AtomsEventTypesController.getAtomEventType
+    path: GET /v2/atoms/event-types/:eventTypeId
+    actions:
+      - name: View an event type
+        importance: incidental
+        events: []
+  - id: get-v2-atoms-event-types
+    kind: handler
+    anchor: apps/api/v2/src/modules/atoms/controllers/atoms.event-types.controller.ts#AtomsEventTypesController.listUserEventTypes
+    path: GET /v2/atoms/event-types
+    actions:
+      - name: List own event types
+        importance: incidental
+        events: []
+  - id: get-v2-atoms-event-types-app-appslug
+    kind: handler
+    anchor: apps/api/v2/src/modules/atoms/controllers/atoms.event-types.controller.ts#AtomsEventTypesController.getAtomEventTypeApp
+    path: GET /v2/atoms/event-types-app/:appSlug
+    actions:
+      - name: View an event type app integration
+        importance: incidental
+        events: []
+  - id: get-v2-atoms-payment-uid
+    kind: handler
+    anchor: apps/api/v2/src/modules/atoms/controllers/atoms.event-types.controller.ts#AtomsEventTypesController.getUserPaymentInfoById
+    path: GET /v2/atoms/payment/:uid
+    actions:
+      - name: View payment info for a booking
+        importance: incidental
+        events: []
+  - id: patch-v2-atoms-event-types-bulk-update-to-default-location
+    kind: handler
+    anchor: apps/api/v2/src/modules/atoms/controllers/atoms.event-types.controller.ts#AtomsEventTypesController.bulkUpdateAtomEventTypes
+    path: PATCH /v2/atoms/event-types/bulk-update-to-default-location
+    actions:
+      - name: Bulk update event types to default location
+        importance: secondary
+        events: []
+  - id: patch-v2-atoms-event-types-eventtypeid
+    kind: handler
+    anchor: apps/api/v2/src/modules/atoms/controllers/atoms.event-types.controller.ts#AtomsEventTypesController.updateAtomEventType
+    path: PATCH /v2/atoms/event-types/:eventTypeId
+    actions:
+      - name: Update an event type
+        importance: core
+        events: []
+  - id: get-v2-atoms-schedules
+    kind: handler
+    anchor: apps/api/v2/src/modules/atoms/controllers/atoms.schedules.controller.ts#AtomsSchedulesController.getSchedule
+    path: GET /v2/atoms/schedules
+    actions:
+      - name: View a schedule
+        importance: incidental
+        events: []
+  - id: get-v2-atoms-schedules-event-type-eventslug
+    kind: handler
+    anchor: apps/api/v2/src/modules/atoms/controllers/atoms.schedules.controller.ts#AtomsSchedulesController.getScheduleByEventSlug
+    path: GET /v2/atoms/schedules/event-type/:eventSlug
+    actions:
+      - name: View schedule for an event type
+        importance: incidental
+        events: []
+  - id: get-v2-atoms-schedules-all
+    kind: handler
+    anchor: apps/api/v2/src/modules/atoms/controllers/atoms.schedules.controller.ts#AtomsSchedulesController.getAllUserSchedules
+    path: GET /v2/atoms/schedules/all
+    actions:
+      - name: List all schedules
+        importance: incidental
+        events: []
+  - id: patch-v2-atoms-schedules-scheduleid
+    kind: handler
+    anchor: apps/api/v2/src/modules/atoms/controllers/atoms.schedules.controller.ts#AtomsSchedulesController.updateSchedule
+    path: PATCH /v2/atoms/schedules/:scheduleId
+    actions:
+      - name: Update a schedule
+        importance: secondary
+        events: []
+  - id: post-v2-atoms-schedules-create
+    kind: handler
+    anchor: apps/api/v2/src/modules/atoms/controllers/atoms.schedules.controller.ts#AtomsSchedulesController.createSchedule
+    path: POST /v2/atoms/schedules/create
+    actions:
+      - name: Create a schedule
+        importance: core
+        events: []
+  - id: post-v2-atoms-schedules-scheduleid-duplicate
+    kind: handler
+    anchor: apps/api/v2/src/modules/atoms/controllers/atoms.schedules.controller.ts#AtomsSchedulesController.duplicateExistingSchedule
+    path: POST /v2/atoms/schedules/:scheduleId/duplicate
+    actions:
+      - name: Duplicate a schedule
+        importance: secondary
+        events: []
+  - id: post-v2-atoms-verification-email-send-code
+    kind: handler
+    anchor: apps/api/v2/src/modules/atoms/controllers/atoms.verification.controller.ts#AtomsVerificationController.sendEmailVerificationCode
+    path: POST /v2/atoms/verification/email/send-code
+    actions:
+      - name: Send an email verification code
+        importance: core
+        events: []
+  - id: get-v2-atoms-verification-email-check
+    kind: handler
+    anchor: apps/api/v2/src/modules/atoms/controllers/atoms.verification.controller.ts#AtomsVerificationController.checkEmailVerificationRequired
+    path: GET /v2/atoms/verification/email/check
+    actions:
+      - name: Check whether email verification is required
+        importance: incidental
+        events: []
+  - id: post-v2-atoms-verification-email-verify-code
+    kind: handler
+    anchor: apps/api/v2/src/modules/atoms/controllers/atoms.verification.controller.ts#AtomsVerificationController.verifyEmailCode
+    path: POST /v2/atoms/verification/email/verify-code
+    actions:
+      - name: Verify an email code
+        importance: core
+        events: []
+  - id: post-v2-atoms-verification-email-verify-code-authenticated
+    kind: handler
+    anchor: apps/api/v2/src/modules/atoms/controllers/atoms.verification.controller.ts#AtomsVerificationController.verifyEmailCodeAuthenticated
+    path: POST /v2/atoms/verification/email/verify-code-authenticated
+    actions:
+      - name: Verify email with code
+        importance: core
+        events: []
+  - id: get-v2-atoms-emails-verified-emails
+    kind: handler
+    anchor: apps/api/v2/src/modules/atoms/controllers/atoms.verification.controller.ts#AtomsVerificationController.getVerifiedEmails
+    path: GET /v2/atoms/emails/verified-emails
+    actions:
+      - name: List verified emails
+        importance: incidental
+        events: []
+  - id: post-v2-atoms-emails-verified-emails
+    kind: handler
+    anchor: apps/api/v2/src/modules/atoms/controllers/atoms.verification.controller.ts#AtomsVerificationController.addVerifiedEmails
+    path: POST /v2/atoms/emails/verified-emails
+    actions:
+      - name: Add a verified email
+        importance: secondary
+        events: []
+  - id: get-v2-atoms-auth-oauth2-clients-clientid
+    kind: handler
+    anchor: apps/api/v2/src/modules/auth/oauth2/controllers/atoms-oauth2.controller.ts#AtomsOAuth2Controller.getClient
+    path: GET /v2/atoms/auth/oauth2/clients/:clientId
+    actions:
+      - name: Look up OAuth2 client
+        importance: incidental
+        events: []
+  - id: get-v2-auth-oauth2-clients-clientid
+    kind: handler
+    anchor: apps/api/v2/src/modules/auth/oauth2/controllers/oauth2.controller.ts#OAuth2Controller.getClient
+    path: GET /v2/auth/oauth2/clients/:clientId
+    actions:
+      - name: Look up OAuth2 client
+        importance: incidental
+        events: []
+  - id: post-v2-auth-oauth2-token
+    kind: handler
+    anchor: apps/api/v2/src/modules/auth/oauth2/controllers/oauth2.controller.ts#OAuth2Controller.token
+    path: POST /v2/auth/oauth2/token
+    actions:
+      - name: Exchange authorization code or refresh token for OAuth2 tokens
+        importance: core
+        events: []
+  - id: get-v2-calendars-connections
+    kind: handler
+    anchor: apps/api/v2/src/modules/cal-unified-calendars/controllers/cal-unified-calendars.controller.ts#CalUnifiedCalendarsController.listConnections
+    path: GET /v2/calendars/connections
+    actions:
+      - name: List calendar connections
+        importance: secondary
+        events: []
+  - id: get-v2-calendars-connections-connectionid-events
+    kind: handler
+    anchor: apps/api/v2/src/modules/cal-unified-calendars/controllers/cal-unified-calendars.controller.ts#CalUnifiedCalendarsController.listConnectionEvents
+    path: GET /v2/calendars/connections/:connectionId/events
+    actions:
+      - name: List events on a calendar connection
+        importance: secondary
+        events: []
+  - id: post-v2-calendars-connections-connectionid-events
+    kind: handler
+    anchor: apps/api/v2/src/modules/cal-unified-calendars/controllers/cal-unified-calendars.controller.ts#CalUnifiedCalendarsController.createConnectionEvent
+    path: POST /v2/calendars/connections/:connectionId/events
+    actions:
+      - name: Create event on a calendar connection
+        importance: secondary
+        events: []
+  - id: get-v2-calendars-connections-connectionid-events-eventid
+    kind: handler
+    anchor: apps/api/v2/src/modules/cal-unified-calendars/controllers/cal-unified-calendars.controller.ts#CalUnifiedCalendarsController.getConnectionEvent
+    path: GET /v2/calendars/connections/:connectionId/events/:eventId
+    actions:
+      - name: Get event on a calendar connection
+        importance: incidental
+        events: []
+  - id: patch-v2-calendars-connections-connectionid-events-eventid
+    kind: handler
+    anchor: apps/api/v2/src/modules/cal-unified-calendars/controllers/cal-unified-calendars.controller.ts#CalUnifiedCalendarsController.updateConnectionEvent
+    path: PATCH /v2/calendars/connections/:connectionId/events/:eventId
+    actions:
+      - name: Update event on a calendar connection
+        importance: secondary
+        events: []
+  - id: delete-v2-calendars-connections-connectionid-events-eventid
+    kind: handler
+    anchor: apps/api/v2/src/modules/cal-unified-calendars/controllers/cal-unified-calendars.controller.ts#CalUnifiedCalendarsController.deleteConnectionEvent
+    path: DELETE /v2/calendars/connections/:connectionId/events/:eventId
+    actions:
+      - name: Delete event on a calendar connection
+        importance: secondary
+        events: []
+  - id: get-v2-calendars-connections-connectionid-freebusy
+    kind: handler
+    anchor: apps/api/v2/src/modules/cal-unified-calendars/controllers/cal-unified-calendars.controller.ts#CalUnifiedCalendarsController.getConnectionFreeBusy
+    path: GET /v2/calendars/connections/:connectionId/freebusy
+    actions:
+      - name: Get busy times for a calendar connection
+        importance: secondary
+        events: []
+  - id: get-v2-calendars
+    kind: handler
+    anchor: apps/api/v2/src/modules/cal-unified-calendars/controllers/cal-unified-calendars.controller.ts#CalUnifiedCalendarsController.getCalendarEventDetails
+    path: GET /v2/calendars
+    actions:
+      - name: Get calendar event details
+        importance: incidental
+        events: []
+  - id: patch-v2-calendars
+    kind: handler
+    anchor: apps/api/v2/src/modules/cal-unified-calendars/controllers/cal-unified-calendars.controller.ts#CalUnifiedCalendarsController.updateCalendarEvent
+    path: PATCH /v2/calendars
+    actions:
+      - name: Update calendar event details
+        importance: secondary
+        events: []
+  - id: get-v2-calendars-calendar-events
+    kind: handler
+    anchor: apps/api/v2/src/modules/cal-unified-calendars/controllers/cal-unified-calendars.controller.ts#CalUnifiedCalendarsController.listCalendarEvents
+    path: GET /v2/calendars/:calendar/events
+    actions:
+      - name: List calendar events
+        importance: secondary
+        events: []
+  - id: post-v2-calendars-calendar-events
+    kind: handler
+    anchor: apps/api/v2/src/modules/cal-unified-calendars/controllers/cal-unified-calendars.controller.ts#CalUnifiedCalendarsController.createCalendarEvent
+    path: POST /v2/calendars/:calendar/events
+    actions:
+      - name: Create a calendar event
+        importance: secondary
+        events: []
+  - id: delete-v2-calendars-calendar-events-eventuid
+    kind: handler
+    anchor: apps/api/v2/src/modules/cal-unified-calendars/controllers/cal-unified-calendars.controller.ts#CalUnifiedCalendarsController.deleteCalendarEvent
+    path: DELETE /v2/calendars/:calendar/events/:eventUid
+    actions:
+      - name: Delete a calendar event
+        importance: secondary
+        events: []
+  - id: get-v2-calendars-calendar-freebusy
+    kind: handler
+    anchor: apps/api/v2/src/modules/cal-unified-calendars/controllers/cal-unified-calendars.controller.ts#CalUnifiedCalendarsController.getFreeBusy
+    path: GET /v2/calendars/:calendar/freebusy
+    actions:
+      - name: Get free/busy times
+        importance: secondary
+        events: []
+  - id: post-v2-conferencing-app-connect
+    kind: handler
+    anchor: apps/api/v2/src/modules/conferencing/controllers/conferencing.controller.ts#ConferencingController.connect
+    path: POST /v2/conferencing/:app/connect
+    actions:
+      - name: Connect a conferencing app
+        importance: secondary
+        events: []
+  - id: get-v2-conferencing-app-oauth-auth-url
+    kind: handler
+    anchor: apps/api/v2/src/modules/conferencing/controllers/conferencing.controller.ts#ConferencingController.redirect
+    path: GET /v2/conferencing/:app/oauth/auth-url
+    actions:
+      - name: Start connecting a conferencing app via OAuth
+        importance: core
+        events: []
+  - id: get-v2-conferencing-app-oauth-callback
+    kind: handler
+    anchor: apps/api/v2/src/modules/conferencing/controllers/conferencing.controller.ts#ConferencingController.save
+    path: GET /v2/conferencing/:app/oauth/callback
+    actions:
+      - name: Complete conferencing app OAuth connection
+        importance: core
+        events: []
+  - id: get-v2-conferencing
+    kind: handler
+    anchor: apps/api/v2/src/modules/conferencing/controllers/conferencing.controller.ts#ConferencingController.listInstalledConferencingApps
+    path: GET /v2/conferencing
+    actions:
+      - name: List installed conferencing apps
+        importance: incidental
+        events: []
+  - id: post-v2-conferencing-app-default
+    kind: handler
+    anchor: apps/api/v2/src/modules/conferencing/controllers/conferencing.controller.ts#ConferencingController.default
+    path: POST /v2/conferencing/:app/default
+    actions:
+      - name: Set default conferencing app
+        importance: secondary
+        events: []
+  - id: get-v2-conferencing-default
+    kind: handler
+    anchor: apps/api/v2/src/modules/conferencing/controllers/conferencing.controller.ts#ConferencingController.getDefault
+    path: GET /v2/conferencing/default
+    actions:
+      - name: View default conferencing app
+        importance: incidental
+        events: []
+  - id: delete-v2-conferencing-app-disconnect
+    kind: handler
+    anchor: apps/api/v2/src/modules/conferencing/controllers/conferencing.controller.ts#ConferencingController.disconnect
+    path: DELETE /v2/conferencing/:app/disconnect
+    actions:
+      - name: Disconnect a conferencing app
+        importance: secondary
+        events: []
+  - id: put-v2-destination-calendars
+    kind: handler
+    anchor: apps/api/v2/src/modules/destination-calendars/controllers/destination-calendars.controller.ts#DestinationCalendarsController.updateDestinationCalendars
+    path: PUT /v2/destination-calendars
+    actions:
+      - name: Update destination calendar
+        importance: secondary
+        events: []
+  - id: post-v2-event-types-eventtypeid-webhooks
+    kind: webhook
+    anchor: apps/api/v2/src/modules/event-types/controllers/event-types-webhooks.controller.ts#EventTypeWebhooksController.createEventTypeWebhook
+    path: POST /v2/event-types/:eventTypeId/webhooks
+    actions:
+      - name: Create an event type webhook
+        importance: secondary
+        events: []
+  - id: patch-v2-event-types-eventtypeid-webhooks-webhookid
+    kind: webhook
+    anchor: apps/api/v2/src/modules/event-types/controllers/event-types-webhooks.controller.ts#EventTypeWebhooksController.updateEventTypeWebhook
+    path: PATCH /v2/event-types/:eventTypeId/webhooks/:webhookId
+    actions:
+      - name: Update an event type webhook
+        importance: secondary
+        events: []
+  - id: get-v2-event-types-eventtypeid-webhooks-webhookid
+    kind: webhook
+    anchor: apps/api/v2/src/modules/event-types/controllers/event-types-webhooks.controller.ts#EventTypeWebhooksController.getEventTypeWebhook
+    path: GET /v2/event-types/:eventTypeId/webhooks/:webhookId
+    actions:
+      - name: View an event type webhook
+        importance: incidental
+        events: []
+  - id: get-v2-event-types-eventtypeid-webhooks
+    kind: webhook
+    anchor: apps/api/v2/src/modules/event-types/controllers/event-types-webhooks.controller.ts#EventTypeWebhooksController.getEventTypeWebhooks
+    path: GET /v2/event-types/:eventTypeId/webhooks
+    actions:
+      - name: List event type webhooks
+        importance: incidental
+        events: []
+  - id: delete-v2-event-types-eventtypeid-webhooks-webhookid
+    kind: webhook
+    anchor: apps/api/v2/src/modules/event-types/controllers/event-types-webhooks.controller.ts#EventTypeWebhooksController.deleteEventTypeWebhook
+    path: DELETE /v2/event-types/:eventTypeId/webhooks/:webhookId
+    actions:
+      - name: Delete an event type webhook
+        importance: secondary
+        events: []
+  - id: delete-v2-event-types-eventtypeid-webhooks
+    kind: webhook
+    anchor: apps/api/v2/src/modules/event-types/controllers/event-types-webhooks.controller.ts#EventTypeWebhooksController.deleteAllEventTypeWebhooks
+    path: DELETE /v2/event-types/:eventTypeId/webhooks
+    actions:
+      - name: Delete all webhooks of an event type
+        importance: secondary
+        events: []
+  - id: get-v2-oauth-clients-clientid-users
+    kind: handler
+    anchor: apps/api/v2/src/modules/oauth-clients/controllers/oauth-client-users/oauth-client-users.controller.ts#OAuthClientUsersController.getManagedUsers
+    path: GET /v2/oauth-clients/:clientId/users
+    actions:
+      - name: List managed users of an OAuth client
+        importance: incidental
+        events: []
+  - id: post-v2-oauth-clients-clientid-users
+    kind: handler
+    anchor: apps/api/v2/src/modules/oauth-clients/controllers/oauth-client-users/oauth-client-users.controller.ts#OAuthClientUsersController.createUser
+    path: POST /v2/oauth-clients/:clientId/users
+    actions:
+      - name: Create a managed user
+        importance: core
+        events: []
+  - id: get-v2-oauth-clients-clientid-users-userid
+    kind: handler
+    anchor: apps/api/v2/src/modules/oauth-clients/controllers/oauth-client-users/oauth-client-users.controller.ts#OAuthClientUsersController.getUserById
+    path: GET /v2/oauth-clients/:clientId/users/:userId
+    actions:
+      - name: View a managed user
+        importance: incidental
+        events: []
+  - id: patch-v2-oauth-clients-clientid-users-userid
+    kind: handler
+    anchor: apps/api/v2/src/modules/oauth-clients/controllers/oauth-client-users/oauth-client-users.controller.ts#OAuthClientUsersController.updateUser
+    path: PATCH /v2/oauth-clients/:clientId/users/:userId
+    actions:
+      - name: Update a managed user
+        importance: secondary
+        events: []
+  - id: delete-v2-oauth-clients-clientid-users-userid
+    kind: handler
+    anchor: apps/api/v2/src/modules/oauth-clients/controllers/oauth-client-users/oauth-client-users.controller.ts#OAuthClientUsersController.deleteUser
+    path: DELETE /v2/oauth-clients/:clientId/users/:userId
+    actions:
+      - name: Delete a managed user
+        importance: secondary
+        events: []
+  - id: post-v2-oauth-clients-clientid-users-userid-force-refresh
+    kind: handler
+    anchor: apps/api/v2/src/modules/oauth-clients/controllers/oauth-client-users/oauth-client-users.controller.ts#OAuthClientUsersController.forceRefresh
+    path: POST /v2/oauth-clients/:clientId/users/:userId/force-refresh
+    actions:
+      - name: Force refresh a managed user's tokens
+        importance: secondary
+        events: []
+  - id: post-v2-oauth-clients-clientid-webhooks
+    kind: webhook
+    anchor: apps/api/v2/src/modules/oauth-clients/controllers/oauth-client-webhooks/oauth-client-webhooks.controller.ts#OAuthClientWebhooksController.createOAuthClientWebhook
+    path: POST /v2/oauth-clients/:clientId/webhooks
+    actions:
+      - name: Create an OAuth client webhook
+        importance: secondary
+        events: []
+  - id: patch-v2-oauth-clients-clientid-webhooks-webhookid
+    kind: webhook
+    anchor: apps/api/v2/src/modules/oauth-clients/controllers/oauth-client-webhooks/oauth-client-webhooks.controller.ts#OAuthClientWebhooksController.updateOAuthClientWebhook
+    path: PATCH /v2/oauth-clients/:clientId/webhooks/:webhookId
+    actions:
+      - name: Update an OAuth client webhook
+        importance: secondary
+        events: []
+  - id: get-v2-oauth-clients-clientid-webhooks-webhookid
+    kind: webhook
+    anchor: apps/api/v2/src/modules/oauth-clients/controllers/oauth-client-webhooks/oauth-client-webhooks.controller.ts#OAuthClientWebhooksController.getOAuthClientWebhook
+    path: GET /v2/oauth-clients/:clientId/webhooks/:webhookId
+    actions:
+      - name: View an OAuth client webhook
+        importance: incidental
+        events: []
+  - id: get-v2-oauth-clients-clientid-webhooks
+    kind: webhook
+    anchor: apps/api/v2/src/modules/oauth-clients/controllers/oauth-client-webhooks/oauth-client-webhooks.controller.ts#OAuthClientWebhooksController.getOAuthClientWebhooks
+    path: GET /v2/oauth-clients/:clientId/webhooks
+    actions:
+      - name: List OAuth client webhooks
+        importance: incidental
+        events: []
+  - id: delete-v2-oauth-clients-clientid-webhooks-webhookid
+    kind: webhook
+    anchor: apps/api/v2/src/modules/oauth-clients/controllers/oauth-client-webhooks/oauth-client-webhooks.controller.ts#OAuthClientWebhooksController.deleteOAuthClientWebhook
+    path: DELETE /v2/oauth-clients/:clientId/webhooks/:webhookId
+    actions:
+      - name: Delete an OAuth client webhook
+        importance: secondary
+        events: []
+  - id: delete-v2-oauth-clients-clientid-webhooks
+    kind: webhook
+    anchor: apps/api/v2/src/modules/oauth-clients/controllers/oauth-client-webhooks/oauth-client-webhooks.controller.ts#OAuthClientWebhooksController.deleteAllOAuthClientWebhooks
+    path: DELETE /v2/oauth-clients/:clientId/webhooks
+    actions:
+      - name: Delete all OAuth client webhooks
+        importance: secondary
+        events: []
+  - id: post-v2-oauth-clients
+    kind: handler
+    anchor: apps/api/v2/src/modules/oauth-clients/controllers/oauth-clients/oauth-clients.controller.ts#OAuthClientsController.createOAuthClient
+    path: POST /v2/oauth-clients
+    actions:
+      - name: Create an OAuth client
+        importance: core
+        events: []
+  - id: get-v2-oauth-clients
+    kind: handler
+    anchor: apps/api/v2/src/modules/oauth-clients/controllers/oauth-clients/oauth-clients.controller.ts#OAuthClientsController.getOAuthClients
+    path: GET /v2/oauth-clients
+    actions:
+      - name: List OAuth clients
+        importance: incidental
+        events: []
+  - id: get-v2-oauth-clients-clientid
+    kind: handler
+    anchor: apps/api/v2/src/modules/oauth-clients/controllers/oauth-clients/oauth-clients.controller.ts#OAuthClientsController.getOAuthClientById
+    path: GET /v2/oauth-clients/:clientId
+    actions:
+      - name: View an OAuth client
+        importance: incidental
+        events: []
+  - id: get-v2-oauth-clients-clientid-managed-users
+    kind: handler
+    anchor: apps/api/v2/src/modules/oauth-clients/controllers/oauth-clients/oauth-clients.controller.ts#OAuthClientsController.getOAuthClientManagedUsersById
+    path: GET /v2/oauth-clients/:clientId/managed-users
+    actions:
+      - name: List an OAuth client's managed users
+        importance: incidental
+        events: []
+  - id: patch-v2-oauth-clients-clientid
+    kind: handler
+    anchor: apps/api/v2/src/modules/oauth-clients/controllers/oauth-clients/oauth-clients.controller.ts#OAuthClientsController.updateOAuthClient
+    path: PATCH /v2/oauth-clients/:clientId
+    actions:
+      - name: Update an OAuth client
+        importance: secondary
+        events: []
+  - id: delete-v2-oauth-clients-clientid
+    kind: handler
+    anchor: apps/api/v2/src/modules/oauth-clients/controllers/oauth-clients/oauth-clients.controller.ts#OAuthClientsController.deleteOAuthClient
+    path: DELETE /v2/oauth-clients/:clientId
+    actions:
+      - name: Delete an OAuth client
+        importance: secondary
+        events: []
+  - id: post-v2-oauth-clientid-authorize
+    kind: handler
+    anchor: apps/api/v2/src/modules/oauth-clients/controllers/oauth-flow/oauth-flow.controller.ts#OAuthFlowController.authorize
+    path: POST /v2/oauth/:clientId/authorize
+    actions:
+      - name: Authorize an OAuth client for a user
+        importance: core
+        events: []
+  - id: post-v2-oauth-clientid-exchange
+    kind: handler
+    anchor: apps/api/v2/src/modules/oauth-clients/controllers/oauth-flow/oauth-flow.controller.ts#OAuthFlowController.exchange
+    path: POST /v2/oauth/:clientId/exchange
+    actions:
+      - name: Exchange an authorization code for tokens
+        importance: core
+        events: []
+  - id: post-v2-oauth-clientid-refresh
+    kind: handler
+    anchor: apps/api/v2/src/modules/oauth-clients/controllers/oauth-flow/oauth-flow.controller.ts#OAuthFlowController.refreshTokens
+    path: POST /v2/oauth/:clientId/refresh
+    actions:
+      - name: Refresh managed user tokens
+        importance: secondary
+        events: []
+  - id: post-v2-selected-calendars
+    kind: handler
+    anchor: apps/api/v2/src/modules/selected-calendars/controllers/selected-calendars.controller.ts#SelectedCalendarsController.addSelectedCalendar
+    path: POST /v2/selected-calendars
+    actions:
+      - name: Add a selected calendar
+        importance: secondary
+        events: []
+  - id: delete-v2-selected-calendars
+    kind: handler
+    anchor: apps/api/v2/src/modules/selected-calendars/controllers/selected-calendars.controller.ts#SelectedCalendarsController.deleteSelectedCalendar
+    path: DELETE /v2/selected-calendars
+    actions:
+      - name: Remove a selected calendar
+        importance: secondary
+        events: []
+  - id: post-v2-slots-reserve
+    kind: handler
+    anchor: apps/api/v2/src/modules/slots/slots-2024-04-15/controllers/slots.controller.ts#SlotsController_2024_04_15.reserveSlot
+    path: POST /v2/slots/reserve
+    actions:
+      - name: Reserve a slot
+        importance: core
+        events: []
+  - id: delete-v2-slots-selected-slot
+    kind: handler
+    anchor: apps/api/v2/src/modules/slots/slots-2024-04-15/controllers/slots.controller.ts#SlotsController_2024_04_15.deleteSelectedSlot
+    path: DELETE /v2/slots/selected-slot
+    actions:
+      - name: Release a reserved slot
+        importance: secondary
+        events: []
+  - id: get-v2-slots-available
+    kind: handler
+    anchor: apps/api/v2/src/modules/slots/slots-2024-04-15/controllers/slots.controller.ts#SlotsController_2024_04_15.getAvailableSlots
+    path: GET /v2/slots/available
+    actions:
+      - name: Look up available slots
+        importance: core
+        events: []
+  - id: get-v2-slots
+    kind: handler
+    anchor: apps/api/v2/src/modules/slots/slots-2024-09-04/controllers/slots.controller.ts#SlotsController_2024_09_04.getAvailableSlots
+    path: GET /v2/slots
+    actions:
+      - name: Look up available slots for an event type
+        importance: core
+        events: []
+  - id: post-v2-slots-reservations
+    kind: handler
+    anchor: apps/api/v2/src/modules/slots/slots-2024-09-04/controllers/slots.controller.ts#SlotsController_2024_09_04.reserveSlot
+    path: POST /v2/slots/reservations
+    actions:
+      - name: Reserve a slot
+        importance: core
+        events: []
+  - id: get-v2-slots-reservations-uid
+    kind: handler
+    anchor: apps/api/v2/src/modules/slots/slots-2024-09-04/controllers/slots.controller.ts#SlotsController_2024_09_04.getReservedSlot
+    path: GET /v2/slots/reservations/:uid
+    actions:
+      - name: View a reserved slot
+        importance: incidental
+        events: []
+  - id: patch-v2-slots-reservations-uid
+    kind: handler
+    anchor: apps/api/v2/src/modules/slots/slots-2024-09-04/controllers/slots.controller.ts#SlotsController_2024_09_04.updateReservedSlot
+    path: PATCH /v2/slots/reservations/:uid
+    actions:
+      - name: Update a reserved slot
+        importance: secondary
+        events: []
+  - id: delete-v2-slots-reservations-uid
+    kind: handler
+    anchor: apps/api/v2/src/modules/slots/slots-2024-09-04/controllers/slots.controller.ts#SlotsController_2024_09_04.deleteReservedSlot
+    path: DELETE /v2/slots/reservations/:uid
+    actions:
+      - name: Release a reserved slot
+        importance: secondary
+        events: []
+  - id: get-v2-stripe-connect
+    kind: handler
+    anchor: apps/api/v2/src/modules/stripe/controllers/stripe.controller.ts#StripeController.redirect
+    path: GET /v2/stripe/connect
+    actions:
+      - name: Start connecting a Stripe account
+        importance: core
+        events: []
+  - id: get-v2-stripe-save
+    kind: handler
+    anchor: apps/api/v2/src/modules/stripe/controllers/stripe.controller.ts#StripeController.save
+    path: GET /v2/stripe/save
+    actions:
+      - name: Save Stripe credentials after OAuth callback
+        importance: core
+        events: []
+  - id: get-v2-stripe-check
+    kind: handler
+    anchor: apps/api/v2/src/modules/stripe/controllers/stripe.controller.ts#StripeController.check
+    path: GET /v2/stripe/check
+    actions:
+      - name: Check Stripe connection status
+        importance: incidental
+        events: []
+  - id: get-v2-timezones
+    kind: handler
+    anchor: apps/api/v2/src/modules/timezones/controllers/timezones.controller.ts#TimezonesController.getTimeZones
+    path: GET /v2/timezones
+    actions:
+      - name: List timezones
+        importance: incidental
+        events: []
+  - id: post-v2-verified-resources-emails-verification-code-request
+    kind: handler
+    anchor: apps/api/v2/src/modules/verified-resources/controllers/users-verified-resources.controller.ts#UserVerifiedResourcesController.requestEmailVerificationCode
+    path: POST /v2/verified-resources/emails/verification-code/request
+    actions:
+      - name: Request an email verification code
+        importance: secondary
+        events: []
+  - id: post-v2-verified-resources-phones-verification-code-request
+    kind: handler
+    anchor: apps/api/v2/src/modules/verified-resources/controllers/users-verified-resources.controller.ts#UserVerifiedResourcesController.requestPhoneVerificationCode
+    path: POST /v2/verified-resources/phones/verification-code/request
+    actions:
+      - name: Request a phone verification code
+        importance: secondary
+        events: []
+  - id: post-v2-verified-resources-emails-verification-code-verify
+    kind: handler
+    anchor: apps/api/v2/src/modules/verified-resources/controllers/users-verified-resources.controller.ts#UserVerifiedResourcesController.verifyEmail
+    path: POST /v2/verified-resources/emails/verification-code/verify
+    actions:
+      - name: Verify an email with a code
+        importance: secondary
+        events: []
+  - id: post-v2-verified-resources-phones-verification-code-verify
+    kind: handler
+    anchor: apps/api/v2/src/modules/verified-resources/controllers/users-verified-resources.controller.ts#UserVerifiedResourcesController.verifyPhoneNumber
+    path: POST /v2/verified-resources/phones/verification-code/verify
+    actions:
+      - name: Verify a phone number with a code
+        importance: secondary
+        events: []
+  - id: get-v2-verified-resources-emails
+    kind: handler
+    anchor: apps/api/v2/src/modules/verified-resources/controllers/users-verified-resources.controller.ts#UserVerifiedResourcesController.getVerifiedEmails
+    path: GET /v2/verified-resources/emails
+    actions:
+      - name: List verified emails
+        importance: incidental
+        events: []
+  - id: get-v2-verified-resources-phones
+    kind: handler
+    anchor: apps/api/v2/src/modules/verified-resources/controllers/users-verified-resources.controller.ts#UserVerifiedResourcesController.getVerifiedPhoneNumbers
+    path: GET /v2/verified-resources/phones
+    actions:
+      - name: List verified phone numbers
+        importance: incidental
+        events: []
+  - id: get-v2-verified-resources-emails-id
+    kind: handler
+    anchor: apps/api/v2/src/modules/verified-resources/controllers/users-verified-resources.controller.ts#UserVerifiedResourcesController.getVerifiedEmailById
+    path: GET /v2/verified-resources/emails/:id
+    actions:
+      - name: View a verified email
+        importance: incidental
+        events: []
+  - id: get-v2-verified-resources-phones-id
+    kind: handler
+    anchor: apps/api/v2/src/modules/verified-resources/controllers/users-verified-resources.controller.ts#UserVerifiedResourcesController.getVerifiedPhoneById
+    path: GET /v2/verified-resources/phones/:id
+    actions:
+      - name: View a verified phone number
+        importance: incidental
+        events: []
+  - id: post-v2-webhooks
+    kind: webhook
+    anchor: apps/api/v2/src/modules/webhooks/controllers/webhooks.controller.ts#WebhooksController.createWebhook
+    path: POST /v2/webhooks
+    actions:
+      - name: Create a webhook
+        importance: secondary
+        events: []
+  - id: patch-v2-webhooks-webhookid
+    kind: webhook
+    anchor: apps/api/v2/src/modules/webhooks/controllers/webhooks.controller.ts#WebhooksController.updateWebhook
+    path: PATCH /v2/webhooks/:webhookId
+    actions:
+      - name: Update a webhook
+        importance: secondary
+        events: []
+  - id: get-v2-webhooks-webhookid
+    kind: webhook
+    anchor: apps/api/v2/src/modules/webhooks/controllers/webhooks.controller.ts#WebhooksController.getWebhook
+    path: GET /v2/webhooks/:webhookId
+    actions:
+      - name: View a webhook
+        importance: incidental
+        events: []
+  - id: get-v2-webhooks
+    kind: webhook
+    anchor: apps/api/v2/src/modules/webhooks/controllers/webhooks.controller.ts#WebhooksController.getWebhooks
+    path: GET /v2/webhooks
+    actions:
+      - name: List webhooks
+        importance: incidental
+        events: []
+  - id: delete-v2-webhooks-webhookid
+    kind: webhook
+    anchor: apps/api/v2/src/modules/webhooks/controllers/webhooks.controller.ts#WebhooksController.deleteWebhook
+    path: DELETE /v2/webhooks/:webhookId
+    actions:
+      - name: Delete a webhook
+        importance: secondary
+        events: []
+  - id: get-v2-bookings
+    kind: handler
+    anchor: apps/api/v2/src/platform/bookings/2024-04-15/controllers/bookings.controller.ts#BookingsController_2024_04_15.getBookings
+    path: GET /v2/bookings
+    actions:
+      - name: List bookings by status
+        importance: secondary
+        events: []
+  - id: get-v2-bookings-bookinguid
+    kind: handler
+    anchor: apps/api/v2/src/platform/bookings/2024-04-15/controllers/bookings.controller.ts#BookingsController_2024_04_15.getBooking
+    path: GET /v2/bookings/:bookingUid
+    actions:
+      - name: View a booking
+        importance: incidental
+        events: []
+  - id: get-v2-bookings-bookinguid-reschedule
+    kind: handler
+    anchor: apps/api/v2/src/platform/bookings/2024-04-15/controllers/bookings.controller.ts#BookingsController_2024_04_15.getBookingForReschedule
+    path: GET /v2/bookings/:bookingUid/reschedule
+    actions:
+      - name: Get a booking to reschedule
+        importance: secondary
+        events: []
+  - id: post-v2-bookings
+    kind: handler
+    anchor: apps/api/v2/src/platform/bookings/2024-04-15/controllers/bookings.controller.ts#BookingsController_2024_04_15.createBooking
+    path: POST /v2/bookings
+    actions:
+      - name: Create a booking
+        importance: core
+        events: []
+  - id: post-v2-bookings-bookinguid-cancel
+    kind: handler
+    anchor: apps/api/v2/src/platform/bookings/2024-04-15/controllers/bookings.controller.ts#BookingsController_2024_04_15.cancelBooking
+    path: POST /v2/bookings/:bookingUid/cancel
+    actions:
+      - name: Cancel a booking
+        importance: core
+        events: []
+  - id: post-v2-bookings-bookinguid-mark-no-show
+    kind: handler
+    anchor: apps/api/v2/src/platform/bookings/2024-04-15/controllers/bookings.controller.ts#BookingsController_2024_04_15.markNoShow
+    path: POST /v2/bookings/:bookingUid/mark-no-show
+    actions:
+      - name: Mark a host or attendee as no-show
+        importance: secondary
+        events: []
+  - id: post-v2-bookings-recurring
+    kind: handler
+    anchor: apps/api/v2/src/platform/bookings/2024-04-15/controllers/bookings.controller.ts#BookingsController_2024_04_15.createRecurringBooking
+    path: POST /v2/bookings/recurring
+    actions:
+      - name: Create a recurring booking
+        importance: core
+        events: []
+  - id: get-v2-bookings-bookinguid-attendees
+    kind: handler
+    anchor: apps/api/v2/src/platform/bookings/2024-08-13/controllers/booking-attendees.controller.ts#BookingAttendeesController_2024_08_13.getBookingAttendees
+    path: GET /v2/bookings/:bookingUid/attendees
+    actions:
+      - name: List booking attendees
+        importance: incidental
+        events: []
+  - id: get-v2-bookings-bookinguid-attendees-attendeeid
+    kind: handler
+    anchor: apps/api/v2/src/platform/bookings/2024-08-13/controllers/booking-attendees.controller.ts#BookingAttendeesController_2024_08_13.getBookingAttendee
+    path: GET /v2/bookings/:bookingUid/attendees/:attendeeId
+    actions:
+      - name: View a booking attendee
+        importance: incidental
+        events: []
+  - id: post-v2-bookings-bookinguid-attendees
+    kind: handler
+    anchor: apps/api/v2/src/platform/bookings/2024-08-13/controllers/booking-attendees.controller.ts#BookingAttendeesController_2024_08_13.addAttendee
+    path: POST /v2/bookings/:bookingUid/attendees
+    actions:
+      - name: Add an attendee to a booking
+        importance: secondary
+        events: []
+  - id: delete-v2-bookings-bookinguid-attendees-attendeeid
+    kind: handler
+    anchor: apps/api/v2/src/platform/bookings/2024-08-13/controllers/booking-attendees.controller.ts#BookingAttendeesController_2024_08_13.removeAttendee
+    path: DELETE /v2/bookings/:bookingUid/attendees/:attendeeId
+    actions:
+      - name: Remove an attendee from a booking
+        importance: secondary
+        events: []
+  - id: post-v2-bookings-bookinguid-guests
+    kind: handler
+    anchor: apps/api/v2/src/platform/bookings/2024-08-13/controllers/booking-guests.controller.ts#BookingGuestsController_2024_08_13.addGuests
+    path: POST /v2/bookings/:bookingUid/guests
+    actions:
+      - name: Add guests to a booking
+        importance: secondary
+        events: []
+  - id: patch-v2-bookings-bookinguid-location
+    kind: handler
+    anchor: apps/api/v2/src/platform/bookings/2024-08-13/controllers/booking-location.controller.ts#BookingLocationController_2024_08_13.updateBookingLocation
+    path: PATCH /v2/bookings/:bookingUid/location
+    actions:
+      - name: Update a booking's location
+        importance: secondary
+        events: []
+  - id: post-v2-bookings-2
+    kind: handler
+    anchor: apps/api/v2/src/platform/bookings/2024-08-13/controllers/bookings.controller.ts#BookingsController_2024_08_13.createBooking
+    path: POST /v2/bookings
+    actions:
+      - name: Create a booking (regular, recurring or instant)
+        importance: core
+        events: []
+  - id: get-v2-bookings-by-seat-seatuid
+    kind: handler
+    anchor: apps/api/v2/src/platform/bookings/2024-08-13/controllers/bookings.controller.ts#BookingsController_2024_08_13.getBookingBySeatUid
+    path: GET /v2/bookings/by-seat/:seatUid
+    actions:
+      - name: View a booking by seat
+        importance: incidental
+        events: []
+  - id: get-v2-bookings-bookinguid-2
+    kind: handler
+    anchor: apps/api/v2/src/platform/bookings/2024-08-13/controllers/bookings.controller.ts#BookingsController_2024_08_13.getBooking
+    path: GET /v2/bookings/:bookingUid
+    actions:
+      - name: View a booking
+        importance: incidental
+        events: []
+  - id: get-v2-bookings-bookinguid-recordings
+    kind: handler
+    anchor: apps/api/v2/src/platform/bookings/2024-08-13/controllers/bookings.controller.ts#BookingsController_2024_08_13.getBookingRecordings
+    path: GET /v2/bookings/:bookingUid/recordings
+    actions:
+      - name: Get booking recordings
+        importance: secondary
+        events: []
+  - id: get-v2-bookings-bookinguid-transcripts
+    kind: handler
+    anchor: apps/api/v2/src/platform/bookings/2024-08-13/controllers/bookings.controller.ts#BookingsController_2024_08_13.getBookingTranscripts
+    path: GET /v2/bookings/:bookingUid/transcripts
+    actions:
+      - name: Get booking transcript download links
+        importance: secondary
+        events: []
+  - id: get-v2-bookings-2
+    kind: handler
+    anchor: apps/api/v2/src/platform/bookings/2024-08-13/controllers/bookings.controller.ts#BookingsController_2024_08_13.getBookings
+    path: GET /v2/bookings
+    actions:
+      - name: List bookings
+        importance: secondary
+        events: []
+  - id: post-v2-bookings-bookinguid-reschedule
+    kind: handler
+    anchor: apps/api/v2/src/platform/bookings/2024-08-13/controllers/bookings.controller.ts#BookingsController_2024_08_13.rescheduleBooking
+    path: POST /v2/bookings/:bookingUid/reschedule
+    actions:
+      - name: Reschedule a booking
+        importance: core
+        events: []
+  - id: post-v2-bookings-bookinguid-cancel-2
+    kind: handler
+    anchor: apps/api/v2/src/platform/bookings/2024-08-13/controllers/bookings.controller.ts#BookingsController_2024_08_13.cancelBooking
+    path: POST /v2/bookings/:bookingUid/cancel
+    actions:
+      - name: Cancel a booking
+        importance: core
+        events: []
+  - id: post-v2-bookings-bookinguid-mark-absent
+    kind: handler
+    anchor: apps/api/v2/src/platform/bookings/2024-08-13/controllers/bookings.controller.ts#BookingsController_2024_08_13.markNoShow
+    path: POST /v2/bookings/:bookingUid/mark-absent
+    actions:
+      - name: Mark a booking attendee or host absent
+        importance: secondary
+        events: []
+  - id: post-v2-bookings-bookinguid-reassign
+    kind: handler
+    anchor: apps/api/v2/src/platform/bookings/2024-08-13/controllers/bookings.controller.ts#BookingsController_2024_08_13.reassignBooking
+    path: POST /v2/bookings/:bookingUid/reassign
+    actions:
+      - name: Reassign a booking to an auto-selected host
+        importance: secondary
+        events: []
+  - id: post-v2-bookings-bookinguid-reassign-userid
+    kind: handler
+    anchor: apps/api/v2/src/platform/bookings/2024-08-13/controllers/bookings.controller.ts#BookingsController_2024_08_13.reassignBookingToUser
+    path: POST /v2/bookings/:bookingUid/reassign/:userId
+    actions:
+      - name: Reassign a booking to a specific host
+        importance: secondary
+        events: []
+  - id: post-v2-bookings-bookinguid-confirm
+    kind: handler
+    anchor: apps/api/v2/src/platform/bookings/2024-08-13/controllers/bookings.controller.ts#BookingsController_2024_08_13.confirmBooking
+    path: POST /v2/bookings/:bookingUid/confirm
+    actions:
+      - name: Confirm a booking
+        importance: core
+        events: []
+  - id: post-v2-bookings-bookinguid-decline
+    kind: handler
+    anchor: apps/api/v2/src/platform/bookings/2024-08-13/controllers/bookings.controller.ts#BookingsController_2024_08_13.declineBooking
+    path: POST /v2/bookings/:bookingUid/decline
+    actions:
+      - name: Decline a booking
+        importance: core
+        events: []
+  - id: get-v2-bookings-bookinguid-calendar-links
+    kind: handler
+    anchor: apps/api/v2/src/platform/bookings/2024-08-13/controllers/bookings.controller.ts#BookingsController_2024_08_13.getCalendarLinks
+    path: GET /v2/bookings/:bookingUid/calendar-links
+    actions:
+      - name: Get add-to-calendar links for a booking
+        importance: incidental
+        events: []
+  - id: get-v2-bookings-bookinguid-references
+    kind: handler
+    anchor: apps/api/v2/src/platform/bookings/2024-08-13/controllers/bookings.controller.ts#BookingsController_2024_08_13.getBookingReferences
+    path: GET /v2/bookings/:bookingUid/references
+    actions:
+      - name: View booking references
+        importance: incidental
+        events: []
+  - id: get-v2-bookings-bookinguid-conferencing-sessions
+    kind: handler
+    anchor: apps/api/v2/src/platform/bookings/2024-08-13/controllers/bookings.controller.ts#BookingsController_2024_08_13.getVideoSessions
+    path: GET /v2/bookings/:bookingUid/conferencing-sessions
+    actions:
+      - name: View video meeting sessions for a booking
+        importance: incidental
+        events: []
+  - id: post-v2-calendars-ics-feed-save
+    kind: handler
+    anchor: apps/api/v2/src/platform/calendars/controllers/calendars.controller.ts#CalendarsController.createIcsFeed
+    path: POST /v2/calendars/ics-feed/save
+    actions:
+      - name: Connect an ICS feed calendar
+        importance: secondary
+        events: []
+  - id: get-v2-calendars-ics-feed-check
+    kind: handler
+    anchor: apps/api/v2/src/platform/calendars/controllers/calendars.controller.ts#CalendarsController.checkIcsFeed
+    path: GET /v2/calendars/ics-feed/check
+    actions:
+      - name: Check an ICS feed connection
+        importance: incidental
+        events: []
+  - id: get-v2-calendars-busy-times
+    kind: handler
+    anchor: apps/api/v2/src/platform/calendars/controllers/calendars.controller.ts#CalendarsController.getBusyTimes
+    path: GET /v2/calendars/busy-times
+    actions:
+      - name: Get busy times from calendars
+        importance: incidental
+        events: []
+  - id: get-v2-calendars-2
+    kind: handler
+    anchor: apps/api/v2/src/platform/calendars/controllers/calendars.controller.ts#CalendarsController.getCalendars
+    path: GET /v2/calendars
+    actions:
+      - name: List connected calendars
+        importance: incidental
+        events: []
+  - id: get-v2-calendars-calendar-connect
+    kind: handler
+    anchor: apps/api/v2/src/platform/calendars/controllers/calendars.controller.ts#CalendarsController.redirect
+    path: GET /v2/calendars/:calendar/connect
+    actions:
+      - name: Start connecting a Google or Outlook calendar
+        importance: secondary
+        events: []
+  - id: get-v2-calendars-calendar-save
+    kind: handler
+    anchor: apps/api/v2/src/platform/calendars/controllers/calendars.controller.ts#CalendarsController.save
+    path: GET /v2/calendars/:calendar/save
+    actions:
+      - name: Complete Google or Outlook calendar connection (OAuth callback)
+        importance: secondary
+        events: []
+  - id: post-v2-calendars-calendar-credentials
+    kind: handler
+    anchor: apps/api/v2/src/platform/calendars/controllers/calendars.controller.ts#CalendarsController.syncCredentials
+    path: POST /v2/calendars/:calendar/credentials
+    actions:
+      - name: Connect an Apple calendar with credentials
+        importance: secondary
+        events: []
+  - id: get-v2-calendars-calendar-check
+    kind: handler
+    anchor: apps/api/v2/src/platform/calendars/controllers/calendars.controller.ts#CalendarsController.check
+    path: GET /v2/calendars/:calendar/check
+    actions:
+      - name: Check a calendar connection
+        importance: incidental
+        events: []
+  - id: post-v2-calendars-calendar-disconnect
+    kind: handler
+    anchor: apps/api/v2/src/platform/calendars/controllers/calendars.controller.ts#CalendarsController.deleteCalendarCredentials
+    path: POST /v2/calendars/:calendar/disconnect
+    actions:
+      - name: Disconnect a calendar
+        importance: secondary
+        events: []
+  - id: post-v2-event-types-eventtypeid-private-links
+    kind: handler
+    anchor: apps/api/v2/src/platform/event-types-private-links/controllers/event-types-private-links.controller.ts#EventTypesPrivateLinksController.createPrivateLink
+    path: POST /v2/event-types/:eventTypeId/private-links
+    actions:
+      - name: Create a private link for an event type
+        importance: secondary
+        events: []
+  - id: get-v2-event-types-eventtypeid-private-links
+    kind: handler
+    anchor: apps/api/v2/src/platform/event-types-private-links/controllers/event-types-private-links.controller.ts#EventTypesPrivateLinksController.getPrivateLinks
+    path: GET /v2/event-types/:eventTypeId/private-links
+    actions:
+      - name: List private links for an event type
+        importance: secondary
+        events: []
+  - id: patch-v2-event-types-eventtypeid-private-links-linkid
+    kind: handler
+    anchor: apps/api/v2/src/platform/event-types-private-links/controllers/event-types-private-links.controller.ts#EventTypesPrivateLinksController.updatePrivateLink
+    path: PATCH /v2/event-types/:eventTypeId/private-links/:linkId
+    actions:
+      - name: Update a private link
+        importance: secondary
+        events: []
+  - id: delete-v2-event-types-eventtypeid-private-links-linkid
+    kind: handler
+    anchor: apps/api/v2/src/platform/event-types-private-links/controllers/event-types-private-links.controller.ts#EventTypesPrivateLinksController.deletePrivateLink
+    path: DELETE /v2/event-types/:eventTypeId/private-links/:linkId
+    actions:
+      - name: Delete a private link
+        importance: secondary
+        events: []
+  - id: post-v2-event-types
+    kind: handler
+    anchor: apps/api/v2/src/platform/event-types/event-types_2024_04_15/controllers/event-types.controller.ts#EventTypesController_2024_04_15.createEventType
+    path: POST /v2/event-types
+    actions:
+      - name: Create an event type
+        importance: core
+        events: []
+  - id: get-v2-event-types-eventtypeid
+    kind: handler
+    anchor: apps/api/v2/src/platform/event-types/event-types_2024_04_15/controllers/event-types.controller.ts#EventTypesController_2024_04_15.getEventType
+    path: GET /v2/event-types/:eventTypeId
+    actions:
+      - name: View an event type
+        importance: incidental
+        events: []
+  - id: get-v2-event-types
+    kind: handler
+    anchor: apps/api/v2/src/platform/event-types/event-types_2024_04_15/controllers/event-types.controller.ts#EventTypesController_2024_04_15.getEventTypes
+    path: GET /v2/event-types
+    actions:
+      - name: List my event types
+        importance: incidental
+        events: []
+  - id: get-v2-event-types-username-eventslug-public
+    kind: handler
+    anchor: apps/api/v2/src/platform/event-types/event-types_2024_04_15/controllers/event-types.controller.ts#EventTypesController_2024_04_15.getPublicEventType
+    path: GET /v2/event-types/:username/:eventSlug/public
+    actions:
+      - name: View a public event type
+        importance: incidental
+        events: []
+  - id: get-v2-event-types-username-public
+    kind: handler
+    anchor: apps/api/v2/src/platform/event-types/event-types_2024_04_15/controllers/event-types.controller.ts#EventTypesController_2024_04_15.getPublicEventTypes
+    path: GET /v2/event-types/:username/public
+    actions:
+      - name: List a user's public event types
+        importance: incidental
+        events: []
+  - id: patch-v2-event-types-eventtypeid
+    kind: handler
+    anchor: apps/api/v2/src/platform/event-types/event-types_2024_04_15/controllers/event-types.controller.ts#EventTypesController_2024_04_15.updateEventType
+    path: PATCH /v2/event-types/:eventTypeId
+    actions:
+      - name: Update an event type
+        importance: secondary
+        events: []
+  - id: delete-v2-event-types-eventtypeid
+    kind: handler
+    anchor: apps/api/v2/src/platform/event-types/event-types_2024_04_15/controllers/event-types.controller.ts#EventTypesController_2024_04_15.deleteEventType
+    path: DELETE /v2/event-types/:eventTypeId
+    actions:
+      - name: Delete an event type
+        importance: secondary
+        events: []
+  - id: post-v2-event-types-2
+    kind: handler
+    anchor: apps/api/v2/src/platform/event-types/event-types_2024_06_14/controllers/event-types.controller.ts#EventTypesController_2024_06_14.createEventType
+    path: POST /v2/event-types
+    actions:
+      - name: Create an event type
+        importance: core
+        events: []
+  - id: get-v2-event-types-eventtypeid-2
+    kind: handler
+    anchor: apps/api/v2/src/platform/event-types/event-types_2024_06_14/controllers/event-types.controller.ts#EventTypesController_2024_06_14.getEventTypeById
+    path: GET /v2/event-types/:eventTypeId
+    actions:
+      - name: View an event type
+        importance: incidental
+        events: []
+  - id: get-v2-event-types-2
+    kind: handler
+    anchor: apps/api/v2/src/platform/event-types/event-types_2024_06_14/controllers/event-types.controller.ts#EventTypesController_2024_06_14.getEventTypes
+    path: GET /v2/event-types
+    actions:
+      - name: List event types
+        importance: incidental
+        events: []
+  - id: patch-v2-event-types-eventtypeid-2
+    kind: handler
+    anchor: apps/api/v2/src/platform/event-types/event-types_2024_06_14/controllers/event-types.controller.ts#EventTypesController_2024_06_14.updateEventType
+    path: PATCH /v2/event-types/:eventTypeId
+    actions:
+      - name: Update an event type
+        importance: secondary
+        events: []
+  - id: delete-v2-event-types-eventtypeid-2
+    kind: handler
+    anchor: apps/api/v2/src/platform/event-types/event-types_2024_06_14/controllers/event-types.controller.ts#EventTypesController_2024_06_14.deleteEventType
+    path: DELETE /v2/event-types/:eventTypeId
+    actions:
+      - name: Delete an event type
+        importance: secondary
+        events: []
+  - id: get-v2-gcal-oauth-auth-url
+    kind: handler
+    anchor: apps/api/v2/src/platform/gcal/gcal.controller.ts#GcalController.redirect
+    path: GET /v2/gcal/oauth/auth-url
+    actions:
+      - name: Start Google Calendar connection
+        importance: secondary
+        events: []
+  - id: get-v2-gcal-oauth-save
+    kind: handler
+    anchor: apps/api/v2/src/platform/gcal/gcal.controller.ts#GcalController.save
+    path: GET /v2/gcal/oauth/save
+    actions:
+      - name: Complete Google Calendar connection
+        importance: secondary
+        events: []
+  - id: get-v2-gcal-check
+    kind: handler
+    anchor: apps/api/v2/src/platform/gcal/gcal.controller.ts#GcalController.check
+    path: GET /v2/gcal/check
+    actions:
+      - name: Check Google Calendar connection status
+        importance: incidental
+        events: []
+  - id: get-v2-me
+    kind: handler
+    anchor: apps/api/v2/src/platform/me/me.controller.ts#MeController.getMe
+    path: GET /v2/me
+    actions:
+      - name: View my profile
+        importance: incidental
+        events: []
+  - id: patch-v2-me
+    kind: handler
+    anchor: apps/api/v2/src/platform/me/me.controller.ts#MeController.updateMe
+    path: PATCH /v2/me
+    actions:
+      - name: Update my profile
+        importance: secondary
+        events: []
+  - id: get-v2-provider-clientid
+    kind: handler
+    anchor: apps/api/v2/src/platform/provider/provider.controller.ts#CalProviderController.verifyClientId
+    path: GET /v2/provider/:clientId
+    actions:
+      - name: Verify an OAuth client ID
+        importance: incidental
+        events: []
+  - id: get-v2-provider-clientid-access-token
+    kind: handler
+    anchor: apps/api/v2/src/platform/provider/provider.controller.ts#CalProviderController.verifyAccessToken
+    path: GET /v2/provider/:clientId/access-token
+    actions:
+      - name: Verify an access token
+        importance: incidental
+        events: []
+  - id: post-v2-schedules
+    kind: handler
+    anchor: apps/api/v2/src/platform/schedules/schedules_2024_04_15/controllers/schedules.controller.ts#SchedulesController_2024_04_15.createSchedule
+    path: POST /v2/schedules
+    actions:
+      - name: Create a schedule
+        importance: core
+        events: []
+  - id: get-v2-schedules-default
+    kind: handler
+    anchor: apps/api/v2/src/platform/schedules/schedules_2024_04_15/controllers/schedules.controller.ts#SchedulesController_2024_04_15.getDefaultSchedule
+    path: GET /v2/schedules/default
+    actions:
+      - name: View default schedule
+        importance: incidental
+        events: []
+  - id: get-v2-schedules-scheduleid
+    kind: handler
+    anchor: apps/api/v2/src/platform/schedules/schedules_2024_04_15/controllers/schedules.controller.ts#SchedulesController_2024_04_15.getSchedule
+    path: GET /v2/schedules/:scheduleId
+    actions:
+      - name: View a schedule
+        importance: incidental
+        events: []
+  - id: get-v2-schedules
+    kind: handler
+    anchor: apps/api/v2/src/platform/schedules/schedules_2024_04_15/controllers/schedules.controller.ts#SchedulesController_2024_04_15.getSchedules
+    path: GET /v2/schedules
+    actions:
+      - name: List schedules
+        importance: incidental
+        events: []
+  - id: patch-v2-schedules-scheduleid
+    kind: handler
+    anchor: apps/api/v2/src/platform/schedules/schedules_2024_04_15/controllers/schedules.controller.ts#SchedulesController_2024_04_15.updateSchedule
+    path: PATCH /v2/schedules/:scheduleId
+    actions:
+      - name: Update a schedule
+        importance: secondary
+        events: []
+  - id: delete-v2-schedules-scheduleid
+    kind: handler
+    anchor: apps/api/v2/src/platform/schedules/schedules_2024_04_15/controllers/schedules.controller.ts#SchedulesController_2024_04_15.deleteSchedule
+    path: DELETE /v2/schedules/:scheduleId
+    actions:
+      - name: Delete a schedule
+        importance: secondary
+        events: []
+  - id: post-v2-schedules-2
+    kind: handler
+    anchor: apps/api/v2/src/platform/schedules/schedules_2024_06_11/controllers/schedules.controller.ts#SchedulesController_2024_06_11.createSchedule
+    path: POST /v2/schedules
+    actions:
+      - name: Create a schedule
+        importance: core
+        events: []
+  - id: get-v2-schedules-default-2
+    kind: handler
+    anchor: apps/api/v2/src/platform/schedules/schedules_2024_06_11/controllers/schedules.controller.ts#SchedulesController_2024_06_11.getDefaultSchedule
+    path: GET /v2/schedules/default
+    actions:
+      - name: View default schedule
+        importance: incidental
+        events: []
+  - id: get-v2-schedules-scheduleid-2
+    kind: handler
+    anchor: apps/api/v2/src/platform/schedules/schedules_2024_06_11/controllers/schedules.controller.ts#SchedulesController_2024_06_11.getSchedule
+    path: GET /v2/schedules/:scheduleId
+    actions:
+      - name: View a schedule
+        importance: incidental
+        events: []
+  - id: get-v2-schedules-2
+    kind: handler
+    anchor: apps/api/v2/src/platform/schedules/schedules_2024_06_11/controllers/schedules.controller.ts#SchedulesController_2024_06_11.getSchedules
+    path: GET /v2/schedules
+    actions:
+      - name: List schedules
+        importance: incidental
+        events: []
+  - id: patch-v2-schedules-scheduleid-2
+    kind: handler
+    anchor: apps/api/v2/src/platform/schedules/schedules_2024_06_11/controllers/schedules.controller.ts#SchedulesController_2024_06_11.updateSchedule
+    path: PATCH /v2/schedules/:scheduleId
+    actions:
+      - name: Update a schedule
+        importance: secondary
+        events: []
+  - id: delete-v2-schedules-scheduleid-2
+    kind: handler
+    anchor: apps/api/v2/src/platform/schedules/schedules_2024_06_11/controllers/schedules.controller.ts#SchedulesController_2024_06_11.deleteSchedule
+    path: DELETE /v2/schedules/:scheduleId
+    actions:
+      - name: Delete a schedule
+        importance: secondary
+        events: []
+  - id: post-v2-webhooks-vercel-deployment-promoted
+    kind: webhook
+    anchor: apps/api/v2/src/vercel-webhook.controller.ts#VercelWebhookController.handlePromotion
+    path: POST /v2/webhooks/vercel/deployment-promoted
+    actions:
+      - name: Receive a Vercel deployment promotion and promote the Trigger.dev deployment
+        importance: incidental
+        events: []
+events: {}

@@ -1,0 +1,401 @@
+events:
+  - name: add_organization_member_clicked
+    section: Organization members
+    description: "Fires on the client when an admin or owner clicks the primary \"Add\" button above the organization
+      members table, at the same moment the invite-member modal is opened (INVITE_MEMBER dispatch with showModal: true).
+      The button only renders when the user can invite (permissions.canInvite, or admin/owner when permissions are
+      absent). It is an intent click only: it doesn't say whether any invite was then sent."
+    question: How many admins start adding a member to their organization, as the first step of the invite flow?
+    track_via: client
+    properties: []
+    changelog:
+      - date: 2026-10-31
+        ref: install-audit
+        change: Drafted from code; nothing arriving
+  - name: app_card_details_clicked
+    section: App Store
+    description: Fires on the client when a user clicks the "Details" button on an app card in the app store, just before
+      navigating to /apps/{slug}. Doesn't fire for the install button or for other ways of reaching the app page.
+    question: Which apps do people open from the app store listing?
+    track_via: client
+    properties:
+      - name: slug
+        type: string
+        example: UNCONFIRMED
+        description: Slug of the app on the card (app.slug), also used in the URL /apps/{slug}. Values are app slugs from the
+          app registry; no literal list is visible in the code.
+    changelog:
+      - date: 2026-10-31
+        ref: install-audit
+        change: Drafted from code; nothing arriving
+  - name: app_install_button_clicked
+    section: App Store
+    description: 'Fires on the client when a user clicks the install button on an app card, before any install request is
+      made. Two code paths send it: the default install button calls handleAppInstall, which sends the event and then
+      either opens the external URL (redirect apps), starts the install mutation (conferencing apps without concurrent
+      meetings), or continues into other install flows; a custom-rendered install button sends it in its own onClick and
+      then runs the original handler. Fires on click, not when the install succeeds or fails. Not fired for "Details"
+      clicks.'
+    question: Which apps do users try to install from the app store, and how many of those clicks turn into an installed app?
+    track_via: client
+    properties:
+      - name: app_type
+        type: string
+        example: UNCONFIRMED
+        description: The app's type identifier (app.type), the same value passed to the install mutation
+      - name: is_conferencing
+        type: boolean
+        example: true | false
+        description: Whether the app is in the conferencing category (isConferencing(categories))
+      - name: is_redirect
+        type: boolean
+        example: true | false
+        description: Whether the app is a redirect app (isRedirectApp(slug)), which opens an external URL instead of installing
+      - name: slug
+        type: string
+        example: UNCONFIRMED
+        description: Slug of the app being installed (app.slug)
+    changelog:
+      - date: 2026-10-31
+        ref: install-audit
+        change: Drafted from code; nothing arriving
+  - name: company_email_banner_dismissed
+    section: Account settings
+    description: Fires on the client when a user clicks "Dismiss" on the banner suggesting an organization plan to people
+      with a company email. It fires before the onDismissAction callback runs. The banner only renders when the
+      onboarding-v3 feature flag is on, so the event can't fire with the flag off.
+    track_via: client
+    properties: []
+    changelog:
+      - date: 2026-10-31
+        ref: install-audit
+        change: Drafted from code; nothing arriving
+  - name: company_email_banner_upgrade_clicked
+    section: Account settings
+    description: Fires on the client when a user clicks "Upgrade" on the company-email banner, just before the router
+      navigates to /onboarding/organization/details?migrate=true (onboarding-v3 flag on) or /settings/organizations/new.
+      The banner only renders when the onboarding-v3 flag is on. It records the click only, not whether an organization is
+      then created.
+    question: How many people with a company email click through to upgrade to an organization from the banner?
+    track_via: client
+    properties: []
+    changelog:
+      - date: 2026-10-31
+        ref: install-audit
+        change: Drafted from code; nothing arriving
+  - name: insights_routing_save_filter_clicked
+    section: Insights
+    description: Fires on the client when a user clicks the enabled "Save" button (bookmark icon) in the data-table
+      filter-segment control, which opens the save-segment dialog. It doesn't fire when the button is disabled (segments
+      not enabled, or nothing to save), and it doesn't say whether a segment was then saved. The component is generic to
+      data tables, so the event may fire from other tables than Insights routing.
+    question: How many people try to save a filter segment from the data table?
+    track_via: client
+    properties: []
+    changelog:
+      - date: 2026-10-31
+        ref: install-audit
+        change: Drafted from code; nothing arriving
+  - name: navigation_item_clicked
+    section: Navigation
+    description: "Fires on the client when a user clicks an item in the app's side navigation: a top-level item (only in the
+      collapsed tooltip variant of the link) or a child item in an expanded group, in which case parent_name is the
+      parent's name. It fires on click, not on navigation completion. Top-level clicks in other render variants of
+      NavigationItem may not be tracked."
+    question: Which navigation items do people use to move around the app?
+    track_via: client
+    properties:
+      - name: item_name
+        type: string
+        example: UNCONFIRMED
+        description: The item's name field, which is a translation key (for example view_public_page, settings), not the
+          translated label
+      - name: parent_name
+        type: string
+        example: UNCONFIRMED
+        required: false
+        description: Name of the parent group when a child item is clicked; undefined (not sent) for top-level items
+    changelog:
+      - date: 2026-10-31
+        ref: install-audit
+        change: Drafted from code; nothing arriving
+  - name: onboarding_plan_continue_clicked
+    section: Onboarding
+    description: Fires on the client in the plan-selection onboarding step when the user clicks Continue and a plan is
+      selected, just before routing to /onboarding/organization/details, /onboarding/teams/details or
+      /onboarding/personal/settings. It does not fire when Continue is clicked with no plan selected.
+    question: Which plan do new users continue with at the start of onboarding?
+    track_via: client
+    properties:
+      - name: plan_type
+        type: string
+        example: personal | team | organization
+        description: The selected plan (PlanType)
+    changelog:
+      - date: 2026-10-31
+        ref: install-audit
+        change: Drafted from code; nothing arriving
+  - name: onboarding_plan_selected
+    section: Onboarding
+    description: Fires on the client each time the user picks a plan in the plan-selection radio group of the onboarding
+      step (onValueChange). It fires on every change of selection, so one user may send it several times before they click
+      Continue.
+    question: Which plans do new users consider, and how often do they change their mind before continuing?
+    track_via: client
+    properties:
+      - name: plan_type
+        type: string
+        example: personal | team | organization
+        description: The plan just selected (PlanType)
+    changelog:
+      - date: 2026-10-31
+        ref: install-audit
+        change: Drafted from code; nothing arriving
+  - name: onboarding_sign_out_clicked
+    section: Onboarding
+    description: Fires on the client when a user clicks "Sign out" in the getting-started onboarding flow, just before
+      signOut redirects to /auth/logout. It shows where in onboarding people leave, but not abandonment in general
+      (closing the tab doesn't fire it).
+    question: At which onboarding step do people sign out instead of continuing?
+    track_via: client
+    properties:
+      - name: step
+        type: string
+        example: user-settings | user-profile (full list UNCONFIRMED)
+        description: Current onboarding step slug (currentStep)
+      - name: step_index
+        type: numeric
+        example: "0"
+        description: Zero-based index of the current step in the steps list
+    changelog:
+      - date: 2026-10-31
+        ref: install-audit
+        change: Drafted from code; nothing arriving
+  - name: onboarding_step_completed
+    section: Onboarding
+    description: Fires on the client from goToNextStep in the getting-started onboarding flow, when a step's next/continue
+      handler runs or the user clicks the skip button, just before routing to the next step. It fires on click, not after
+      the step's data is saved on the server. was_skipped separates skips from normal completions.
+    question: How far do new users get through onboarding, and which steps do they skip?
+    track_via: client
+    properties:
+      - name: from
+        type: string
+        example: signup | ""
+        description: Value of the `from` query parameter of the page; empty string when absent or invalid. Only signup is
+          visible in the code.
+      - name: step
+        type: string
+        example: user-settings | user-profile (full list UNCONFIRMED)
+        description: The step being completed (currentStep)
+      - name: step_index
+        type: numeric
+        example: "0"
+        description: Zero-based index of the completed step
+      - name: was_skipped
+        type: boolean
+        example: true | false
+        description: true when the user clicked the skip button, false for a normal continue
+    changelog:
+      - date: 2026-10-31
+        ref: install-audit
+        change: Drafted from code; nothing arriving
+  - name: refer_and_earn_clicked
+    section: Navigation
+    description: Fires on the client when a user clicks the "Refer and earn" item in the bottom navigation, which links to
+      /refer. The item only exists when IS_DUB_REFERRALS_ENABLED is on.
+    question: How many users open the referral programme from the navigation?
+    track_via: client
+    properties: []
+    changelog:
+      - date: 2026-10-31
+        ref: install-audit
+        change: Drafted from code; nothing arriving
+  - name: signup_email_button_clicked
+    section: Signup
+    description: Fires on the client when a user clicks "Continue with email" on the signup page, at the moment the email
+      form is revealed. It's the intent to sign up by email (as opposed to Google or Microsoft), not a submit.
+    question: How many visitors choose email signup over Google or Microsoft?
+    track_via: client
+    properties:
+      - name: has_token
+        type: boolean
+        example: true | false
+        description: Whether the signup URL carries an invite token
+      - name: is_org_invite
+        type: boolean
+        example: true | false
+        description: Whether this is an organization invite by link (orgSlug present and no prefilled username). The expression
+          is orgSlug && !username, so the raw value may be undefined or an empty string when there is no orgSlug.
+      - name: org_slug
+        type: string
+        example: UNCONFIRMED
+        required: false
+        description: Slug of the organization being joined; undefined when it isn't an org signup
+    changelog:
+      - date: 2026-10-31
+        ref: install-audit
+        change: Drafted from code; nothing arriving
+  - name: signup_form_submit_error
+    section: Signup
+    description: Fires on the client when the signup submit handler throws (the fetchSignup call or the follow-up signIn
+      raises), after the Turnstile token has been reset. It does not fire for the Cloudflare invalid-token error
+      (INVALID_CLOUDFLARE_TOKEN_ERROR is returned silently). It does not fire when the API answers with a non-ok result
+      that is handled in code, such as the user-already-exists case, which shows a warning toast and redirects to login.
+    question: How many signup attempts fail, and why?
+    track_via: client
+    properties:
+      - name: error_message
+        type: string
+        example: UNCONFIRMED
+        description: The thrown Error's message, or the translated unexpected_error_try_again text. Free text from the server or
+          the client.
+      - name: has_token
+        type: boolean
+        example: true | false
+        description: Whether the signup URL carries an invite token
+      - name: is_org_invite
+        type: boolean
+        example: true | false
+        description: Organization invite by link; may be undefined or an empty string when there is no orgSlug
+      - name: is_premium_username
+        type: boolean
+        example: true | false
+        description: Whether the chosen username is a premium one
+      - name: org_slug
+        type: string
+        example: UNCONFIRMED
+        required: false
+        description: Slug of the organization being joined; undefined for non-org signups
+    changelog:
+      - date: 2026-10-31
+        ref: install-audit
+        change: Drafted from code; nothing arriving
+  - name: signup_form_submitted
+    section: Signup
+    description: "Fires on the client when the user submits the signup form and the handler starts, before the signup
+      request is sent. It records the attempt, not the outcome: success, already-exists and errors all follow it. Failures
+      that throw are recorded separately by signup_form_submit_error."
+    question: How many signup attempts are made, with what share on invite links or premium usernames, and how many of them fail?
+    track_via: client
+    properties:
+      - name: has_token
+        type: boolean
+        example: true | false
+        description: Whether the signup URL carries an invite token
+      - name: is_org_invite
+        type: boolean
+        example: true | false
+        description: Organization invite by link; may be undefined or an empty string when there is no orgSlug
+      - name: is_premium_username
+        type: boolean
+        example: true | false
+        description: Whether the chosen username is a premium one
+      - name: org_slug
+        type: string
+        example: UNCONFIRMED
+        required: false
+        description: Slug of the organization being joined; undefined for non-org signups
+      - name: username_taken
+        type: boolean
+        example: true | false
+        description: Whether the username check found the username already taken at submit time
+    changelog:
+      - date: 2026-10-31
+        ref: install-audit
+        change: Drafted from code; nothing arriving
+  - name: signup_google_button_clicked
+    section: Signup
+    description: Fires on the client when a visitor clicks "Continue with Google" on the signup page, which is only shown
+      when Google login is enabled and the email form is not displayed. It fires at click time, before loading state is
+      set and before the browser is sent to /auth/sso/google, so it records intent only. It does not mean Google sign-in
+      or account creation succeeded. The outcome happens in an external OAuth callback, so a click with no later signup
+      outcome is an abandonment.
+    question: How many visitors choose Google to sign up, and how does that differ for org invites and pre-filled usernames?
+    track_via: client
+    properties:
+      - name: has_prepopulated_username
+        type: boolean
+        example: true | false
+        description: Whether a username was pre-filled into the signup form (!!prepopulateFormValues.username)
+      - name: has_token
+        type: boolean
+        example: true | false
+        description: Whether the signup page was opened with an invite token (!!token)
+      - name: is_org_invite
+        type: boolean
+        example: true | false
+        required: false
+        description: orgSlug is set and no username was pre-filled (orgSlug && !prepopulateFormValues.username). The code does
+          not coerce it to a boolean, so it can be undefined or an empty string when orgSlug is missing or empty.
+      - name: org_slug
+        type: string
+        example: UNCONFIRMED
+        required: false
+        description: Slug of the organization being joined. Undefined when the signup is not for an organization.
+    changelog:
+      - date: 2026-10-31
+        ref: install-audit
+        change: Drafted from code; nothing arriving
+  - name: signup_microsoft_button_clicked
+    section: Signup
+    description: Fires on the client when a visitor clicks "Continue with Microsoft" on the signup page, which is only shown
+      when Outlook/Microsoft login is enabled and the email form is not displayed. It fires at click time, before loading
+      state is set and before the browser is sent to /auth/sso/microsoft, so it records intent only. It does not mean
+      Microsoft sign-in or account creation succeeded. The outcome happens in an external OAuth callback, so a click with
+      no later signup outcome is an abandonment.
+    question: How many visitors choose Microsoft to sign up, and how does that differ for org invites and pre-filled usernames?
+    track_via: client
+    properties:
+      - name: has_prepopulated_username
+        type: boolean
+        example: true | false
+        description: Whether a username was pre-filled into the signup form (!!prepopulateFormValues.username)
+      - name: has_token
+        type: boolean
+        example: true | false
+        description: Whether the signup page was opened with an invite token (!!token)
+      - name: is_org_invite
+        type: boolean
+        example: true | false
+        required: false
+        description: orgSlug is set and no username was pre-filled (orgSlug && !prepopulateFormValues.username). The code does
+          not coerce it to a boolean, so it can be undefined or an empty string when orgSlug is missing or empty.
+      - name: org_slug
+        type: string
+        example: UNCONFIRMED
+        required: false
+        description: Slug of the organization being joined. Undefined when the signup is not for an organization.
+    changelog:
+      - date: 2026-10-31
+        ref: install-audit
+        change: Drafted from code; nothing arriving
+  - name: verify_email_already_verified
+    section: Signup
+    description: Fires on the client from an effect on the verify-email page when the email-verify check returns isVerified
+      = true. The user is then redirected to /onboarding/getting-started (onboarding-v3 flag on) or /getting-started. It
+      fires on page load for an already-verified user, not when verification happens. The effect also depends on the
+      feature flags, so it can fire again if the flags change while isVerified is true.
+    track_via: client
+    properties:
+      - name: onboarding_v3_enabled
+        type: boolean
+        example: true | false
+        description: Value of the "onboarding-v3" feature flag at the moment of the event. It may be undefined if the flags have
+          not loaded.
+    changelog:
+      - date: 2026-10-31
+        ref: install-audit
+        change: Drafted from code; nothing arriving
+  - name: verify_email_resend_clicked
+    section: Signup
+    description: Fires on the client when the user clicks "Resend email" on the verify-email page. It fires on click, before
+      the resendVerifyEmail mutation is sent, and the success toast is shown at the same moment. It does not confirm that
+      the email was sent. The button is not disabled during the request, but it shows a loading state.
+    question: How many users ask for the verification email to be sent again?
+    track_via: client
+    properties: []
+    changelog:
+      - date: 2026-10-31
+        ref: install-audit
+        change: Drafted from code; nothing arriving

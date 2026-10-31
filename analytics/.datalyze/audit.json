@@ -1,0 +1,2475 @@
+{
+ "kind": "install",
+ "generated_at": "2026-10-31T12:47:36.894Z",
+ "snapshot_source": null,
+ "scope": null,
+ "health": null,
+ "method_version": "2026.10.19",
+ "data_note": "No analytics tool is set in `.datalyze/config.yaml`, so this audit used the code alone.",
+ "counts": null,
+ "items": [
+  {
+   "name": "event_type_app_switch_toggled",
+   "type": "event",
+   "bucket": "not_measured",
+   "status": "implemented",
+   "checks": [],
+   "code_refs": [
+    "packages/app-store/_components/AppCard.tsx:100"
+   ]
+  },
+  {
+   "name": "onboarding_app_connect_clicked",
+   "type": "event",
+   "bucket": "not_measured",
+   "status": "implemented",
+   "checks": [],
+   "code_refs": [
+    "apps/web/components/getting-started/components/AppConnectionItem.tsx:113"
+   ]
+  },
+  {
+   "name": "onboarding_completed",
+   "type": "event",
+   "bucket": "not_measured",
+   "status": "implemented",
+   "checks": [],
+   "code_refs": [
+    "apps/web/components/getting-started/steps-views/UserProfile.tsx:69"
+   ]
+  },
+  {
+   "name": "add_organization_member_clicked",
+   "type": "event",
+   "bucket": "not_measured",
+   "status": "implemented",
+   "checks": [],
+   "code_refs": [
+    "apps/web/modules/users/components/UserTable/UserListTable.tsx:775"
+   ]
+  },
+  {
+   "name": "app_card_details_clicked",
+   "type": "event",
+   "bucket": "not_measured",
+   "status": "implemented",
+   "checks": [],
+   "code_refs": [
+    "apps/web/modules/apps/components/AppCard.tsx:140"
+   ]
+  },
+  {
+   "name": "app_install_button_clicked",
+   "type": "event",
+   "bucket": "not_measured",
+   "status": "implemented",
+   "checks": [],
+   "code_refs": [
+    "apps/web/modules/apps/components/AppCard.tsx:62",
+    "apps/web/modules/apps/components/AppCard.tsx:167",
+    "apps/web/modules/apps/components/AppCard.tsx:204"
+   ]
+  },
+  {
+   "name": "company_email_banner_dismissed",
+   "type": "event",
+   "bucket": "not_measured",
+   "status": "implemented",
+   "checks": [],
+   "code_refs": [
+    "apps/web/modules/settings/my-account/components/CompanyEmailOrganizationBanner.tsx:32"
+   ]
+  },
+  {
+   "name": "company_email_banner_upgrade_clicked",
+   "type": "event",
+   "bucket": "not_measured",
+   "status": "implemented",
+   "checks": [],
+   "code_refs": [
+    "apps/web/modules/settings/my-account/components/CompanyEmailOrganizationBanner.tsx:26"
+   ]
+  },
+  {
+   "name": "insights_routing_save_filter_clicked",
+   "type": "event",
+   "bucket": "not_measured",
+   "status": "implemented",
+   "checks": [],
+   "code_refs": [
+    "apps/web/modules/data-table/components/segment/SaveFilterSegmentButton.tsx:160"
+   ]
+  },
+  {
+   "name": "navigation_item_clicked",
+   "type": "event",
+   "bucket": "not_measured",
+   "status": "implemented",
+   "checks": [],
+   "code_refs": [
+    "apps/web/modules/shell/navigation/NavigationItem.tsx:36"
+   ]
+  },
+  {
+   "name": "onboarding_plan_continue_clicked",
+   "type": "event",
+   "bucket": "not_measured",
+   "status": "implemented",
+   "checks": [],
+   "code_refs": [
+    "apps/web/modules/onboarding/getting-started/onboarding-view.tsx:73"
+   ]
+  },
+  {
+   "name": "onboarding_plan_selected",
+   "type": "event",
+   "bucket": "not_measured",
+   "status": "implemented",
+   "checks": [],
+   "code_refs": [
+    "apps/web/modules/onboarding/getting-started/onboarding-view.tsx:169"
+   ]
+  },
+  {
+   "name": "onboarding_sign_out_clicked",
+   "type": "event",
+   "bucket": "not_measured",
+   "status": "implemented",
+   "checks": [],
+   "code_refs": [
+    "apps/web/modules/getting-started/[[...step]]/onboarding-view.tsx:218"
+   ]
+  },
+  {
+   "name": "onboarding_step_completed",
+   "type": "event",
+   "bucket": "not_measured",
+   "status": "implemented",
+   "checks": [],
+   "code_refs": [
+    "apps/web/modules/getting-started/[[...step]]/onboarding-view.tsx:137"
+   ]
+  },
+  {
+   "name": "refer_and_earn_clicked",
+   "type": "event",
+   "bucket": "not_measured",
+   "status": "implemented",
+   "checks": [],
+   "code_refs": [
+    "apps/web/modules/shell/useBottomNavItems.ts:39"
+   ]
+  },
+  {
+   "name": "signup_email_button_clicked",
+   "type": "event",
+   "bucket": "not_measured",
+   "status": "implemented",
+   "checks": [],
+   "code_refs": [
+    "apps/web/modules/signup-view.tsx:722"
+   ]
+  },
+  {
+   "name": "signup_form_submit_error",
+   "type": "event",
+   "bucket": "not_measured",
+   "status": "implemented",
+   "checks": [],
+   "code_refs": [
+    "apps/web/modules/signup-view.tsx:326"
+   ]
+  },
+  {
+   "name": "signup_form_submitted",
+   "type": "event",
+   "bucket": "not_measured",
+   "status": "implemented",
+   "checks": [],
+   "code_refs": [
+    "apps/web/modules/signup-view.tsx:243"
+   ]
+  },
+  {
+   "name": "signup_google_button_clicked",
+   "type": "event",
+   "bucket": "not_measured",
+   "status": "implemented",
+   "checks": [],
+   "code_refs": [
+    "apps/web/modules/signup-view.tsx:623"
+   ]
+  },
+  {
+   "name": "signup_microsoft_button_clicked",
+   "type": "event",
+   "bucket": "not_measured",
+   "status": "implemented",
+   "checks": [],
+   "code_refs": [
+    "apps/web/modules/signup-view.tsx:674"
+   ]
+  },
+  {
+   "name": "verify_email_already_verified",
+   "type": "event",
+   "bucket": "not_measured",
+   "status": "implemented",
+   "checks": [],
+   "code_refs": [
+    "apps/web/modules/auth/verify-email-view.tsx:50"
+   ]
+  },
+  {
+   "name": "verify_email_resend_clicked",
+   "type": "event",
+   "bucket": "not_measured",
+   "status": "implemented",
+   "checks": [],
+   "code_refs": [
+    "apps/web/modules/auth/verify-email-view.tsx:91"
+   ]
+  },
+  {
+   "name": "settings_sidebar_button_clicked",
+   "type": "event",
+   "bucket": "not_measured",
+   "status": "implemented",
+   "checks": [],
+   "code_refs": [
+    "packages/ui/components/navigation/tabs/VerticalTabItem.tsx:57"
+   ]
+  }
+ ],
+ "code": [],
+ "profile": {
+  "version": 1,
+  "stack": [
+   {
+    "path": ".",
+    "language": "typescript"
+   }
+  ],
+  "sdks": [],
+  "wrappers": [],
+  "calls": [],
+  "direct_sdk": "allow",
+  "paths": {
+   "server": [],
+   "client": []
+  },
+  "sdk_exceptions": [
+   {
+    "file": "apps/web/modules/formbricks/lib/trackFormbricksAction.ts",
+    "pattern": "formbricks\\.track\\(",
+    "reason": "Formbricks survey-trigger action, not product analytics; the helper trackFormbricksAction has no callers in the repo"
+   }
+  ],
+  "dynamic_names": [],
+  "notes": []
+ },
+ "discovery": {
+  "trackers": [],
+  "adapter_paths": [],
+  "server_paths": [],
+  "blind_spots": [],
+  "index": {
+   "lines": 43,
+   "groups": 8,
+   "files": 5074
+  },
+  "coverage": {
+   "total": 43,
+   "counts": {
+    "read": 25,
+    "import": 14,
+    "in_wrapper": 0,
+    "other_tool": 1,
+    "explained": 0,
+    "dismissed": 3,
+    "blind_spot": 0
+   },
+   "unaccounted": [],
+   "other_tools": [
+    {
+     "tool": "formbricks.track",
+     "count": 1,
+     "examples": [
+      "apps/web/modules/formbricks/lib/trackFormbricksAction.ts:8"
+     ]
+    }
+   ]
+  },
+  "dismissed": [
+   {
+    "key": "call|own|formMethods.register|apps",
+    "why": "react-hook-form's register in WebhookForm.tsx:290 registers a form field, not an analytics call."
+   },
+   {
+    "key": "call|own|analyticsService.sendEvent|packages",
+    "why": "packages/features/tasker/tasks/analytics/analyticsManager.ts:31 forwards booking events to a third-party analytics app the customer connected with a credential (via getAnalyticsService in app-store). It is a product feature that sends to the customer's tools, not the product's own analytics."
+   },
+   {
+    "key": "call|own|manager.sendEvent|packages",
+    "why": "packages/features/tasker/tasks/analytics/sendAnalyticsEvent.ts:27 is a tasker job that loads a credential and hands the payload (credentialId, info) to AnalyticsManager. It forwards to the customer's own analytics integration, so it is not product analytics."
+   }
+  ],
+  "idle_trackers": [],
+  "explained": [],
+  "refused": [],
+  "rounds": 1
+ },
+ "events_checked": {
+  "events": 23,
+  "checked": 23,
+  "unsure": 2,
+  "moments": {
+   "before the request": 20,
+   "after success": 1,
+   "on mount": 1,
+   "after failure": 1
+  },
+  "draft_findings": 1
+ },
+ "gaps": {
+  "total": 261,
+  "proposed": 93,
+  "over_budget": 0,
+  "skipped": [
+   {
+    "gap": "get-v2-slots-available: Look up available slots",
+    "why": "Same action as the 2024-09-04 slot lookup on an older API version. It is covered by the slots_searched event added for GET /v2/slots; fire that same event here with api_version=2024-04-15, no separate event."
+   },
+   {
+    "gap": "get-v2-stripe-connect: Start connecting a Stripe account",
+    "why": "Same connect-start action as the conferencing OAuth flow. It is covered by app_connect_started added for the conferencing gap; fire it here with app_type=payment and app=stripe."
+   },
+   {
+    "gap": "get-v2-stripe-save: Save Stripe credentials after OAuth callback",
+    "why": "Same OAuth outcome as the conferencing callback. It is covered by app_connected added for that gap; fire it here with app_type=payment, app=stripe, status and failure_reason."
+   },
+   {
+    "gap": "post-v2-atoms-verification-email-verify-code-authenticated: Verify email with code",
+    "why": "Same verification action from a logged-in user. It is covered by email_verified added for the unauthenticated route; fire it here with is_authenticated=true, status and failure_reason."
+   },
+   {
+    "gap": "post-v2-bookings-2: Create a booking (regular, recurring or instant)",
+    "why": "Same create action on the 2024-08-13 API. It is covered by booking_created added for the 2024-04-15 create; fire it here with api_version=2024-08-13 and booking_type=regular, recurring or instant."
+   },
+   {
+    "gap": "post-v2-bookings-bookinguid-cancel-2: Cancel a booking",
+    "why": "Same cancel action on the 2024-08-13 API. It is covered by booking_cancelled added for the 2024-04-15 cancel; fire it here with api_version=2024-08-13."
+   },
+   {
+    "gap": "post-v2-bookings-recurring: Create a recurring booking",
+    "why": "A recurring booking is the same create action as booking_created, added for POST /v2/bookings. Fire it here with booking_type=recurring, recurrence_count and api_version=2024-04-15."
+   },
+   {
+    "gap": "post-v2-oauth-clientid-exchange: Exchange an authorization code for tokens",
+    "why": "It's the machine step right after authorize, so `oauth_client_authorized` already answers whether users grant access. Exchange failures are mostly bad secrets or codes, which belong in error logs. If someone asks about authorize-to-token drop-off, raise it as a question."
+   },
+   {
+    "gap": "delete-v2-bookings-bookinguid-attendees-attendeeid: Remove an attendee from a booking",
+    "why": "This is a low-volume secondary action. Nobody has a question that this number answers. Raise it if someone asks."
+   },
+   {
+    "gap": "delete-v2-calendars-calendar-events-eventuid: Delete a calendar event",
+    "why": "It's a pass-through to the calendar provider, and the booking cancellation events already record what matters. A count of deleted calendar events wouldn't answer a question anyone has."
+   },
+   {
+    "gap": "delete-v2-calendars-connections-connectionid-events-eventid: Delete event on a calendar connection",
+    "why": "It's the same pass-through action as the calendar event delete above, and it records nothing a Monday-morning question needs."
+   },
+   {
+    "gap": "delete-v2-conferencing-app-disconnect: Disconnect a conferencing app",
+    "why": "It would be a useful churn signal for integrations, but it's low volume and nobody has asked for it. Raise it as a question, because adding the event later costs one PR."
+   },
+   {
+    "gap": "delete-v2-event-types-eventtypeid: Delete an event type",
+    "why": "Deleting is a secondary action and nobody has a question about it yet. If someone does, add `event_type_deleted` later."
+   },
+   {
+    "gap": "delete-v2-event-types-eventtypeid-2: Delete an event type",
+    "why": "It's the same action as the 2024_04_15 delete, and the same reasoning applies."
+   },
+   {
+    "gap": "delete-v2-event-types-eventtypeid-private-links-linkid: Delete a private link",
+    "why": "It's a low-volume housekeeping action, and nobody would query it."
+   },
+   {
+    "gap": "delete-v2-event-types-eventtypeid-webhooks: Delete all webhooks of an event type",
+    "why": "It's an admin cleanup action with no product question behind it."
+   },
+   {
+    "gap": "delete-v2-event-types-eventtypeid-webhooks-webhookid: Delete an event type webhook",
+    "why": "It's an admin cleanup action with no product question behind it."
+   },
+   {
+    "gap": "delete-v2-oauth-clients-clientid: Delete an OAuth client",
+    "why": "It's rare. It would signal churn of platform customers, but that is better read from `oauth_client_created` and account data. Raise it as a question if churn analysis needs it."
+   },
+   {
+    "gap": "delete-v2-slots-reservations-uid: Release a reserved slot",
+    "why": "This is housekeeping inside the booking flow, and reservations expire on their own. A release count answers no question. Booking outcomes already measure the funnel."
+   },
+   {
+    "gap": "delete-v2-slots-selected-slot: Release a reserved slot",
+    "why": "Same housekeeping release as the 2024-09-04 endpoint, only on the older API version. Booking outcomes measure drop-off."
+   },
+   {
+    "gap": "get-v2-bookings: List bookings by status",
+    "why": "A read-only list. It creates or changes no value, and a per-call count says nothing beyond API request logs."
+   },
+   {
+    "gap": "get-v2-bookings-2: List bookings",
+    "why": "A read-only list with no state change. Request volume is already visible in API logs."
+   },
+   {
+    "gap": "get-v2-bookings-bookinguid-recordings: Get booking recordings",
+    "why": "A read that returns links. It's not clear anyone would ask a question that this count answers. Raise it later if recording usage becomes a product question."
+   },
+   {
+    "gap": "get-v2-bookings-bookinguid-reschedule: Get a booking to reschedule",
+    "why": "This only looks up the booking before a reschedule. The reschedule outcome is the action that matters."
+   },
+   {
+    "gap": "get-v2-bookings-bookinguid-transcripts: Get booking transcript download links",
+    "why": "It returns links only, and the download happens elsewhere. It's a maybe, so skip it and raise it as a question."
+   },
+   {
+    "gap": "get-v2-calendars-calendar-events: List calendar events",
+    "why": "A read-only listing that creates or changes nothing. A count of calls would not answer anyone's question."
+   },
+   {
+    "gap": "get-v2-calendars-calendar-freebusy: Get free/busy times",
+    "why": "A read-only availability lookup, already visible in API request logs."
+   },
+   {
+    "gap": "get-v2-calendars-connections: List calendar connections",
+    "why": "A read-only list of connections, with no decision or state change behind it."
+   },
+   {
+    "gap": "get-v2-calendars-connections-connectionid-events: List events on a calendar connection",
+    "why": "A read-only listing, the same as the other calendar event reads. Request volume is available from API logs."
+   },
+   {
+    "gap": "get-v2-calendars-connections-connectionid-freebusy: Get busy times for a calendar connection",
+    "why": "A read-only lookup. Nobody asks how many times busy times were fetched, and the booking outcomes already cover what it feeds."
+   },
+   {
+    "gap": "get-v2-event-types-eventtypeid-private-links: List private links for an event type",
+    "why": "A read-only list with no decision in it. Any private-link tracking belongs on create or use."
+   },
+   {
+    "gap": "get-v2-gcal-oauth-save: Complete Google Calendar connection",
+    "why": "This handler only redirects to /calendars/google/save, where the credential is actually stored. The calendar connection outcome belongs on that handler, so tracking here would double count."
+   },
+   {
+    "gap": "patch-v2-atoms-event-types-bulk-update-to-default-location: Bulk update event types to default location",
+    "why": "A rare maintenance operation that runs when a conferencing app is removed. Nobody would chart it. If someone asks, add it later."
+   },
+   {
+    "gap": "patch-v2-calendars: Update calendar event details",
+    "why": "A passthrough edit of an external calendar event. It is not a product value moment, and the booking events cover the outcomes people ask about."
+   },
+   {
+    "gap": "patch-v2-calendars-connections-connectionid-events-eventid: Update event on a calendar connection",
+    "why": "A passthrough edit of an external calendar event with no question attached. Same reasoning as the other calendar event update."
+   },
+   {
+    "gap": "patch-v2-event-types-eventtypeid-private-links-linkid: Update a private link",
+    "why": "A settings tweak on a link (expiry or usage limit). No question depends on it, and booking events cover the outcome."
+   },
+   {
+    "gap": "patch-v2-event-types-eventtypeid-webhooks-webhookid: Update an event type webhook",
+    "why": "A configuration tweak with no product consequence that anyone would count. Webhook creation is the more useful signal and isn't in this batch."
+   },
+   {
+    "gap": "patch-v2-me: Update my profile",
+    "why": "A profile settings tweak. Name and email are identity, not event properties. Any segment-worthy field (such as timezone) is better set as a user property than counted as an event."
+   },
+   {
+    "gap": "patch-v2-oauth-clients-clientid: Update an OAuth client",
+    "why": "A rare admin settings edit on a platform client. No one asks for a count of it."
+   },
+   {
+    "gap": "patch-v2-oauth-clients-clientid-users-userid: Update a managed user",
+    "why": "A passthrough profile update on a managed user, with no product consequence. Not worth a number."
+   },
+   {
+    "gap": "patch-v2-oauth-clients-clientid-webhooks-webhookid: Update an OAuth client webhook",
+    "why": "A configuration tweak with no question attached. Same reasoning as the event type webhook update."
+   },
+   {
+    "gap": "patch-v2-slots-reservations-uid: Update a reserved slot",
+    "why": "A short-lived reservation hold that is refreshed in the booking flow. The booking outcome events already measure what matters."
+   },
+   {
+    "gap": "patch-v2-webhooks-webhookid: Update a webhook",
+    "why": "Editing a webhook's settings is a config tweak and no one will ask for a count of it. Creation is the number that matters (see webhook_created)."
+   },
+   {
+    "gap": "post-v2-api-keys-refresh: Refresh an API key",
+    "why": "Key rotation is low volume and doesn't answer a recurring product question."
+   },
+   {
+    "gap": "post-v2-atoms-emails-verified-emails: Add a verified email",
+    "why": "This only starts a verification. Adding an email has no recurring question behind it, so skip it and raise it if someone asks."
+   },
+   {
+    "gap": "post-v2-atoms-schedules-scheduleid-duplicate: Duplicate a schedule",
+    "why": "This is a minor convenience action on availability settings. No one will ask for its count."
+   },
+   {
+    "gap": "post-v2-calendars-calendar-disconnect: Disconnect a calendar",
+    "why": "Disconnects are rare, and no one has stated a question that their count answers. Raise it if integration churn becomes a concern."
+   },
+   {
+    "gap": "post-v2-calendars-calendar-events: Create a calendar event",
+    "why": "This is a pass-through to the provider calendar API. No product question depends on its count."
+   },
+   {
+    "gap": "post-v2-calendars-connections-connectionid-events: Create event on a calendar connection",
+    "why": "This is the same pass-through calendar write as the other create-event endpoint, so skip it for the same reason."
+   },
+   {
+    "gap": "post-v2-conferencing-app-default: Set default conferencing app",
+    "why": "This is a settings tweak with no outcome that can be measured. The provider mix can be read from integration_connected."
+   },
+   {
+    "gap": "post-v2-event-types-eventtypeid-private-links: Create a private link for an event type",
+    "why": "This is a niche sharing option and no one has stated a question that its count answers. Raise it as a question if one appears."
+   },
+   {
+    "gap": "post-v2-oauth-clientid-refresh: Refresh managed user tokens",
+    "why": "This is routine token plumbing run by client apps. Its volume says nothing about product use."
+   },
+   {
+    "gap": "post-v2-oauth-clients-clientid-users-userid-force-refresh: Force refresh a managed user's tokens",
+    "why": "It's an operational token rotation that a platform customer triggers for security or debugging, and it creates no product value. No one would ask a Monday-morning question that this count answers."
+   },
+   {
+    "gap": "upgrade: Upgrade organization",
+    "why": "The upgrade view is a stub in this codebase: the mutation is a no-op and upgradeData is always undefined, so the page only shows 'you are all set'. There is no action to record."
+   },
+   {
+    "gap": "apps: Browse app store",
+    "why": "Browsing is already covered by app_card_details_clicked and app_install_button_clicked, and page views come from autocapture. A separate browse event would not answer a new question."
+   },
+   {
+    "gap": "availability: Duplicate a schedule",
+    "why": "Duplicating ends in a new schedule, which is recorded by schedule_created with `creation_method` = duplicate (added under the create-schedule gap), so no separate event is needed."
+   },
+   {
+    "gap": "availability: Delete a schedule",
+    "why": "Deletion is low-volume and nobody has a question it answers. It can be added later in one PR if someone asks."
+   },
+   {
+    "gap": "availability-schedule: Edit an availability schedule (working hours, date overrides, timezone)",
+    "why": "Recorded by schedule_updated (added under the set-default gap) with `entry_point` = detail and `change_type` = working_hours | date_overrides | timezone | name, so it needs no separate event."
+   },
+   {
+    "gap": "availability-schedule: Manage travel schedules",
+    "why": "Travel schedules are a niche option inside the editor and only apply to the default schedule. No one has asked a question about them, so it is not worth an event yet."
+   },
+   {
+    "gap": "bookings-status: View bookings by status",
+    "why": "Switching status tab is navigation inside one screen. The status is in the URL, so autocapture covers it."
+   },
+   {
+    "gap": "bookings-status: Filter bookings",
+    "why": "Filtering uses the generic data-table filters and is not central to finding a booking. Raise it as a question if someone wants it."
+   },
+   {
+    "gap": "refer: View the referral program and refer others",
+    "why": "The click into the page is already recorded by refer_and_earn_clicked. The referral itself happens inside the Dub embed, which this code does not control, and any referral outcome belongs to Dub's own tracking."
+   },
+   {
+    "gap": "settings-my-account-out-of-office: Delete or edit an out-of-office entry",
+    "why": "Edit and delete of an out-of-office entry are low-volume follow-ups to creation. out_of_office_created already answers the adoption question."
+   },
+   {
+    "gap": "settings-my-account-profile: Update profile details",
+    "why": "Profile edits are settings tweaks with no product consequence, and the fields (name, bio, avatar) shouldn't go into event properties. Anything segmentable belongs on the user profile."
+   },
+   {
+    "gap": "auth-setup: Choose a license and finish setup",
+    "why": "The setup code has no license step: the wizard has only the admin user step and the apps step. Finishing is the apps step, which `setup_step_completed` with step=apps records."
+   },
+   {
+    "gap": "auth-setup: Enable apps during setup",
+    "why": "Finishing the apps step is recorded by `setup_step_completed` with step=apps, added for the admin account gap. Add an `enabled_app_count` property there rather than a separate event."
+   },
+   {
+    "gap": "event-types: Filter event types by team or group",
+    "why": "The filter is a team or group selector that changes what is listed. It isn't central to finding event types and no recurring question needs its number. Raise it later if someone asks."
+   },
+   {
+    "gap": "event-types: Search event types",
+    "why": "The event type list is short for most users, so search isn't central. No one has a question that its count would answer."
+   },
+   {
+    "gap": "event-types-type: Configure availability and scheduling for an event type",
+    "why": "These tabs save through the same update mutation as the editor, so `event_type_updated` (added for the save gap) records them through its `tabs_changed` property. A separate event per tab would be a per-screen event."
+   },
+   {
+    "gap": "event-types-type: Configure event type apps and integrations",
+    "why": "Apps on an event type are saved through the same update mutation, so `event_type_updated` records them with `apps` in `tabs_changed`."
+   },
+   {
+    "gap": "event-types-type: Configure event type workflows and webhooks",
+    "why": "The workflows and webhooks tabs live in the same editor, so `event_type_updated` records them with `tabs_changed`. Webhook and workflow objects themselves belong to their own surfaces."
+   },
+   {
+    "gap": "all-api-book-recurring-event: Create a recurring booking",
+    "why": "It is the same action as a single booking, so it is recorded by booking_created (added for /api/book/event) with is_recurring = true and recurring_count, not a new event."
+   },
+   {
+    "gap": "all-api-integrations-btcpayserver-webhook: Receive a BTCPay Server booking payment",
+    "why": "It is the same outcome as the Alby payment, so it is recorded by payment_completed (added for the Alby webhook) with provider = btcpayserver."
+   },
+   {
+    "gap": "all-api-integrations-paypal-webhook: Receive a PayPal booking payment",
+    "why": "It is the same outcome as the other payment providers, so it is recorded by payment_completed (added for the Alby webhook) with provider = paypal. The no-payment and no-booking 204 branches map to status and failure_reason there."
+   },
+   {
+    "gap": "all-api-trpc-loggedinviewerrouter-trpc: Manage account, event types, bookings and settings",
+    "why": "This is a catch-all transport route for many procedures. Any event belongs on the specific action, such as event type created or booking cancelled, not on the router. Those actions should be audited on their own surfaces."
+   },
+   {
+    "gap": "all-api-trpc-public-trpc: View public booking page data and book",
+    "why": "This is a generic data-fetching transport. The booking itself is recorded by booking_created on /api/book/event, and page views are covered by autocapture."
+   },
+   {
+    "gap": "all-api-trpc-slots-trpc: Check available slots and reserve a slot",
+    "why": "Slot lookups are reads with no decision in them. A slot reservation is a step inside the booking flow that booking_created (outcome) and a booker intent event already cover."
+   },
+   {
+    "gap": "all-api-trpc-viewer-trpc: Manage account, event types, bookings and settings",
+    "why": "This is a catch-all transport route for many procedures. Events should be added at the specific procedures, not on the router."
+   },
+   {
+    "gap": "auth-login: Sign in with email and password",
+    "why": "The credentials login outcome is recorded by login_completed from the NextAuth server handler with method = credentials. A client event as well would count the same login twice."
+   },
+   {
+    "gap": "auth-signin: Sign in with an auth provider",
+    "why": "It is the same action as the login-page provider buttons, so it is recorded by login_started (added for auth-login) with entry_point = signin_page."
+   },
+   {
+    "gap": "auth-verify: Continue after email verification",
+    "why": "This is navigation after verification. The outcome is already recorded by email_verified on the server."
+   },
+   {
+    "gap": "auth-verify-email-2: Verify email address from link",
+    "why": "The anchor re-exports the same handler as /api/auth/verify-email, so email_verified (added for that route) already records it."
+   },
+   {
+    "gap": "booking-uid: Cancel a booking",
+    "why": "The cancel on this page posts to /api/cancel, so the server `booking_cancelled` event added under post-api-cancel already records it. Its `entry_point` (booking_page | embed | api) tells the sources apart."
+   },
+   {
+    "gap": "booking-uid-embed: Cancel or reschedule a booking (embedded)",
+    "why": "The embed page renders the same booking view and uses the same cancel and reschedule paths. `booking_cancelled` and `booking_rescheduled`, added in this batch, record it with `entry_point = embed`."
+   },
+   {
+    "gap": "delete-api-cancel: Cancel a booking",
+    "why": "DELETE and POST /api/cancel share one handler, so the single `booking_cancelled` event added under post-api-cancel covers both. Don't add a second event for the HTTP verb."
+   },
+   {
+    "gap": "get-api-verify-booking-token: Accept a booking from an email link",
+    "why": "It leads to the same confirmHandler outcome as /api/link, which `booking_confirmation_completed` records. The `entry_point = email_verify_token` and `decision = accept` values separate it."
+   },
+   {
+    "gap": "onboarding-personal-profile: Choose a username",
+    "why": "The username is a field inside the personal-details step, so it is recorded by `onboarding_step_completed`. A separate event would not answer a question anyone has, and the username value itself is not a safe property."
+   },
+   {
+    "gap": "onboarding-personal-settings: Choose a username",
+    "why": "The username is part of the same step and is covered by `onboarding_step_completed`. Choosing it does not fail or get abandoned separately."
+   },
+   {
+    "gap": "payment-uid: Authorize a no-show fee hold",
+    "why": "A card hold authorization is the same payment flow with `payment_option = HOLD`, recorded by `payment_completed` added under 'Pay for a booking'. It is not a separate event."
+   },
+   {
+    "gap": "post-api-auth-setup: Create the first admin user during setup",
+    "why": "Creating the first admin is a one-time signup, recorded by `user_signed_up` (added under post-api-auth-signup) with `signup_type = first_admin_setup`. A separate event would be a near-duplicate."
+   },
+   {
+    "gap": "post-api-verify-booking-token: Accept a booking from an email link",
+    "why": "The POST handler runs the same confirmHandler outcome, which `booking_confirmation_completed` (added under get-api-link) records. `entry_point = email_verify_token`, `decision` and `has_reason` separate accept from reject."
+   },
+   {
+    "gap": "user-embed: Choose an event type from a user's profile (embedded)",
+    "why": "Same action as the profile page gap, recorded by event_type_selected with entry_point = embed and is_embed = true. No separate event or entry is needed."
+   },
+   {
+    "gap": "user-type-embed: Book a time slot for an event type (embedded)",
+    "why": "Same action as the non-embedded booker, recorded by booking_created with is_embed = true and entry_point = embed."
+   },
+   {
+    "gap": "user-type-embed: Select a date and time on the booker",
+    "why": "Same action as the non-embedded booker, recorded by booking_slot_selected with is_embed = true and entry_point = embed."
+   },
+   {
+    "gap": "video-uid: Join a video meeting",
+    "why": "Recorded by video_call_joined with participant_role and entry_point = video_page. The guest-session gap defines that event, so this is a property value on it, not a new event."
+   },
+   {
+    "gap": "all-api-auth-nextauth: Sign out",
+    "why": "Sign out is an identity reset (call reset on the analytics client), not an event, and no one asks for a logout count."
+   },
+   {
+    "gap": "all-api-integrations-args: Install or connect an app integration",
+    "why": "Recorded by app_install_started, defined in the calendar gap, which covers any app by app_slug and app_category. If the server endpoint is the better place to fire it, send it from here with the same properties. Not a new event."
+   },
+   {
+    "gap": "all-api-trpc-googleworkspace-trpc: Connect or manage Google Workspace integration",
+    "why": "Rare admin setup action. It is a maybe, so skip it and raise it as a question."
+   },
+   {
+    "gap": "all-api-trpc-oauth-trpc: Manage OAuth clients and authorize access",
+    "why": "Developer or admin configuration with low volume. It is a maybe, so skip it and raise it as a question."
+   },
+   {
+    "gap": "all-api-trpc-ooo-trpc: Create or manage out-of-office entries",
+    "why": "A settings change with no clear question behind it. It is a maybe, so skip it and raise it as a question."
+   },
+   {
+    "gap": "all-api-trpc-travelschedules-trpc: Manage travel schedules",
+    "why": "A settings tweak with no clear question behind it, so it isn't worth a number."
+   },
+   {
+    "gap": "all-api-trpc-users-trpc: Administer users",
+    "why": "Internal admin actions, not product usage. Counting them would add events nobody queries."
+   },
+   {
+    "gap": "all-api-trpc-webhook-trpc: Create, edit, delete or test a webhook subscription",
+    "why": "It is a maybe, and this batch is already over the new-event budget. Raise a webhook_subscription_changed event as a question for a later PR."
+   },
+   {
+    "gap": "apps-installation-step: Complete app installation steps (choose accounts, event types, configure)",
+    "why": "The install funnel is covered by app_install_started and app_installed, with entry_point = installation_flow. A per-step event is a maybe, so raise it as a question."
+   },
+   {
+    "gap": "apps-installed-category: Review installed apps and connected calendars in a category",
+    "why": "This page only loads and lists connected apps. Opening it doesn't record a decision, and autocapture covers page views."
+   },
+   {
+    "gap": "apps-slug-setup: Configure an installed app on its setup page",
+    "why": "The setup page is a step inside app installation, and its outcome belongs on whatever install event the plan adds for apps. A separate setup event would have no question of its own."
+   },
+   {
+    "gap": "auth-verify-email-2: Confirm a changed primary email",
+    "why": "It's the same server handler as the secondary-email verification, so it is recorded by email_verification_completed with email_type = primary_change, added under the secondary-email gap. A separate event would count the same action twice."
+   },
+   {
+    "gap": "auth-verify-email-change: Confirm an email address change",
+    "why": "The page's server code posts the token to the verify-email handler, so the outcome is already recorded by email_verification_completed (email_type = primary_change). A page event would count the same thing twice."
+   },
+   {
+    "gap": "booking-uid: View booking confirmation",
+    "why": "This is a confirmation screen that carries no decision. The booking outcome is recorded when the booking is created, and autocapture covers the view."
+   },
+   {
+    "gap": "booking-uid-embed: View booking confirmation (embedded)",
+    "why": "This is the same confirmation view inside an embed. The booking-created outcome covers it, and the view itself answers nothing."
+   },
+   {
+    "gap": "cron-5-api-cron-selected-calendars: Create selected calendars for delegation credential users",
+    "why": "This is a plumbing job that runs every 5 minutes and mostly finds nothing to do. Its counts are already logged, and no one will chart them on a Monday."
+   },
+   {
+    "gap": "delete-api-availability-calendar: Unselect a calendar from conflict checking",
+    "why": "Unselecting is the opposite direction of the same action as selecting, so it's recorded by calendar_selection_changed with action = unselected, added under the select gap. A second event would split one question."
+   },
+   {
+    "gap": "get-api-video-recording: Download a call recording",
+    "why": "This is a token link that redirects to a download, opened mostly from emails. How often it's used is a maybe with no clear question or chart, so raise it as a question and don't add it."
+   },
+   {
+    "gap": "onboarding-personal-profile: Upload a profile picture",
+    "why": "An avatar upload is a settings tweak with no product consequence. If anyone wants to know who adds a photo during onboarding, put a has_avatar property on the onboarding step event."
+   },
+   {
+    "gap": "onboarding-personal-settings: Upload a profile picture",
+    "why": "This is the same avatar upload on the same onboarding flow. Handle it with a has_avatar property on the onboarding step event, not a new event."
+   },
+   {
+    "gap": "post-api-auth-oauth-refreshtoken: Refresh an OAuth access token",
+    "why": "This is high-volume machine-to-machine traffic. A count of refreshes answers no question, and failures are already visible as HTTP errors in the logs."
+   },
+   {
+    "gap": "post-api-cron-bookingreminder: Send reminders for pending booking requests",
+    "why": "This cron already sends an email per reminder, and the count is returned in the response and tracked in the reminder table. No one will ask a product question of a per-run count."
+   },
+   {
+    "gap": "post-api-cron-webhooktriggers: Fire scheduled webhook triggers",
+    "why": "A cron that only runs handleWebhookScheduledTriggers and returns ok. Nobody asks how often the cron ran, and the delivery outcome belongs to the webhook delivery path, not this trigger."
+   },
+   {
+    "gap": "post-api-username: Check username availability",
+    "why": "This is a lookup fired as the user types, with no decision in it. The outcome that matters is the username being saved or the sign-up completing, which other events cover."
+   },
+   {
+    "gap": "post-api-webhook-app-credential: Receive synced app credentials",
+    "why": "This is a machine-to-machine credential sync for self-hosted setups, and it is gated by a secret. It has no product question, and the handler touches secrets, so it shouldn't emit analytics."
+   },
+   {
+    "gap": "post-api-webhooks-calendar-subscription-provider: Receive calendar change notification",
+    "why": "This is high-volume provider push noise that fires with every calendar change. Its volume answers no business question, and failures are already logged."
+   },
+   {
+    "gap": "settings-admin-flags: Toggle a feature flag",
+    "why": "This is an internal admin config change, and the flag state already lives in the database. It is not user behaviour anyone would chart."
+   },
+   {
+    "gap": "settings-admin-lockedsms: Lock SMS sending for a user",
+    "why": "This is a rare internal admin moderation action. It is recorded in the lock state itself, and no product question needs a number."
+   },
+   {
+    "gap": "settings-admin-lockedsms: Lock SMS sending for a team",
+    "why": "This is the same rare internal admin moderation action as locking a user, and it is already stored as state."
+   },
+   {
+    "gap": "settings-admin-oauth: Approve or reject an OAuth client",
+    "why": "This is a low-volume internal review action, and the approval status is stored on the client record. It doesn't need an event."
+   },
+   {
+    "gap": "settings-admin-users: Start adding a new user",
+    "why": "This is a navigation click to a form that has no decision in it. The outcome is the add-user save."
+   },
+   {
+    "gap": "settings-admin-users-add: Add a new user as admin",
+    "why": "This is a rare internal admin operation, and the user creation is already visible in the user table. It is not worth a new event."
+   },
+   {
+    "gap": "settings-admin-users-id-edit: Edit a user as admin",
+    "why": "This is an internal admin support edit, and the changes are stored on the user record. It would carry nothing anyone would break down."
+   },
+   {
+    "gap": "settings-developer-api-keys: Delete an API key",
+    "why": "Revoking keys is housekeeping, and no one would ask for this number. The count of active keys can be queried from the database."
+   },
+   {
+    "gap": "settings-developer-oauth: Manage OAuth clients",
+    "why": "This is a list and settings management surface. Opening it or tweaking client details is not a decision with a number someone would ask for."
+   },
+   {
+    "gap": "settings-developer-webhooks-id: Edit a webhook",
+    "why": "This is a settings tweak on an existing webhook, and the creation event already measures adoption. It would add no question that isn't answered by webhook_created."
+   },
+   {
+    "gap": "settings-my-account-calendars: Choose which calendars check for conflicts",
+    "why": "A settings tweak with no standalone question. If it matters later, it can go as a property on calendar_connected or calendar_disconnected."
+   },
+   {
+    "gap": "settings-my-account-conferencing: Install a conferencing app",
+    "why": "Installing an app is almost certainly already covered by a generic app-install event on the app store flow. Adding a conferencing-specific event would be a near-duplicate. Break it down by app category there instead."
+   },
+   {
+    "gap": "settings-my-account-conferencing: Remove a conferencing app",
+    "why": "Removal is already covered by a generic app-uninstall/credential-deleted action. A conferencing-only event would be a near-duplicate, and the question can be answered by filtering that event by app category."
+   },
+   {
+    "gap": "settings-my-account-general: Update language, timezone and time format",
+    "why": "A profile settings tweak with no product consequence anyone reports on. Language and timezone are better kept as user properties."
+   },
+   {
+    "gap": "video-uid: Leave the meeting",
+    "why": "The leave button is inside the embedded Daily call UI. Call duration and completion are better taken from the server-side meeting-ended webhook or booking data than from a client leave click."
+   }
+  ]
+ },
+ "surfaces": {
+  "total": 358,
+  "by_kind": {
+   "handler": 241,
+   "webhook": 28,
+   "route": 82,
+   "job": 7
+  },
+  "labelled": 358,
+  "map_files": [
+   "_map/api.yaml",
+   "_map/app_store.yaml",
+   "_map/docs.yaml",
+   "_map/getting_started.yaml",
+   "_map/modules.yaml",
+   "_map/ui.yaml",
+   "_map/web.yaml"
+  ]
+ },
+ "registry": {
+  "events": 23,
+  "user_properties": 0,
+  "baseline_findings": 26
+ },
+ "findings": [
+  {
+   "title": "Signup failure is a separate event and signup has no outcome event to hold status + failure_reason",
+   "severity": "medium",
+   "items": [
+    "signup_form_submit_error"
+   ],
+   "explanation": "signup_form_submitted fires at the start of the handler (intent only). The only outcome signal is signup_form_submit_error, fired from the catch block, so failure lives on its own event (rule 4) and success has no event. 'How many signup attempts fail' needs a union of the two events and can't give a success rate. The catch also skips several end states: the Cloudflare invalid-token error returns silently, as do user-already-exists, checkout-session redirect and account-under-review. These attempts have an intent event and no outcome, so they look like abandonment in a funnel.",
+   "evidence": [
+    {
+     "code": "apps/web/modules/signup-view.tsx:243"
+    },
+    {
+     "code": "apps/web/modules/signup-view.tsx:261"
+    },
+    {
+     "code": "apps/web/modules/signup-view.tsx:282"
+    },
+    {
+     "code": "apps/web/modules/signup-view.tsx:322"
+    },
+    {
+     "code": "apps/web/modules/signup-view.tsx:326"
+    }
+   ],
+   "fix": "Add one outcome event (e.g. signup_completed) with status = success | failed | cancelled and failure_reason (enum). Use values read from the code: user_already_exists, invalid_cloudflare_token, checkout_required, under_review, api_error, sign_in_failed. Do not rename signup_form_submit_error in place. Dual-fire both events for one release (dual_fire_until on the old entry), then mark the old entry deprecated with deprecated_reason and replaced_by. Add a SEMANTICS changelog line. Dashboards on this event's question 'How many signup attempts fail, and why?' move to the new event.",
+   "id": "F1",
+   "verdict": "confirmed",
+   "verifier_note": "Read `apps/web/modules/signup-view.tsx` lines 240–335 and searched the repo for any other signup `capture` call (none, apart from the three button clicks). - `signup_form_submitted` fires before the request at :243. The only outcome is `signup_form_submit_error` in the catch at :326, and no event fires on success, so the success rate can't be measured. Several paths end with no outcome event: user already exists (:262–268), the checkout redirect (:271–279), account under review (:285–287) and the Cloudflare invalid-token error (:322–323). They will look like abandonment. Correction for the fix: in `calcomSignupHandler.ts` the checkout case (\"Created user but missing payment\", :319) and the under-review case (:303) both come after the user has been created. They are not failures, so they should not be `failure_reason` values. Record them as success with a separate dimension, such as `next_step = checkout | under_review`."
+  },
+  {
+   "title": "error_message sends raw free text from the server or client as the failure reason",
+   "severity": "medium",
+   "items": [
+    "signup_form_submit_error"
+   ],
+   "explanation": "error_message is the thrown Error's message. That is result.error.message from the signup API, or a translated UI string. It is unbounded, localized free text, so the same failure splits into many values in a breakdown. Its content is not controlled by the plan, so it could include user-supplied values. The catch also treats an exception from signIn as a signup failure, and the handler doesn't distinguish the two sources.",
+   "evidence": [
+    {
+     "code": "apps/web/modules/signup-view.tsx:282"
+    },
+    {
+     "code": "apps/web/modules/signup-view.tsx:320"
+    },
+    {
+     "code": "apps/web/modules/signup-view.tsx:331"
+    }
+   ],
+   "fix": "Replace error_message with a closed failure_reason enum on the new outcome event, mapped from API error codes or the failing step (signup request vs. sign-in). Keep the raw message out of analytics and leave it in the form error and server logs. If you keep a message for debugging, truncate it and mark the values you haven't observed as (UNCONFIRMED).",
+   "id": "F2",
+   "verdict": "confirmed",
+   "verifier_note": "Read :282, :320 and :331, plus the signup API handlers that produce `result.error.message`. - `error_message` is free text: whatever message the server sends back, a translated fallback, or any error thrown by `signIn`. It is not a closed list. Correction: the text is mostly not localized. The server sends fixed English strings (\"Invalid username\", \"Username or email is already taken\", \"A user exists with that username\", \"Signup is disabled\", \"Internal server error\"). The translated `unexpected_error_try_again` text is used only when the thrown value isn't an `Error`. So the breakdown splits less than the finding says. `route.ts:72` passes through an arbitrary `e.message` from `HttpError`, so I can't rule out user-supplied content, but I can't confirm it either. The closed-enum fix still applies, and its values can come from the server strings above."
+  },
+  {
+   "title": "verify_email_already_verified can fire again when feature flags change, and may read onboarding_v3_enabled before flags load",
+   "severity": "low",
+   "items": [
+    "verify_email_already_verified"
+   ],
+   "explanation": "The event sits in an effect that depends on `[data?.isVerified, flags]`. Once the user is verified, it fires every time the `flags` object changes identity, for example when flags load or refresh. The redirect still runs the first time, but the page can send the event more than once for one visit. If the first run happens before flags are populated, `onboarding_v3_enabled` is undefined and the redirect goes to the wrong path. This inflates the already-verified count and can leave the flag property empty or wrong.",
+   "evidence": [
+    {
+     "code": "apps/web/modules/auth/verify-email-view.tsx:50"
+    },
+    {
+     "code": "apps/web/modules/auth/verify-email-view.tsx:57"
+    }
+   ],
+   "fix": "Fire the event once, for example with a ref guard (`hasTracked.current`). Wait until flags are loaded before reading `flags[\"onboarding-v3\"]`. Alternatively, depend only on `data?.isVerified`.",
+   "id": "F3",
+   "verdict": "confirmed",
+   "verifier_note": "Read `verify-email-view.tsx` lines 46–57, `useFlagMap` (`packages/features/flags/context/provider.ts`) and `useFlags` (`apps/web/modules/feature-flags/hooks/useFlags.ts`). - The flags object is `query.data ?? initialData`. When the tRPC query resolves, `flags` becomes a new object and the effect runs again. A verified user can therefore send the event twice and get two `router.replace` calls, as long as the page is still mounted when the flags arrive. Correction: before the flags load, `flags[\"onboarding-v3\"]` is `false`, not `undefined`, because `initialData` sets it to `false`. So the first event can report `false` when the flag is really on, and the first redirect goes to `/getting-started`; the second run then redirects to the right path. The registry description (\"may be undefined if the flags have not loaded\") is wrong in the same way and should say \"false until flags load\". A later refetch that returns the same data probably keeps the same object, because React Query's structural sharing reuses unchanged data, so the \"refresh\" part of the finding is unlikely in practice."
+  }
+ ],
+ "undecided": [],
+ "disproved": [],
+ "duplicates": [],
+ "dropped_without_evidence": [],
+ "uncovered": [],
+ "migration": [
+  {
+   "item": "signup_form_submit_error",
+   "change": "split_status",
+   "to": "signup_form_submitted",
+   "why": "A failure is sent as its own event. Rule 4 puts it on the outcome as status and failure_reason. signup_form_submitted fires before the request, so it is an intent, not an outcome. Add a server-side or post-response outcome event with status = success | failed | cancelled and failure_reason, then deprecate the submit_error event.",
+   "evidence": "apps/web/modules/signup-view.tsx:326"
+  },
+  {
+   "item": "signup_form_submit_error.error_message",
+   "change": "privacy",
+   "why": "error_message sends raw error text (server or client message). Replace it with an enumerated error_reason (for example user_exists | validation | network | unexpected) and stop sending the free text.",
+   "evidence": "apps/web/modules/signup-view.tsx:331"
+  },
+  {
+   "item": "signup_form_submitted",
+   "change": "add_pair",
+   "why": "The signup intent (signup_form_submitted) has no outcome event for a created account. Add one, sent from the server where the user row is created, so drop-off from submit to account created can be measured.",
+   "evidence": "apps/web/modules/signup-view.tsx:243"
+  },
+  {
+   "item": "add_organization_member_clicked",
+   "change": "add_pair",
+   "why": "Intent click with no outcome. Pair with an invite-sent outcome (status, member count after), preferably from the server, to measure drop-off.",
+   "evidence": "apps/web/modules/users/components/UserTable/UserListTable.tsx:775"
+  },
+  {
+   "item": "app_install_button_clicked",
+   "change": "add_pair",
+   "why": "Install intent has no outcome event (app installed, with status and failure_reason). Install success is only shown as a toast.",
+   "evidence": "apps/web/modules/apps/components/AppCard.tsx:62"
+  },
+  {
+   "item": "app_install_button_clicked",
+   "change": "other",
+   "why": "The same call is repeated at three sites (handleAppInstall and two custom onClick wrappers). Extract it into one helper so the properties can't drift apart.",
+   "evidence": "apps/web/modules/apps/components/AppCard.tsx:167"
+  },
+  {
+   "item": "onboarding_plan_selected",
+   "change": "other",
+   "why": "A new onboarding flow (modules/onboarding/getting-started) and the older one (modules/getting-started/[[...step]]) both send onboarding events with different names and shapes. Plan selection and the old step_completed events describe the same funnel. Consider a single onboarding_step_completed with a step property in both flows.",
+   "evidence": "apps/web/modules/onboarding/getting-started/onboarding-view.tsx:169"
+  },
+  {
+   "item": "onboarding_plan_selected",
+   "change": "remove",
+   "why": "Fires on every radio change and is mostly redundant with onboarding_plan_continue_clicked, which carries the final plan. Only keep it if someone asks about plans considered before continuing.",
+   "evidence": "apps/web/modules/onboarding/getting-started/onboarding-view.tsx:169"
+  },
+  {
+   "item": "company_email_banner_dismissed",
+   "change": "remove",
+   "why": "Dismissing a banner is on the ignore list and answers no stated question; the upgrade click is the event that matters. Candidate for removal unless someone wants the dismissal rate.",
+   "evidence": "apps/web/modules/settings/my-account/components/CompanyEmailOrganizationBanner.tsx:32"
+  },
+  {
+   "item": "insights_routing_save_filter_clicked",
+   "change": "rename",
+   "to": "data_table_save_filter_clicked",
+   "why": "The name says insights routing, but SaveFilterSegmentButton is a generic data-table component. Rename, or add a property for the table (for example table_id), and dual-fire if it is on a dashboard.",
+   "evidence": "apps/web/modules/data-table/components/segment/SaveFilterSegmentButton.tsx:160"
+  },
+  {
+   "item": "navigation_item_clicked",
+   "change": "other",
+   "why": "Sent only from the collapsed-tooltip top-level link and the child link; other render variants of the item may not be tracked. Check that every nav click path calls trackNavigationClick. Also, item_name is a translation key; document that.",
+   "evidence": "apps/web/modules/shell/navigation/NavigationItem.tsx:208"
+  },
+  {
+   "item": "refer_and_earn_clicked",
+   "change": "merge",
+   "to": "navigation_item_clicked",
+   "why": "It is a click on a navigation item (referral_text, /refer) that navigation_item_clicked can already record. If the click is already tracked there, this is a near-duplicate.",
+   "evidence": "apps/web/modules/shell/useBottomNavItems.ts:39"
+  },
+  {
+   "item": "signup_google_button_clicked",
+   "change": "merge",
+   "to": "signup_sso_button_clicked",
+   "why": "Google and Microsoft are the same action (choosing an SSO provider to sign up) sent as two events. Fold both into one event with a new provider property (google | microsoft). Dual-fire for a window if either is on a dashboard.",
+   "evidence": "apps/web/modules/signup-view.tsx:623"
+  },
+  {
+   "item": "signup_microsoft_button_clicked",
+   "change": "merge",
+   "to": "signup_sso_button_clicked",
+   "why": "Same action as the Google button. Fold into one event with provider = microsoft.",
+   "evidence": "apps/web/modules/signup-view.tsx:674"
+  },
+  {
+   "item": "signup_google_button_clicked",
+   "change": "property",
+   "why": "is_org_invite is computed as `orgSlug && !username`, so it is not always a boolean (it can be undefined or an empty string). Wrap it in !! so the type is always boolean. The same expression is used in the other signup events.",
+   "evidence": "apps/web/modules/signup-view.tsx:203"
+  },
+  {
+   "item": "signup_google_button_clicked",
+   "change": "add_pair",
+   "why": "The click is an intent event and the outcome comes back through an external OAuth callback. This code does not show a server-side signup outcome event that carries the provider. Without one, drop-off between click and account creation cannot be measured per provider.",
+   "evidence": "apps/web/modules/signup-view.tsx:631"
+  },
+  {
+   "item": "verify_email_resend_clicked",
+   "change": "add_pair",
+   "why": "A click on resend is intent. The mutation result (success or error) is not tracked, and the success toast shows before the request finishes. Add a status on the outcome, or track it on the server where the email is sent.",
+   "evidence": "apps/web/modules/auth/verify-email-view.tsx:91"
+  },
+  {
+   "item": "event_type_app_switch_toggled.enabled",
+   "change": "property",
+   "why": "The draft types `enabled` as string, but the code sends a boolean from the Switch's onCheckedChange. Set the registry type to boolean.",
+   "evidence": "packages/app-store/_components/AppCard.tsx:100-103"
+  },
+  {
+   "item": "onboarding_app_connect_clicked.has_dependency",
+   "change": "property",
+   "why": "The draft types it as string, but the code sends a boolean (!!dependency). The Connect button is disabled whenever a dependency is missing, so the value is effectively always false. Consider dropping it, or sending it from the dependency-warning link instead.",
+   "evidence": "apps/web/components/getting-started/components/AppConnectionItem.tsx:74,117"
+  },
+  {
+   "item": "onboarding_completed",
+   "change": "add_pair",
+   "why": "Only the outcome is tracked. There is no onboarding start or step event, so drop-off can't be measured (rule 2). The onError path shows a toast but sends nothing. Add an onboarding step event with a `step` property, or add status/failure_reason to this event.",
+   "evidence": "apps/web/components/getting-started/steps-views/UserProfile.tsx:69,76"
+  },
+  {
+   "item": "onboarding_app_connect_clicked",
+   "change": "add_pair",
+   "why": "This is an intent event with no outcome. Whether the app got installed is not tracked (install success is handled in onSuccess with only a toast). Add an app-installed outcome event or track it server-side.",
+   "evidence": "apps/web/components/getting-started/components/AppConnectionItem.tsx:57-64,113"
+  },
+  {
+   "item": "settings_sidebar_button_clicked",
+   "change": "property",
+   "why": "The call forwards a free-form Record<string, any> (props.trackingMetadata) as event properties. Nothing in the type stops a caller adding other keys such as user text. Every caller found today sends only section and page. Type trackingMetadata as { section: string; page: string }.",
+   "evidence": "packages/ui/components/navigation/tabs/VerticalTabItem.tsx:34,57"
+  },
+  {
+   "item": "settings_sidebar_button_clicked",
+   "change": "other",
+   "why": "The call uses posthog.capture directly inside a shared UI component instead of a tracking wrapper. The scanner could not read its properties. Check this against the direct_sdk setting in _tracking_profile.yaml.",
+   "evidence": "packages/ui/components/navigation/tabs/VerticalTabItem.tsx:57"
+  },
+  {
+   "item": "onboarding_completed",
+   "change": "property",
+   "why": "Finish personal onboarding (continue) on `/onboarding/personal/calendar` (core) has no event: Continue calls updateProfile with completedOnboarding: true, which is the finish line of personal onboarding. `onboarding_completed` is already in the plan, so add these properties and values to it. This shows how many sign-ups finish personal onboarding and whether they connected a calendar first. Add `method`, `has_connected_calendar`, `onboarding_type`.",
+   "evidence": "apps/web/app/(use-page-wrapper)/onboarding/personal/calendar/page.tsx#ServerPage",
+   "area": "app_store",
+   "importance": "core",
+   "properties": [
+    "method",
+    "has_connected_calendar",
+    "onboarding_type"
+   ]
+  },
+  {
+   "item": "onboarding_step_completed",
+   "change": "property",
+   "why": "Save personal profile details and continue onboarding on `/onboarding/personal/profile` (core) has no event: This answers where new users drop off in onboarding. It is a new `step` value and a few properties on the existing event, not a new event. Add `step`, `has_avatar`, `has_bio`, `from_team_onboarding`.",
+   "evidence": "apps/web/app/(use-page-wrapper)/onboarding/personal/profile/page.tsx#ServerPage",
+   "area": "web",
+   "importance": "core",
+   "properties": [
+    "step",
+    "has_avatar",
+    "has_bio",
+    "from_team_onboarding"
+   ]
+  },
+  {
+   "item": "app_connect_started",
+   "change": "add_event",
+   "why": "Start connecting a conferencing app via OAuth on `GET /v2/conferencing/:app/oauth/auth-url` (core) has no event. Intent half of the connect flow: how many users start connecting an app (Zoom, Google Meet, Stripe and so on) and which one. The outcome arrives through the OAuth callback, so abandonment is a start with no matching app_connected. Properties: `app_type`, `app`, `api_version`.",
+   "evidence": "apps/api/v2/src/modules/conferencing/controllers/conferencing.controller.ts#ConferencingController.redirect",
+   "area": "api",
+   "importance": "core",
+   "properties": [
+    "app_type",
+    "app",
+    "api_version"
+   ]
+  },
+  {
+   "item": "app_connected",
+   "change": "add_event",
+   "why": "Complete conferencing app OAuth connection on `GET /v2/conferencing/:app/oauth/callback` (core) has no event. Outcome of the OAuth connect: how many apps get connected, per app, and how many fail and why. Success and failure share one event through status and failure_reason. Properties: `app_type`, `app`, `status`, `failure_reason`, `is_first_app_connected`, `api_version`.",
+   "evidence": "apps/api/v2/src/modules/conferencing/controllers/conferencing.controller.ts#ConferencingController.save",
+   "area": "api",
+   "importance": "core",
+   "properties": [
+    "app_type",
+    "app",
+    "status",
+    "failure_reason",
+    "is_first_app_connected",
+    "api_version"
+   ]
+  },
+  {
+   "item": "slots_searched",
+   "change": "add_event",
+   "why": "Look up available slots for an event type on `GET /v2/slots` (core) has no event. Top of the booking funnel: how often a slot lookup returns nothing, and how many lookups turn into a booking. Send counts only, never the user or attendee details. Properties: `api_version`, `result_count`, `has_slots`, `range_days`, `event_type_type`, `entry_point`.",
+   "evidence": "apps/api/v2/src/modules/slots/slots-2024-09-04/controllers/slots.controller.ts#SlotsController_2024_09_04.getAvailableSlots",
+   "area": "api",
+   "importance": "core",
+   "properties": [
+    "api_version",
+    "result_count",
+    "has_slots",
+    "range_days",
+    "event_type_type",
+    "entry_point"
+   ]
+  },
+  {
+   "item": "event_type_updated",
+   "change": "add_event",
+   "why": "Update an event type on `PATCH /v2/atoms/event-types/:eventTypeId`; Update an event type on `PATCH /v2/event-types/:eventTypeId`; Update an event type on `PATCH /v2/event-types/:eventTypeId` (core) has no event. Answers which event type settings people change after creating one, and how often saving fails. Send field names only, never the values. Properties: `event_type_id`, `changed_fields`, `status`, `failure_reason`, `scheduling_type`, `is_team_event`.",
+   "evidence": "apps/api/v2/src/modules/atoms/controllers/atoms.event-types.controller.ts#AtomsEventTypesController.updateAtomEventType, apps/api/v2/src/platform/event-types/event-types_2024_04_15/controllers/event-types.controller.ts#EventTypesController_2024_04_15.updateEventType, apps/api/v2/src/platform/event-types/event-types_2024_06_14/controllers/event-types.controller.ts#EventTypesController_2024_06_14.updateEventType",
+   "area": "api",
+   "importance": "core",
+   "properties": [
+    "event_type_id",
+    "changed_fields",
+    "status",
+    "failure_reason",
+    "scheduling_type",
+    "is_team_event"
+   ]
+  },
+  {
+   "item": "schedule_created",
+   "change": "add_event",
+   "why": "Create a schedule on `POST /v2/atoms/schedules/create`; Create a schedule on `POST /v2/schedules`; Create a schedule on `POST /v2/schedules` (core) has no event. Availability setup is a prerequisite for being bookable, so this answers how many users create their first schedule and how many create extra ones. Properties: `is_first_schedule`, `is_default`, `status`, `failure_reason`.",
+   "evidence": "apps/api/v2/src/modules/atoms/controllers/atoms.schedules.controller.ts#AtomsSchedulesController.createSchedule, apps/api/v2/src/platform/schedules/schedules_2024_04_15/controllers/schedules.controller.ts#SchedulesController_2024_04_15.createSchedule, apps/api/v2/src/platform/schedules/schedules_2024_06_11/controllers/schedules.controller.ts#SchedulesController_2024_06_11.createSchedule",
+   "area": "api",
+   "importance": "core",
+   "properties": [
+    "is_first_schedule",
+    "is_default",
+    "status",
+    "failure_reason"
+   ]
+  },
+  {
+   "item": "email_verification_code_sent",
+   "change": "add_event",
+   "why": "Send an email verification code on `POST /v2/atoms/verification/email/send-code` (core) has no event. Intent half of email verification: how many codes are requested and how many fail to send. A sent code with no email_verified afterwards is abandonment. Properties: `status`, `failure_reason`, `entry_point`.",
+   "evidence": "apps/api/v2/src/modules/atoms/controllers/atoms.verification.controller.ts#AtomsVerificationController.sendEmailVerificationCode",
+   "area": "api",
+   "importance": "core",
+   "properties": [
+    "status",
+    "failure_reason",
+    "entry_point"
+   ]
+  },
+  {
+   "item": "email_verified",
+   "change": "add_event",
+   "why": "Verify an email code on `POST /v2/atoms/verification/email/verify-code` (core) has no event. Outcome of email verification: the share of codes that get verified, and whether failures are wrong code, expired code or rate limit. Use is_authenticated=false for this unauthenticated route. Properties: `status`, `failure_reason`, `is_authenticated`, `attempt_count`.",
+   "evidence": "apps/api/v2/src/modules/atoms/controllers/atoms.verification.controller.ts#AtomsVerificationController.verifyEmailCode",
+   "area": "api",
+   "importance": "core",
+   "properties": [
+    "status",
+    "failure_reason",
+    "is_authenticated",
+    "attempt_count"
+   ]
+  },
+  {
+   "item": "oauth2_token_issued",
+   "change": "add_event",
+   "why": "Exchange authorization code or refresh token for OAuth2 tokens on `POST /v2/auth/oauth2/token` (core) has no event. Shows how many third-party OAuth clients complete authorization, and how many refreshes run versus fail. Grant type separates new authorizations from refreshes. Properties: `grant_type`, `client_id`, `status`, `failure_reason`.",
+   "evidence": "apps/api/v2/src/modules/auth/oauth2/controllers/oauth2.controller.ts#OAuth2Controller.token",
+   "area": "api",
+   "importance": "core",
+   "properties": [
+    "grant_type",
+    "client_id",
+    "status",
+    "failure_reason"
+   ]
+  },
+  {
+   "item": "booking_created",
+   "change": "add_event",
+   "why": "Create a booking on `POST /v2/bookings` (core) has no event. The core outcome of the product: bookings made, by type and API version, and how many fail and why. The intent side is the booker UI, which is recorded on the client. Properties: `booking_type`, `event_type_id`, `api_version`, `status`, `failure_reason`, `is_first_booking`, `requires_confirmation`, `is_seated`, `auth_method`.",
+   "evidence": "apps/api/v2/src/platform/bookings/2024-04-15/controllers/bookings.controller.ts#BookingsController_2024_04_15.createBooking",
+   "area": "api",
+   "importance": "core",
+   "properties": [
+    "booking_type",
+    "event_type_id",
+    "api_version",
+    "status",
+    "failure_reason",
+    "is_first_booking",
+    "requires_confirmation",
+    "is_seated",
+    "auth_method"
+   ]
+  },
+  {
+   "item": "booking_cancelled",
+   "change": "add_event",
+   "why": "Cancel a booking on `POST /v2/bookings/:bookingUid/cancel` (core) has no event. Answers how many bookings are cancelled, by whom and how close to the start time. Never send the cancellation reason text. Properties: `cancelled_by`, `is_recurring`, `cancel_all_remaining`, `is_seated`, `hours_until_start`, `status`, `failure_reason`, `api_version`.",
+   "evidence": "apps/api/v2/src/platform/bookings/2024-04-15/controllers/bookings.controller.ts#BookingsController_2024_04_15.cancelBooking",
+   "area": "api",
+   "importance": "core",
+   "properties": [
+    "cancelled_by",
+    "is_recurring",
+    "cancel_all_remaining",
+    "is_seated",
+    "hours_until_start",
+    "status",
+    "failure_reason",
+    "api_version"
+   ]
+  },
+  {
+   "item": "booking_confirmed",
+   "change": "add_event",
+   "why": "Confirm a booking on `POST /v2/bookings/:bookingUid/confirm` (core) has no event. For event types that require confirmation, this shows how many requests hosts approve and how long they take. Properties: `hours_since_requested`, `status`, `failure_reason`.",
+   "evidence": "apps/api/v2/src/platform/bookings/2024-08-13/controllers/bookings.controller.ts#BookingsController_2024_08_13.confirmBooking",
+   "area": "api",
+   "importance": "core",
+   "properties": [
+    "hours_since_requested",
+    "status",
+    "failure_reason"
+   ]
+  },
+  {
+   "item": "booking_declined",
+   "change": "add_event",
+   "why": "Decline a booking on `POST /v2/bookings/:bookingUid/decline` (core) has no event. Pairs with booking_confirmed to give the approval rate for bookings that need confirmation. Send has_reason as a boolean, never the reason text. Properties: `hours_since_requested`, `has_reason`, `status`, `failure_reason`.",
+   "evidence": "apps/api/v2/src/platform/bookings/2024-08-13/controllers/bookings.controller.ts#BookingsController_2024_08_13.declineBooking",
+   "area": "api",
+   "importance": "core",
+   "properties": [
+    "hours_since_requested",
+    "has_reason",
+    "status",
+    "failure_reason"
+   ]
+  },
+  {
+   "item": "booking_rescheduled",
+   "change": "add_event",
+   "why": "Reschedule a booking on `POST /v2/bookings/:bookingUid/reschedule` (core) has no event. Answers how often bookings are moved rather than cancelled, and by whom. It is a different action from creating or cancelling. Properties: `rescheduled_by`, `is_seated`, `hours_until_original_start`, `status`, `failure_reason`, `api_version`.",
+   "evidence": "apps/api/v2/src/platform/bookings/2024-08-13/controllers/bookings.controller.ts#BookingsController_2024_08_13.rescheduleBooking",
+   "area": "api",
+   "importance": "core",
+   "properties": [
+    "rescheduled_by",
+    "is_seated",
+    "hours_until_original_start",
+    "status",
+    "failure_reason",
+    "api_version"
+   ]
+  },
+  {
+   "item": "event_type_created",
+   "change": "add_event",
+   "why": "Create an event type on `POST /v2/event-types`; Create an event type on `POST /v2/event-types` (core) has no event. Answers how many event types API users create each week, and how many are a user's first, which is the first value moment. Send it from the server (`api_version` = 2024_04_15). Properties: `entry_point`, `api_version`, `status`, `failure_reason`, `is_first_event_type`, `length_in_minutes`, `scheduling_type`, `team_id_present`.",
+   "evidence": "apps/api/v2/src/platform/event-types/event-types_2024_04_15/controllers/event-types.controller.ts#EventTypesController_2024_04_15.createEventType, apps/api/v2/src/platform/event-types/event-types_2024_06_14/controllers/event-types.controller.ts#EventTypesController_2024_06_14.createEventType",
+   "area": "api",
+   "importance": "core",
+   "properties": [
+    "entry_point",
+    "api_version",
+    "status",
+    "failure_reason",
+    "is_first_event_type",
+    "length_in_minutes",
+    "scheduling_type",
+    "team_id_present"
+   ]
+  },
+  {
+   "item": "oauth_client_authorized",
+   "change": "add_event",
+   "why": "Authorize an OAuth client for a user on `POST /v2/oauth/:clientId/authorize` (core) has no event. Answers how many users grant a platform client access, and why they fail. The code shows three failures: client not found, invalid redirect URI, and already authorized. The flow ends in an external callback, so a user who is sent to authorize and never completes it counts as abandonment with no matching event. Properties: `status`, `failure_reason`, `oauth_client_id`.",
+   "evidence": "apps/api/v2/src/modules/oauth-clients/controllers/oauth-flow/oauth-flow.controller.ts#OAuthFlowController.authorize",
+   "area": "api",
+   "importance": "core",
+   "properties": [
+    "status",
+    "failure_reason",
+    "oauth_client_id"
+   ]
+  },
+  {
+   "item": "oauth_client_created",
+   "change": "add_event",
+   "why": "Create an OAuth client on `POST /v2/oauth-clients` (core) has no event. Answers how many platform customers set up a client each week, and how many are new. This is the first value moment for the platform product, and no existing event covers it. Properties: `status`, `failure_reason`, `permissions_count`, `redirect_uri_count`, `is_first_oauth_client`, `organization_id`.",
+   "evidence": "apps/api/v2/src/modules/oauth-clients/controllers/oauth-clients/oauth-clients.controller.ts#OAuthClientsController.createOAuthClient",
+   "area": "api",
+   "importance": "core",
+   "properties": [
+    "status",
+    "failure_reason",
+    "permissions_count",
+    "redirect_uri_count",
+    "is_first_oauth_client",
+    "organization_id"
+   ]
+  },
+  {
+   "item": "managed_user_created",
+   "change": "add_event",
+   "why": "Create a managed user on `POST /v2/oauth-clients/:clientId/users` (core) has no event. Answers how fast each platform client's user base grows, which is the usage number for the platform product. It's sent from the server because the user is created on a client's behalf. Properties: `oauth_client_id`, `status`, `failure_reason`, `time_zone_set`, `is_first_managed_user`, `user_count_after`.",
+   "evidence": "apps/api/v2/src/modules/oauth-clients/controllers/oauth-client-users/oauth-client-users.controller.ts#OAuthClientUsersController.createUser",
+   "area": "api",
+   "importance": "core",
+   "properties": [
+    "oauth_client_id",
+    "status",
+    "failure_reason",
+    "time_zone_set",
+    "is_first_managed_user",
+    "user_count_after"
+   ]
+  },
+  {
+   "item": "slot_reserved",
+   "change": "add_event",
+   "why": "Reserve a slot on `POST /v2/slots/reservations`; Reserve a slot on `POST /v2/slots/reserve` (core) has no event. Answers how many slot holds turn into bookings, when paired with the booking-created outcome event. It's over the budget of 5 new events, and the reason is that it's the top of the booking funnel. `api_version` = 2024_09_04 here. Properties: `api_version`, `event_type_id`, `reservation_duration_minutes`, `is_authenticated`, `status`, `failure_reason`.",
+   "evidence": "apps/api/v2/src/modules/slots/slots-2024-09-04/controllers/slots.controller.ts#SlotsController_2024_09_04.reserveSlot, apps/api/v2/src/modules/slots/slots-2024-04-15/controllers/slots.controller.ts#SlotsController_2024_04_15.reserveSlot",
+   "area": "api",
+   "importance": "core",
+   "properties": [
+    "api_version",
+    "event_type_id",
+    "reservation_duration_minutes",
+    "is_authenticated",
+    "status",
+    "failure_reason"
+   ]
+  },
+  {
+   "item": "app_installed",
+   "change": "add_event",
+   "why": "Connect a calendar app on `/onboarding/personal/calendar` (core) has no event. Answers how many new users connect a calendar during onboarding, which calendar, and how many installs fail. Many calendars go through an OAuth redirect, so send it from the server as the outcome, with `entry_point = onboarding_personal`. Install clicks that never reach `app_installed` are abandonment, so an `app_install_started` intent event is worth adding too. Properties: `app_slug`, `app_category`, `entry_point`, `status`, `failure_reason`.",
+   "evidence": "apps/web/app/(use-page-wrapper)/onboarding/personal/calendar/page.tsx#ServerPage",
+   "area": "app_store",
+   "importance": "core",
+   "properties": [
+    "app_slug",
+    "app_category",
+    "entry_point",
+    "status",
+    "failure_reason"
+   ]
+  },
+  {
+   "item": "booking_action_completed",
+   "change": "add_event",
+   "why": "Cancel, confirm, reject or reschedule a booking on `/bookings/[status]` (core) has no event. Answers how many bookings hosts cancel, confirm or reject, and how many of those fail. These are core state changes and should be sent from the server with `status` and `failure_reason`. `action` = cancel | confirm | reject | reschedule, and `cancelled` is not counted as a failure. Properties: `action`, `status`, `failure_reason`, `booking_status_tab`, `actor_role`, `is_recurring`.",
+   "evidence": "apps/web/app/(use-page-wrapper)/(main-nav)/bookings/[status]/page.tsx#Page",
+   "area": "modules",
+   "importance": "core",
+   "properties": [
+    "action",
+    "status",
+    "failure_reason",
+    "booking_status_tab",
+    "actor_role",
+    "is_recurring"
+   ]
+  },
+  {
+   "item": "setup_step_completed",
+   "change": "add_event",
+   "why": "Create the admin account on `/auth/setup` (core) has no event. Answers how many self-hosted installs get past creating the first admin; one onboarding-step event with a `step` property covers the setup steps. It should be sent from the server, where the user is created. Properties: `step`, `status`, `failure_reason`, `is_first_user`.",
+   "evidence": "apps/web/app/(use-page-wrapper)/auth/setup/page.tsx#ServerPage",
+   "area": "ui",
+   "importance": "core",
+   "properties": [
+    "step",
+    "status",
+    "failure_reason",
+    "is_first_user"
+   ]
+  },
+  {
+   "item": "login_completed",
+   "change": "add_event",
+   "why": "Sign in or sign up via NextAuth on `ALL /api/auth/[...nextauth]` (core) has no event. Answers how many people signed in or signed up last week, by method, and how many failed. NextAuth is the one server place every method passes through, so it is the outcome event, and is_new_user marks the sign-ups. Properties: `method`, `status`, `failure_reason`, `is_new_user`, `two_factor_used`.",
+   "evidence": "apps/web/pages/api/auth/[...nextauth].ts#handler",
+   "area": "web",
+   "importance": "core",
+   "properties": [
+    "method",
+    "status",
+    "failure_reason",
+    "is_new_user",
+    "two_factor_used"
+   ]
+  },
+  {
+   "item": "payment_completed",
+   "change": "add_event",
+   "why": "Receive an Alby (Lightning) booking payment on `ALL /api/integrations/alby/webhook`; Pay for a booking on `/payment/[uid]` (core) has no event. Money outcomes are tracked from the server, and this is a callback with no user present. It answers how many booking payments complete per provider. A booking that starts payment but has no payment_completed counts as abandoned. Properties: `provider`, `status`, `failure_reason`, `booking_id`, `amount_bucket`, `currency`.",
+   "evidence": "apps/web/pages/api/integrations/alby/webhook.ts#default, apps/web/app/(use-page-wrapper)/payment/[uid]/page.tsx#ServerPage",
+   "area": "web",
+   "importance": "core",
+   "properties": [
+    "provider",
+    "status",
+    "failure_reason",
+    "booking_id",
+    "amount_bucket",
+    "currency"
+   ]
+  },
+  {
+   "item": "password_reset_requested",
+   "change": "add_event",
+   "why": "Request a password reset email on `/auth/forgot-password`; Request a password reset email on `POST /api/auth/forgot-password` (core) has no event. Answers how often people get locked out and ask for a reset. It is the intent half of a pair with password_reset_completed. Never send the email address. Properties: `status`, `failure_reason`.",
+   "evidence": "apps/web/app/(use-page-wrapper)/auth/forgot-password/page.tsx#ServerPage, apps/web/app/api/auth/forgot-password/route.ts#POST",
+   "area": "web",
+   "importance": "core",
+   "properties": [
+    "status",
+    "failure_reason"
+   ]
+  },
+  {
+   "item": "password_reset_completed",
+   "change": "add_event",
+   "why": "Set a new password from a reset link on `/auth/forgot-password/[id]`; Reset a password with an emailed token on `POST /api/auth/reset-password` (core) has no event. Answers how many reset requests end in a new password. A request with no completion is an abandoned reset. Properties: `status`, `failure_reason`.",
+   "evidence": "apps/web/app/(use-page-wrapper)/auth/forgot-password/[id]/page.tsx#ServerPage, apps/web/app/api/auth/reset-password/route.ts#POST",
+   "area": "web",
+   "importance": "core",
+   "properties": [
+    "status",
+    "failure_reason"
+   ]
+  },
+  {
+   "item": "login_started",
+   "change": "add_event",
+   "why": "Sign in with an identity provider (Google or SAML) on `/auth/login` (core) has no event. Provider sign-in leaves for an external callback, so abandonment is a login_started with no login_completed. This answers how many people start provider login and don't finish. Properties: `method`, `entry_point`.",
+   "evidence": "apps/web/app/(use-page-wrapper)/auth/login/page.tsx#ServerPage",
+   "area": "web",
+   "importance": "core",
+   "properties": [
+    "method",
+    "entry_point"
+   ]
+  },
+  {
+   "item": "oauth_app_authorized",
+   "change": "add_event",
+   "why": "Authorize an OAuth app to access the account on `/auth/oauth2/authorize` (core) has no event. Answers how many users grant access to third-party apps and how many deny it. Cancelled is the deny button and is not a failure. Properties: `status`, `failure_reason`, `client_id`.",
+   "evidence": "apps/web/app/(use-page-wrapper)/auth/oauth2/authorize/page.tsx#ServerPageWrapper",
+   "area": "web",
+   "importance": "core",
+   "properties": [
+    "status",
+    "failure_reason",
+    "client_id"
+   ]
+  },
+  {
+   "item": "verification_email_resent",
+   "change": "add_event",
+   "why": "Resend the verification email on `/auth/verify` (core) has no event. Answers how often the verification email doesn't arrive or isn't acted on, which shows verification friction. Properties: `entry_point`, `status`.",
+   "evidence": "apps/web/app/(use-page-wrapper)/auth/verify/page.tsx#ServerPage",
+   "area": "web",
+   "importance": "core",
+   "properties": [
+    "entry_point",
+    "status"
+   ]
+  },
+  {
+   "item": "booking_confirmation_completed",
+   "change": "add_event",
+   "why": "Accept or reject a booking from an email link on `GET /api/link` (core) has no event. Hosts of confirmation-required events accept or reject bookings, and the number shows how many pending bookings get resolved, and how, from the email. Fire it on the server in confirmHandler so the dashboard path shares the same event. Accept and reject are one event with `decision`. Properties: `decision`, `entry_point`, `status`, `failure_reason`, `has_reason`, `is_recurring`.",
+   "evidence": "apps/web/app/api/link/route.ts#GET",
+   "area": "web",
+   "importance": "core",
+   "properties": [
+    "decision",
+    "entry_point",
+    "status",
+    "failure_reason",
+    "has_reason",
+    "is_recurring"
+   ]
+  },
+  {
+   "item": "oauth_token_exchanged",
+   "change": "add_event",
+   "why": "Exchange an authorization code for an OAuth access token on `POST /api/auth/oauth/token` (core) has no event. It shows whether third-party OAuth clients can finish authorization and how many apps are actively connected. Fire it from the server, which sees the failures. Properties: `status`, `failure_reason`, `client_id`, `grant_type`, `uses_pkce`.",
+   "evidence": "apps/web/app/api/auth/oauth/token/route.ts#POST",
+   "area": "web",
+   "importance": "core",
+   "properties": [
+    "status",
+    "failure_reason",
+    "client_id",
+    "grant_type",
+    "uses_pkce"
+   ]
+  },
+  {
+   "item": "user_signed_up",
+   "change": "add_event",
+   "why": "Sign up for an account on `POST /api/auth/signup` (core) has no event. Sign-ups are the top of the acquisition funnel, and the server sees both outcomes and failure reasons. It answers how many accounts are created per week and which signup path they use. Identify the user here, and set the signup date as a `set_once` user property. Properties: `status`, `failure_reason`, `signup_type`, `has_invite_token`, `is_premium_username`.",
+   "evidence": "apps/web/app/api/auth/signup/route.ts#POST",
+   "area": "web",
+   "importance": "core",
+   "properties": [
+    "status",
+    "failure_reason",
+    "signup_type",
+    "has_invite_token",
+    "is_premium_username"
+   ]
+  },
+  {
+   "item": "booking_request_decided",
+   "change": "add_event",
+   "why": "Reject a booking with a reason from an email link on `POST /api/verify-booking-token` (core) has no event. Answers how many pending booking requests hosts accept or reject, how many come from the email link, and how many fail. It is a server outcome. The intent is just the email click, so there is no separate intent event. Never send the reason text. Properties: `decision`, `entry_point`, `status`, `failure_reason`, `has_reason`, `reason_char_count`, `is_recurring`.",
+   "evidence": "apps/web/app/api/verify-booking-token/route.ts#POST",
+   "area": "web",
+   "importance": "core",
+   "properties": [
+    "decision",
+    "entry_point",
+    "status",
+    "failure_reason",
+    "has_reason",
+    "reason_char_count",
+    "is_recurring"
+   ]
+  },
+  {
+   "item": "video_call_joined",
+   "change": "add_event",
+   "why": "Join a video call as a guest on `POST /api/video/guest-session`; Continue to the meeting as a guest on `/video/[uid]`; Sign in to join the meeting on `/video/[uid]` (core) has no event. Answers how many booked calls are actually joined, and how many guests are blocked by the email check. Hosts joining from the video page use the same event with a different participant_role. Properties: `participant_role`, `entry_point`, `status`, `failure_reason`, `booking_uid`.",
+   "evidence": "apps/web/app/api/video/guest-session/route.ts#POST, apps/web/app/(use-page-wrapper)/video/[uid]/page.tsx#ServerPage, apps/web/app/(use-page-wrapper)/video/[uid]/page.tsx#ServerPage",
+   "area": "web",
+   "importance": "core",
+   "properties": [
+    "participant_role",
+    "entry_point",
+    "status",
+    "failure_reason",
+    "booking_uid"
+   ]
+  },
+  {
+   "item": "app_install_started",
+   "change": "add_event",
+   "why": "Connect a calendar on `/settings/my-account/calendars` (core) has no event. Connecting a calendar is the main activation step for a scheduling product. This is the intent; OAuth can be abandoned, so the outcome is app_installed, and a start with no matching outcome counts as abandoned. Properties: `app_slug`, `app_category`, `entry_point`, `is_team_install`.",
+   "evidence": "apps/web/app/(use-page-wrapper)/settings/(settings-layout)/my-account/calendars/page.tsx#Page",
+   "area": "web",
+   "importance": "core",
+   "properties": [
+    "app_slug",
+    "app_category",
+    "entry_point",
+    "is_team_install"
+   ]
+  },
+  {
+   "item": "event_type_selected",
+   "change": "add_event",
+   "why": "Choose an event type from a user's profile on `/[user]` (core) has no event. Answers how many profile visitors pick an event type, which is the top of the booking funnel by profile. Properties: `entry_point`, `event_type_id`, `is_team_event`, `is_embed`.",
+   "evidence": "apps/web/app/(booking-page-wrapper)/[user]/page.tsx#ServerPage",
+   "area": "web",
+   "importance": "core",
+   "properties": [
+    "entry_point",
+    "event_type_id",
+    "is_team_event",
+    "is_embed"
+   ]
+  },
+  {
+   "item": "booking_slot_selected",
+   "change": "add_event",
+   "why": "Select a date and time on the booker on `/[user]/[type]` (core) has no event. The intent half of booking_created: slots selected against bookings made shows where visitors drop off on the booker. It fires once per chosen slot, not per calendar click. This PR adds more than 5 events; each answers a distinct core-funnel question (request decision, call joined, install start and finish, profile pick, booking intent and outcome). Properties: `event_type_id`, `is_embed`, `entry_point`, `days_until_slot_bucket`, `is_team_event`.",
+   "evidence": "apps/web/app/(booking-page-wrapper)/[user]/[type]/page.tsx#ServerPage",
+   "area": "web",
+   "importance": "core",
+   "properties": [
+    "event_type_id",
+    "is_embed",
+    "entry_point",
+    "days_until_slot_bucket",
+    "is_team_event"
+   ]
+  },
+  {
+   "item": "managed_user_deleted",
+   "change": "add_event",
+   "why": "Delete a managed user on `DELETE /v2/oauth-clients/:clientId/users/:userId` (secondary) has no event. Answers how many managed users platform customers remove per week and from which OAuth client. The handler deletes the user directly, so send it from the server. Properties: `oauth_client_id`, `managed_user_id`, `status`.",
+   "evidence": "apps/api/v2/src/modules/oauth-clients/controllers/oauth-client-users/oauth-client-users.controller.ts#OAuthClientUsersController.deleteUser",
+   "area": "api",
+   "importance": "secondary",
+   "properties": [
+    "oauth_client_id",
+    "managed_user_id",
+    "status"
+   ]
+  },
+  {
+   "item": "webhook_deleted",
+   "change": "add_event",
+   "why": "Delete all OAuth client webhooks on `DELETE /v2/oauth-clients/:clientId/webhooks`; Delete an OAuth client webhook on `DELETE /v2/oauth-clients/:clientId/webhooks/:webhookId`; Delete a webhook on `DELETE /v2/webhooks/:webhookId` (secondary) has no event. Shows how often customers remove webhook integrations, a churn signal for API users. The same event covers the single and bulk deletes on the user and OAuth client surfaces, with `entry_point` and `delete_mode` telling them apart. Properties: `deleted_count`, `oauth_client_id`.",
+   "evidence": "apps/api/v2/src/modules/oauth-clients/controllers/oauth-client-webhooks/oauth-client-webhooks.controller.ts#OAuthClientWebhooksController.deleteAllOAuthClientWebhooks, apps/api/v2/src/modules/oauth-clients/controllers/oauth-client-webhooks/oauth-client-webhooks.controller.ts#OAuthClientWebhooksController.deleteOAuthClientWebhook, apps/api/v2/src/modules/webhooks/controllers/webhooks.controller.ts#WebhooksController.deleteWebhook",
+   "area": "api",
+   "importance": "secondary",
+   "properties": [
+    "deleted_count",
+    "oauth_client_id"
+   ]
+  },
+  {
+   "item": "schedule_deleted",
+   "change": "add_event",
+   "why": "Delete a schedule on `DELETE /v2/schedules/:scheduleId`; Delete a schedule on `DELETE /v2/schedules/:scheduleId` (secondary) has no event. Availability schedules drive what can be booked, so removing one is a state change worth counting. It shares the `schedule_deleted` name with the 2024-06-11 endpoint, and `api_version` separates them and shows who is still on the old version. Properties: `is_default`, `schedule_count_after`.",
+   "evidence": "apps/api/v2/src/platform/schedules/schedules_2024_04_15/controllers/schedules.controller.ts#SchedulesController_2024_04_15.deleteSchedule, apps/api/v2/src/platform/schedules/schedules_2024_06_11/controllers/schedules.controller.ts#SchedulesController_2024_06_11.deleteSchedule",
+   "area": "api",
+   "importance": "secondary",
+   "properties": [
+    "is_default",
+    "schedule_count_after"
+   ]
+  },
+  {
+   "item": "selected_calendar_removed",
+   "change": "add_event",
+   "why": "Remove a selected calendar on `DELETE /v2/selected-calendars` (secondary) has no event. Removing a calendar from conflict checking changes which times appear free. The count shows how often users prune calendars and whether they end up with none. Properties: `integration`, `calendar_count_after`, `status`.",
+   "evidence": "apps/api/v2/src/modules/selected-calendars/controllers/selected-calendars.controller.ts#SelectedCalendarsController.deleteSelectedCalendar",
+   "area": "api",
+   "importance": "secondary",
+   "properties": [
+    "integration",
+    "calendar_count_after",
+    "status"
+   ]
+  },
+  {
+   "item": "calendar_connect_started",
+   "change": "add_event",
+   "why": "Start connecting a Google or Outlook calendar on `GET /v2/calendars/:calendar/connect` (secondary) has no event. This is the intent half of a calendar connection, which finishes through an OAuth callback. Abandonment is a start with no matching `calendar_connected`. Properties: `calendar_type`, `is_dry_run`.",
+   "evidence": "apps/api/v2/src/platform/calendars/controllers/calendars.controller.ts#CalendarsController.redirect",
+   "area": "api",
+   "importance": "secondary",
+   "properties": [
+    "calendar_type",
+    "is_dry_run"
+   ]
+  },
+  {
+   "item": "calendar_connected",
+   "change": "add_event",
+   "why": "Complete Google or Outlook calendar connection (OAuth callback) on `GET /v2/calendars/:calendar/save` (secondary) has no event. This is the outcome of the calendar connection: how many users finish connecting, and why they fail. Send it from the server. It pairs with `calendar_connect_started`. Properties: `calendar_type`, `status`, `failure_reason`, `is_dry_run`.",
+   "evidence": "apps/api/v2/src/platform/calendars/controllers/calendars.controller.ts#CalendarsController.save",
+   "area": "api",
+   "importance": "secondary",
+   "properties": [
+    "calendar_type",
+    "status",
+    "failure_reason",
+    "is_dry_run"
+   ]
+  },
+  {
+   "item": "calendar_connection_started",
+   "change": "add_event",
+   "why": "Start Google Calendar connection on `GET /v2/gcal/oauth/auth-url` (secondary) has no event. Answers how many users start connecting a calendar and how many finish. The outcome arrives through the OAuth callback, so abandonment is a start with no matching connected event. The outcome event (calendar_connected, with status and failure_reason) belongs on the callback that saves the credential, not on this redirect. Properties: `provider`, `entry_point`.",
+   "evidence": "apps/api/v2/src/platform/gcal/gcal.controller.ts#GcalController.redirect",
+   "area": "api",
+   "importance": "secondary",
+   "properties": [
+    "provider",
+    "entry_point"
+   ]
+  },
+  {
+   "item": "schedule_updated",
+   "change": "add_event",
+   "why": "Update a schedule on `PATCH /v2/atoms/schedules/:scheduleId`; Update a schedule on `PATCH /v2/schedules/:scheduleId`; Update a schedule on `PATCH /v2/schedules/:scheduleId` (secondary) has no event. Answers how often users change their availability and which part they change. Same event name on every schedule update surface, with entry_point or api_version to tell them apart. Properties: `entry_point`, `api_version`, `is_default_changed`, `availability_changed`, `overrides_changed`, `timezone_changed`, `status`, `failure_reason`.",
+   "evidence": "apps/api/v2/src/modules/atoms/controllers/atoms.schedules.controller.ts#AtomsSchedulesController.updateSchedule, apps/api/v2/src/platform/schedules/schedules_2024_04_15/controllers/schedules.controller.ts#SchedulesController_2024_04_15.updateSchedule, apps/api/v2/src/platform/schedules/schedules_2024_06_11/controllers/schedules.controller.ts#SchedulesController_2024_06_11.updateSchedule",
+   "area": "api",
+   "importance": "secondary",
+   "properties": [
+    "entry_point",
+    "api_version",
+    "is_default_changed",
+    "availability_changed",
+    "overrides_changed",
+    "timezone_changed",
+    "status",
+    "failure_reason"
+   ]
+  },
+  {
+   "item": "booking_location_updated",
+   "change": "add_event",
+   "why": "Update a booking's location on `PATCH /v2/bookings/:bookingUid/location` (secondary) has no event. Changing a location after booking is a different action from rescheduling or cancelling. It answers how often hosts or attendees change location, to which type, and how often it fails. Properties: `location_type`, `previous_location_type`, `booking_status`, `entry_point`, `status`, `failure_reason`.",
+   "evidence": "apps/api/v2/src/platform/bookings/2024-08-13/controllers/booking-location.controller.ts#BookingLocationController_2024_08_13.updateBookingLocation",
+   "area": "api",
+   "importance": "secondary",
+   "properties": [
+    "location_type",
+    "previous_location_type",
+    "booking_status",
+    "entry_point",
+    "status",
+    "failure_reason"
+   ]
+  },
+  {
+   "item": "booking_attendee_added",
+   "change": "add_event",
+   "why": "Add an attendee to a booking on `POST /v2/bookings/:bookingUid/attendees`; Add guests to a booking on `POST /v2/bookings/:bookingUid/guests` (secondary) has no event. Answers how often bookings are changed after creation by adding people, and how often it fails. Send it from the server and don't send emails or names. Properties: `attendee_type`, `attendee_count_added`, `entry_point`, `is_platform_client`, `status`, `failure_reason`.",
+   "evidence": "apps/api/v2/src/platform/bookings/2024-08-13/controllers/booking-attendees.controller.ts#BookingAttendeesController_2024_08_13.addAttendee, apps/api/v2/src/platform/bookings/2024-08-13/controllers/booking-guests.controller.ts#BookingGuestsController_2024_08_13.addGuests",
+   "area": "api",
+   "importance": "secondary",
+   "properties": [
+    "attendee_type",
+    "attendee_count_added",
+    "entry_point",
+    "is_platform_client",
+    "status",
+    "failure_reason"
+   ]
+  },
+  {
+   "item": "booking_no_show_marked",
+   "change": "add_event",
+   "why": "Mark a booking attendee or host absent on `POST /v2/bookings/:bookingUid/mark-absent`; Mark a host or attendee as no-show on `POST /v2/bookings/:bookingUid/mark-no-show` (secondary) has no event. Answers how many bookings end in a no-show, and whether the host or the attendee was absent. Properties: `target`, `marked_count`, `api_version`, `is_platform_client`, `status`, `failure_reason`.",
+   "evidence": "apps/api/v2/src/platform/bookings/2024-08-13/controllers/bookings.controller.ts#BookingsController_2024_08_13.markNoShow, apps/api/v2/src/platform/bookings/2024-04-15/controllers/bookings.controller.ts#BookingsController_2024_04_15.markNoShow",
+   "area": "api",
+   "importance": "secondary",
+   "properties": [
+    "target",
+    "marked_count",
+    "api_version",
+    "is_platform_client",
+    "status",
+    "failure_reason"
+   ]
+  },
+  {
+   "item": "booking_reassigned",
+   "change": "add_event",
+   "why": "Reassign a booking to an auto-selected host on `POST /v2/bookings/:bookingUid/reassign`; Reassign a booking to a specific host on `POST /v2/bookings/:bookingUid/reassign/:userId` (secondary) has no event. Answers how often team bookings are moved to another host, whether the host is picked or auto-selected, and how often it fails. Properties: `reassign_method`, `event_type_id`, `is_platform_client`, `status`, `failure_reason`.",
+   "evidence": "apps/api/v2/src/platform/bookings/2024-08-13/controllers/bookings.controller.ts#BookingsController_2024_08_13.reassignBooking, apps/api/v2/src/platform/bookings/2024-08-13/controllers/bookings.controller.ts#BookingsController_2024_08_13.reassignBookingToUser",
+   "area": "api",
+   "importance": "secondary",
+   "properties": [
+    "reassign_method",
+    "event_type_id",
+    "is_platform_client",
+    "status",
+    "failure_reason"
+   ]
+  },
+  {
+   "item": "integration_connected",
+   "change": "add_event",
+   "why": "Connect an Apple calendar with credentials on `POST /v2/calendars/:calendar/credentials`; Connect an ICS feed calendar on `POST /v2/calendars/ics-feed/save`; Connect a conferencing app on `POST /v2/conferencing/:app/connect` (secondary) has no event. Connecting a calendar or conferencing app is an activation step that bookings depend on. This answers how many users connect which provider and how often it fails. Properties: `category`, `provider`, `method`, `is_first_integration`, `is_platform_client`, `status`, `failure_reason`.",
+   "evidence": "apps/api/v2/src/platform/calendars/controllers/calendars.controller.ts#CalendarsController.syncCredentials, apps/api/v2/src/platform/calendars/controllers/calendars.controller.ts#CalendarsController.createIcsFeed, apps/api/v2/src/modules/conferencing/controllers/conferencing.controller.ts#ConferencingController.connect",
+   "area": "api",
+   "importance": "secondary",
+   "properties": [
+    "category",
+    "provider",
+    "method",
+    "is_first_integration",
+    "is_platform_client",
+    "status",
+    "failure_reason"
+   ]
+  },
+  {
+   "item": "webhook_created",
+   "change": "add_event",
+   "why": "Create an event type webhook on `POST /v2/event-types/:eventTypeId/webhooks`; Create an OAuth client webhook on `POST /v2/oauth-clients/:clientId/webhooks`; Create a webhook on `POST /v2/webhooks` (secondary) has no event. Answers how many users set up webhook integrations, and at which level. It is a signal of API and integration adoption. Don't send the subscriber URL. Properties: `scope`, `subscriber_event_count`, `is_active`, `is_platform_client`, `status`, `failure_reason`.",
+   "evidence": "apps/api/v2/src/modules/event-types/controllers/event-types-webhooks.controller.ts#EventTypeWebhooksController.createEventTypeWebhook, apps/api/v2/src/modules/oauth-clients/controllers/oauth-client-webhooks/oauth-client-webhooks.controller.ts#OAuthClientWebhooksController.createOAuthClientWebhook, apps/api/v2/src/modules/webhooks/controllers/webhooks.controller.ts#WebhooksController.createWebhook",
+   "area": "api",
+   "importance": "secondary",
+   "properties": [
+    "scope",
+    "subscriber_event_count",
+    "is_active",
+    "is_platform_client",
+    "status",
+    "failure_reason"
+   ]
+  },
+  {
+   "item": "selected_calendar_added",
+   "change": "add_event",
+   "why": "Add a selected calendar on `POST /v2/selected-calendars` (secondary) has no event. Answers how many users add calendars to check for conflicts, and on which calendar providers. That is a setup step that makes availability accurate. Don't send the external calendar ID. Properties: `integration`, `has_delegation_credential`.",
+   "evidence": "apps/api/v2/src/modules/selected-calendars/controllers/selected-calendars.controller.ts#SelectedCalendarsController.addSelectedCalendar",
+   "area": "api",
+   "importance": "secondary",
+   "properties": [
+    "integration",
+    "has_delegation_credential"
+   ]
+  },
+  {
+   "item": "verification_code_requested",
+   "change": "add_event",
+   "why": "Request an email verification code on `POST /v2/verified-resources/emails/verification-code/request`; Request a phone verification code on `POST /v2/verified-resources/phones/verification-code/request` (secondary) has no event. This is the intent half of the verification pair, so drop-off between requesting and entering a code can be measured. Email and phone are one event, told apart by resource_type. Never send the address or number. Properties: `resource_type`, `status`, `failure_reason`.",
+   "evidence": "apps/api/v2/src/modules/verified-resources/controllers/users-verified-resources.controller.ts#UserVerifiedResourcesController.requestEmailVerificationCode, apps/api/v2/src/modules/verified-resources/controllers/users-verified-resources.controller.ts#UserVerifiedResourcesController.requestPhoneVerificationCode",
+   "area": "api",
+   "importance": "secondary",
+   "properties": [
+    "resource_type",
+    "status",
+    "failure_reason"
+   ]
+  },
+  {
+   "item": "verification_completed",
+   "change": "add_event",
+   "why": "Verify an email with a code on `POST /v2/verified-resources/emails/verification-code/verify`; Verify a phone number with a code on `POST /v2/verified-resources/phones/verification-code/verify` (secondary) has no event. This is the outcome half of the pair, and it answers what share of requested codes get verified and why they fail. Email and phone share one event, and the failure goes on status/failure_reason. Properties: `resource_type`, `status`, `failure_reason`.",
+   "evidence": "apps/api/v2/src/modules/verified-resources/controllers/users-verified-resources.controller.ts#UserVerifiedResourcesController.verifyEmail, apps/api/v2/src/modules/verified-resources/controllers/users-verified-resources.controller.ts#UserVerifiedResourcesController.verifyPhoneNumber",
+   "area": "api",
+   "importance": "secondary",
+   "properties": [
+    "resource_type",
+    "status",
+    "failure_reason"
+   ]
+  },
+  {
+   "item": "destination_calendar_updated",
+   "change": "add_event",
+   "why": "Update destination calendar on `PUT /v2/destination-calendars` (secondary) has no event. Answers how many users choose where new bookings are written, and on which calendar providers. It's a different action from selecting calendars for conflict checks, so it's a separate event. Don't send the external ID. Properties: `integration`, `has_delegation_credential`.",
+   "evidence": "apps/api/v2/src/modules/destination-calendars/controllers/destination-calendars.controller.ts#DestinationCalendarsController.updateDestinationCalendars",
+   "area": "api",
+   "importance": "secondary",
+   "properties": [
+    "integration",
+    "has_delegation_credential"
+   ]
+  },
+  {
+   "item": "out_of_office_created",
+   "change": "add_event",
+   "why": "Set an out-of-office period on `/settings/my-account/out-of-office` (secondary) has no event. Answers how many users set out-of-office periods and how many redirect their bookings to someone else. It changes how bookings are routed. Properties: `status`, `failure_reason`, `has_redirect`, `reason`, `duration_days_bucket`.",
+   "evidence": "apps/web/app/(use-page-wrapper)/settings/(settings-layout)/my-account/out-of-office/page.tsx#Page",
+   "area": "modules",
+   "importance": "secondary",
+   "properties": [
+    "status",
+    "failure_reason",
+    "has_redirect",
+    "reason",
+    "duration_days_bucket"
+   ]
+  },
+  {
+   "item": "event_type_link_copied",
+   "change": "add_event",
+   "why": "Copy or share an event type link on `/event-types` (secondary) has no event. Copying the booking link is the main way an event type gets shared, so this shows how many created event types reach the sharing step. It can't fail, so no intent event is needed. Properties: `entry_point`, `is_team_event`, `scheduling_type`.",
+   "evidence": "apps/web/app/(use-page-wrapper)/(main-nav)/event-types/page.tsx#Page",
+   "area": "ui",
+   "importance": "secondary",
+   "properties": [
+    "entry_point",
+    "is_team_event",
+    "scheduling_type"
+   ]
+  },
+  {
+   "item": "event_type_duplicated",
+   "change": "add_event",
+   "why": "Duplicate an event type on `/event-types` (secondary) has no event. Duplicating is a different action from creating, and it shows how many people build new event types by copying. The mutation can fail on a clashing slug, so failure goes on this event. Properties: `status`, `failure_reason`, `is_team_event`, `scheduling_type`.",
+   "evidence": "apps/web/app/(use-page-wrapper)/(main-nav)/event-types/page.tsx#Page",
+   "area": "ui",
+   "importance": "secondary",
+   "properties": [
+    "status",
+    "failure_reason",
+    "is_team_event",
+    "scheduling_type"
+   ]
+  },
+  {
+   "item": "event_type_visibility_changed",
+   "change": "add_event",
+   "why": "Hide or show an event type on `/event-types`; Hide or show an event type on `/event-types/[type]` (secondary) has no event. Answers how many event types people hide or unhide, which is a state change on what bookers can see. The list and the detail page use the same event, told apart by `entry_point`. Properties: `is_hidden`, `entry_point`, `status`, `failure_reason`, `is_team_event`.",
+   "evidence": "apps/web/app/(use-page-wrapper)/(main-nav)/event-types/page.tsx#Page, apps/web/app/(use-page-wrapper)/event-types/[type]/page.tsx#ServerPage",
+   "area": "ui",
+   "importance": "secondary",
+   "properties": [
+    "is_hidden",
+    "entry_point",
+    "status",
+    "failure_reason",
+    "is_team_event"
+   ]
+  },
+  {
+   "item": "event_type_deleted",
+   "change": "add_event",
+   "why": "Delete an event type on `/event-types`; Delete an event type on `/event-types/[type]` (secondary) has no event. Answers how often event types are removed, which is a churn signal for the product's main object. The list and the detail page use the same event, told apart by `entry_point`. Properties: `entry_point`, `status`, `failure_reason`, `is_team_event`, `scheduling_type`.",
+   "evidence": "apps/web/app/(use-page-wrapper)/(main-nav)/event-types/page.tsx#Page, apps/web/app/(use-page-wrapper)/event-types/[type]/page.tsx#ServerPage",
+   "area": "ui",
+   "importance": "secondary",
+   "properties": [
+    "entry_point",
+    "status",
+    "failure_reason",
+    "is_team_event",
+    "scheduling_type"
+   ]
+  },
+  {
+   "item": "admin_app_toggled",
+   "change": "add_event",
+   "why": "Enable or disable an app on `/settings/admin/apps/[category]` (secondary) has no event. Answers which apps instance admins turn on or off, which sets what their users can install. The setup wizard and the admin page show the same app list and share this event. Properties: `app_slug`, `category`, `is_enabled`, `entry_point`, `status`, `failure_reason`.",
+   "evidence": "apps/web/app/(use-page-wrapper)/settings/(admin-layout)/admin/apps/[category]/page.tsx#Page",
+   "area": "ui",
+   "importance": "secondary",
+   "properties": [
+    "app_slug",
+    "category",
+    "is_enabled",
+    "entry_point",
+    "status",
+    "failure_reason"
+   ]
+  },
+  {
+   "item": "admin_app_keys_saved",
+   "change": "add_event",
+   "why": "Set an app's keys on `/settings/admin/apps/[category]` (secondary) has no event. Answers how many admins finish configuring an app after enabling it, since many apps don't work without keys, and how many saves fail. Send only the app and the outcome, never the key values. Properties: `app_slug`, `category`, `entry_point`, `status`, `failure_reason`.",
+   "evidence": "apps/web/app/(use-page-wrapper)/settings/(admin-layout)/admin/apps/[category]/page.tsx#Page",
+   "area": "ui",
+   "importance": "secondary",
+   "properties": [
+    "app_slug",
+    "category",
+    "entry_point",
+    "status",
+    "failure_reason"
+   ]
+  },
+  {
+   "item": "app_disconnected",
+   "change": "add_event",
+   "why": "Disconnect or manage an installed app on `/apps/installed/[category]` (secondary) has no event. Answers which integrations users remove and how many removals follow an install. It's a single completed action with no intent/outcome pair, sent once from the server where the credential is deleted. It is one of 7 new events in this batch, over the default budget of 5, so this is its written reason. Properties: `app_slug`, `category`, `credential_type`, `entry_point`.",
+   "evidence": "apps/web/app/(use-page-wrapper)/apps/installed/[category]/page.tsx#InstalledAppsWrapper",
+   "area": "web",
+   "importance": "secondary",
+   "properties": [
+    "app_slug",
+    "category",
+    "credential_type",
+    "entry_point"
+   ]
+  },
+  {
+   "item": "oauth_authorization_completed",
+   "change": "add_event",
+   "why": "Decline an OAuth app's access request on `/auth/oauth2/authorize` (secondary) has no event. Answers how many authorization requests third-party apps get and how many users approve or decline them. Decline goes in as status = cancelled (not a failure) beside success and failed, not as a separate event. Fire it from wherever the approve and decline calls are handled, because the page has no server code of its own. One of 7 new events in the batch, so this is its written reason. Properties: `client_id`, `status`, `failure_reason`, `scope_count`.",
+   "evidence": "apps/web/app/(use-page-wrapper)/auth/oauth2/authorize/page.tsx#ServerPageWrapper",
+   "area": "web",
+   "importance": "secondary",
+   "properties": [
+    "client_id",
+    "status",
+    "failure_reason",
+    "scope_count"
+   ]
+  },
+  {
+   "item": "email_verification_completed",
+   "change": "add_event",
+   "why": "Verify a secondary email on `/auth/verify-email` (secondary) has no event. Answers how many email verification links get used and how many fail on expired or reused tokens. One server event covers all branches of the handler, with email_type telling them apart, including the primary-email change. Abandonment is a link sent with no matching outcome. One of 7 new events in the batch, so this is its written reason. Properties: `email_type`, `status`, `failure_reason`.",
+   "evidence": "apps/web/lib/pages/auth/verify-email.ts",
+   "area": "web",
+   "importance": "secondary",
+   "properties": [
+    "email_type",
+    "status",
+    "failure_reason"
+   ]
+  },
+  {
+   "item": "two_factor_disabled",
+   "change": "add_event",
+   "why": "Disable two-factor authentication on `POST /api/auth/two-factor/totp/disable` (secondary) has no event. Answers how many users turn off 2FA and how often the attempt fails, which is a security signal. Disabling is a different action from enabling, so it gets its own event, sent from the server. One of 7 new events in the batch, so this is its written reason. Properties: `status`, `failure_reason`, `method`, `identity_provider`.",
+   "evidence": "apps/web/app/api/auth/two-factor/totp/disable/route.ts#POST",
+   "area": "web",
+   "importance": "secondary",
+   "properties": [
+    "status",
+    "failure_reason",
+    "method",
+    "identity_provider"
+   ]
+  },
+  {
+   "item": "two_factor_enabled",
+   "change": "add_event",
+   "why": "Enable two-factor authentication on `POST /api/auth/two-factor/totp/enable` (secondary) has no event. Answers how many users who start 2FA setup finish it and how many get stuck on a wrong code. It's the outcome half of the pair with two_factor_setup_started, sent from the server. One of 7 new events in the batch, so this is its written reason. Properties: `status`, `failure_reason`, `identity_provider`.",
+   "evidence": "apps/web/app/api/auth/two-factor/totp/enable/route.ts#POST",
+   "area": "web",
+   "importance": "secondary",
+   "properties": [
+    "status",
+    "failure_reason",
+    "identity_provider"
+   ]
+  },
+  {
+   "item": "two_factor_setup_started",
+   "change": "add_event",
+   "why": "Start two-factor authentication setup on `POST /api/auth/two-factor/totp/setup` (secondary) has no event. This is the intent half of the pair with two_factor_enabled. Setup can be abandoned after the QR code is shown, and without this event there's no denominator for drop-off. One of 7 new events in the batch, so this is its written reason. Properties: `identity_provider`, `entry_point`.",
+   "evidence": "apps/web/app/api/auth/two-factor/totp/setup/route.ts#POST",
+   "area": "web",
+   "importance": "secondary",
+   "properties": [
+    "identity_provider",
+    "entry_point"
+   ]
+  },
+  {
+   "item": "calendar_selection_changed",
+   "change": "add_event",
+   "why": "Select a calendar to check for conflicts on `POST /api/availability/calendar` (secondary) has no event. Answers which calendars users choose to check for conflicts, a setting that directly affects which slots show as available. The same event covers unselecting through action, and it's sent from the server after the selection is saved. One of 7 new events in the batch, so this is its written reason. Properties: `action`, `integration`, `is_event_type_level`, `credential_type`.",
+   "evidence": "apps/web/app/api/availability/calendar/route.ts#POST",
+   "area": "web",
+   "importance": "secondary",
+   "properties": [
+    "action",
+    "integration",
+    "is_event_type_level",
+    "credential_type"
+   ]
+  },
+  {
+   "item": "booking_recording_processed",
+   "change": "add_event",
+   "why": "Receive a Daily recording or transcript ready notification on `POST /api/recorded-daily-video` (secondary) has no event. This happens with no user present and decides whether Cal Video recordings and transcripts reach hosts. It answers how many recordings and transcripts were delivered last week, and how many failed (webhook, transcription job or email step failed, or booking not found). Properties: `stage`, `status`, `failure_reason`, `event_type_id`, `team_id`, `is_team_event`.",
+   "evidence": "apps/web/app/api/recorded-daily-video/route.ts#POST",
+   "area": "web",
+   "importance": "secondary",
+   "properties": [
+    "stage",
+    "status",
+    "failure_reason",
+    "event_type_id",
+    "team_id",
+    "is_team_event"
+   ]
+  },
+  {
+   "item": "api_key_created",
+   "change": "add_event",
+   "why": "Create an API key on `/settings/developer/api-keys` (secondary) has no event. This is the first-value moment for API integrators. It answers how many users create API keys, how many are first keys, and whether they pick expiring keys. It is a single mutation with no intent step worth measuring. Properties: `status`, `failure_reason`, `has_expiry`, `expiry_bucket`, `is_first_api_key`, `has_note`.",
+   "evidence": "apps/web/app/(use-page-wrapper)/settings/(settings-layout)/developer/api-keys/page.tsx#Page",
+   "area": "web",
+   "importance": "secondary",
+   "properties": [
+    "status",
+    "failure_reason",
+    "has_expiry",
+    "expiry_bucket",
+    "is_first_api_key",
+    "has_note"
+   ]
+  },
+  {
+   "item": "webhook_tested",
+   "change": "add_event",
+   "why": "Test a webhook subscriber URL on `/settings/developer/webhooks/[id]` (secondary) has no event. A test can fail, and it answers how many users verify a webhook endpoint and how often it is unreachable. Failures are the signal that setup friction exists. Properties: `status`, `failure_reason`, `http_status_bucket`, `scope`.",
+   "evidence": "apps/web/app/(use-page-wrapper)/settings/(settings-layout)/developer/webhooks/[id]/page.tsx#Page",
+   "area": "web",
+   "importance": "secondary",
+   "properties": [
+    "status",
+    "failure_reason",
+    "http_status_bucket",
+    "scope"
+   ]
+  },
+  {
+   "item": "booking_page_appearance_updated",
+   "change": "add_event",
+   "why": "Update booking page theme and brand colors on `/settings/my-account/appearance` (secondary) has no event. Answers how many users customise their booking page and which options they pick. It is a settings change with a product consequence for bookers. Properties: `theme`, `brand_color_changed`, `dark_brand_color_changed`, `hide_branding`, `status`.",
+   "evidence": "apps/web/app/(use-page-wrapper)/settings/(settings-layout)/my-account/appearance/page.tsx#Page",
+   "area": "web",
+   "importance": "secondary",
+   "properties": [
+    "theme",
+    "brand_color_changed",
+    "dark_brand_color_changed",
+    "hide_branding",
+    "status"
+   ]
+  },
+  {
+   "item": "calendar_disconnected",
+   "change": "add_event",
+   "why": "Disconnect a calendar on `/settings/my-account/calendars` (secondary) has no event. Answers which calendar providers users drop and how often, a churn signal for the integration that availability depends on. A connect event is worth adding as the pair if no calendar_connected exists. Properties: `calendar_type`, `status`, `failure_reason`, `remaining_calendar_count`.",
+   "evidence": "apps/web/app/(use-page-wrapper)/settings/(settings-layout)/my-account/calendars/page.tsx#Page",
+   "area": "web",
+   "importance": "secondary",
+   "properties": [
+    "calendar_type",
+    "status",
+    "failure_reason",
+    "remaining_calendar_count"
+   ]
+  },
+  {
+   "item": "default_conferencing_app_set",
+   "change": "add_event",
+   "why": "Set default conferencing app on `/settings/my-account/conferencing` (secondary) has no event. Answers which video provider users choose as their default, which drives the meeting link on every booking. Properties: `app_slug`, `previous_app_slug`, `status`.",
+   "evidence": "apps/web/app/(use-page-wrapper)/settings/(settings-layout)/my-account/conferencing/page.tsx#Page",
+   "area": "web",
+   "importance": "secondary",
+   "properties": [
+    "app_slug",
+    "previous_app_slug",
+    "status"
+   ]
+  },
+  {
+   "item": "push_notifications_toggled",
+   "change": "add_event",
+   "why": "Enable or disable push notifications on `/settings/my-account/push-notifications` (secondary) has no event. Answers the opt-in rate for push notifications and how often the browser permission is denied. Both are needed to judge the channel's reach. Properties: `enabled`, `status`, `failure_reason`, `permission_state`.",
+   "evidence": "apps/web/app/(use-page-wrapper)/settings/(settings-layout)/my-account/push-notifications/page.tsx#Page",
+   "area": "web",
+   "importance": "secondary",
+   "properties": [
+    "enabled",
+    "status",
+    "failure_reason",
+    "permission_state"
+   ]
+  },
+  {
+   "item": "password_changed",
+   "change": "add_event",
+   "why": "Change password on `/settings/security/password` (secondary) has no event. Answers how often password changes succeed or fail, for example on a wrong old password or a weak new one. It is also an account-security health signal. Never send the password values. Properties: `status`, `failure_reason`.",
+   "evidence": "apps/web/app/(use-page-wrapper)/settings/(settings-layout)/security/password/page.tsx#Page",
+   "area": "web",
+   "importance": "secondary",
+   "properties": [
+    "status",
+    "failure_reason"
+   ]
+  },
+  {
+   "item": "two_factor_auth_changed",
+   "change": "add_event",
+   "why": "Enable two-factor authentication on `/settings/security/two-factor-auth`; Disable two-factor authentication on `/settings/security/two-factor-auth` (secondary) has no event. Answers 2FA adoption and the setup failure rate, such as a wrong code or a wrong password. Enabling and disabling share this one event with action = enabled | disabled. Setup is abandoned partway through, so a start event is worth adding too. Properties: `action`, `status`, `failure_reason`.",
+   "evidence": "apps/web/app/(use-page-wrapper)/settings/(settings-layout)/security/two-factor-auth/page.tsx#Page, apps/web/app/(use-page-wrapper)/settings/(settings-layout)/security/two-factor-auth/page.tsx#Page",
+   "area": "web",
+   "importance": "secondary",
+   "properties": [
+    "action",
+    "status",
+    "failure_reason"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "item": "onboarding_step_completed.step",
+   "question": "What are all the step values for the getting-started flow? getStepsAndHeadersForUser builds the list and I only saw user-settings and user-profile.",
+   "options": [
+    "user-settings | user-profile",
+    "other steps too"
+   ],
+   "recommendation": "Read getStepsAndHeadersForUser and list its steps.",
+   "evidence": "apps/web/modules/getting-started/[[...step]]/onboarding-view.tsx:118"
+  },
+  {
+   "item": "onboarding_step_completed.from",
+   "question": "Which values can the `from` query parameter take besides signup?",
+   "options": [
+    "signup | empty",
+    "signup | other sources"
+   ],
+   "recommendation": "signup | empty string",
+   "evidence": "apps/web/modules/getting-started/[[...step]]/onboarding-view.tsx:106"
+  },
+  {
+   "item": "app_install_button_clicked.app_type",
+   "question": "Is there a fixed list of app types (for example google_calendar, zoom_video), or is it open-ended?",
+   "options": [
+    "open-ended: one value per app",
+    "fixed list"
+   ],
+   "recommendation": "open-ended, one value per app",
+   "evidence": "apps/web/modules/apps/components/AppCard.tsx:64"
+  },
+  {
+   "item": "signup_form_submit_error",
+   "question": "Is signup_form_submit_error used on any dashboard or alert? If so, the split into an outcome event needs a dual-fire period.",
+   "options": [
+    "used on a dashboard",
+    "unused"
+   ],
+   "recommendation": "Check before the migration.",
+   "evidence": "apps/web/modules/signup-view.tsx:326"
+  },
+  {
+   "item": "company_email_banner_dismissed",
+   "question": "Does anyone ask for the banner's dismissal rate? If not, remove the event.",
+   "options": [
+    "keep",
+    "remove"
+   ],
+   "recommendation": "remove",
+   "evidence": "apps/web/modules/settings/my-account/components/CompanyEmailOrganizationBanner.tsx:32"
+  },
+  {
+   "item": "navigation_item_clicked",
+   "question": "Which side of the app does NavigationItem run on, and are there other render variants of the top-level item (expanded and mobile) that don't call trackNavigationClick?",
+   "options": [
+    "all variants tracked",
+    "only the tooltip variant tracked"
+   ],
+   "recommendation": "Check the full component.",
+   "evidence": "apps/web/modules/shell/navigation/NavigationItem.tsx:204"
+  },
+  {
+   "item": "verify_email_already_verified",
+   "question": "What decision does this event inform? It fires only when an already-verified user lands on the page and is redirected. Is it used to measure how often users reach verify-email unnecessarily, or can it be removed?",
+   "options": [
+    "Keep: measures unnecessary verify-email visits",
+    "Remove: answers no question"
+   ],
+   "recommendation": "Keep only if someone reads it. Otherwise remove it, because rule 1 requires a question.",
+   "evidence": "apps/web/modules/auth/verify-email-view.tsx:50"
+  },
+  {
+   "item": "signup_google_button_clicked.org_slug",
+   "question": "Is org_slug a public, non-personal identifier, and what values does it take?",
+   "options": [
+    "Public organization slug, safe to send",
+    "Treat as sensitive and send a boolean only"
+   ],
+   "recommendation": "Public organization slug, safe to send. No example value is visible in the code.",
+   "evidence": "apps/web/modules/signup-view.tsx:626"
+  },
+  {
+   "item": "verify_email_already_verified.onboarding_v3_enabled",
+   "question": "Is the flag always loaded when this event fires? flags[\"onboarding-v3\"] may be undefined before the flags load.",
+   "options": [
+    "Always loaded",
+    "Can be undefined"
+   ],
+   "recommendation": "Can be undefined. Mark it required: false if it is confirmed.",
+   "evidence": "apps/web/modules/auth/verify-email-view.tsx:51"
+  },
+  {
+   "item": "event_type_app_switch_toggled.app_slug",
+   "question": "Is a list of app slugs available for the example? The code sends app.slug, so any installed app's slug can appear and no single value is visible in this file.",
+   "options": [
+    "Leave as UNCONFIRMED until a data snapshot exists",
+    "Use examples such as google-calendar | zoom | stripe, taken from the packages/app-store directory names"
+   ],
+   "recommendation": "Leave as UNCONFIRMED until a data snapshot or the app-store directory listing confirms the values",
+   "evidence": "packages/app-store/_components/AppCard.tsx:101"
+  },
+  {
+   "item": "event_type_app_switch_toggled",
+   "question": "Does this event answer a question anyone asks? It records only the click, not whether the event type was saved with the app on. Is a click-level signal enough, or should it be tied to the event type save?",
+   "options": [
+    "Keep as is: the click is the signal",
+    "Add the event type save as the outcome and treat the toggle as intent"
+   ],
+   "recommendation": "Keep as is until someone asks for the saved state",
+   "evidence": "packages/app-store/_components/AppCard.tsx:99-108"
+  },
+  {
+   "item": "onboarding_app_connect_clicked.app_type",
+   "question": "Which values can app_type take in the onboarding list? The code passes App['type'] from the app store and the values aren't visible in this file.",
+   "options": [
+    "list from the App type definition in @calcom/types/App",
+    "only conferencing/calendar app types shown in onboarding"
+   ],
+   "recommendation": "Read the values from the App['type'] definition and the apps listed in the onboarding steps, then write them as a `a | b | c` enum.",
+   "evidence": "apps/web/components/getting-started/components/AppConnectionItem.tsx:20,115"
+  },
+  {
+   "item": "onboarding_app_connect_clicked.app_slug",
+   "question": "What are example slugs, and is slug always passed by the parent components?",
+   "options": [
+    "always passed",
+    "sometimes undefined"
+   ],
+   "recommendation": "Check the parents that render AppConnectionItem; keep required: false until confirmed.",
+   "evidence": "apps/web/components/getting-started/components/AppConnectionItem.tsx:24,116"
+  },
+  {
+   "item": "settings_sidebar_button_clicked",
+   "question": "Does a product owner ask which settings pages people open? Rule 1 says to cut a navigation click that no one will query.",
+   "options": [
+    "Keep: settings page usage is reviewed",
+    "Remove: navigation click, autocapture covers it"
+   ],
+   "recommendation": "Keep for now. The call is already live and carries section and page, but confirm someone uses it.",
+   "evidence": "packages/ui/components/navigation/tabs/VerticalTabItem.tsx:57"
+  },
+  {
+   "item": "settings_sidebar_button_clicked.page",
+   "question": "Is the page list complete? Only SettingsLayoutAppDirClient.tsx was checked for callers that set trackingMetadata. Other callers of VerticalTabItem may send other values.",
+   "options": [
+    "Complete as listed",
+    "Other callers exist"
+   ],
+   "recommendation": "Complete as listed, until a data snapshot shows otherwise.",
+   "evidence": "apps/web/app/(use-page-wrapper)/settings/(settings-layout)/SettingsLayoutAppDirClient.tsx:47-338"
+  }
+ ],
+ "refused": [
+  "settings_sidebar_button_clicked.section: not a property on the drafted entry (properties come from the code; raise it as a migration item)",
+  "settings_sidebar_button_clicked.page: not a property on the drafted entry (properties come from the code; raise it as a migration item)"
+ ],
+ "verifier": {
+  "model": "claude-opus-5-5",
+  "verdict": "3 confirmed, 0 undecided, 0 disproved"
+ },
+ "not_checked": [],
+ "batches": [
+  {
+   "phase": "discovery-1",
+   "batches": 2,
+   "splits": 0,
+   "retries": 0
+  },
+  {
+   "phase": "complete",
+   "batches": 5,
+   "splits": 0,
+   "retries": 0
+  },
+  {
+   "phase": "surfaces",
+   "batches": 29,
+   "splits": 0,
+   "retries": 0
+  },
+  {
+   "phase": "events",
+   "batches": 5,
+   "splits": 0,
+   "retries": 0
+  },
+  {
+   "phase": "gaps",
+   "batches": 15,
+   "splits": 0,
+   "retries": 0
+  },
+  {
+   "phase": "explain",
+   "batches": 1,
+   "splits": 0,
+   "retries": 0
+  },
+  {
+   "phase": "verify",
+   "batches": 1,
+   "splits": 0,
+   "retries": 0
+  }
+ ],
+ "cost": "claude-sonnet-5-5 (72 calls), claude-opus-5-5 (1 call) · 2,472,869 tokens in, 164,372 out · $4.00"
+}
