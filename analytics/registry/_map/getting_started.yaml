@@ -1,0 +1,29 @@
+# Written by the Datalyze Tracking Agent's first audit; changed only in reviewed pull requests.
+# Anchors are path#Symbol (never line numbers). The registry is the source of truth.
+area: getting_started
+surfaces: []
+events:
+  onboarding_app_connect_clicked:
+    fires_in: apps/web/components/getting-started/components/AppConnectionItem.tsx#AppConnectionItem
+    trigger: The person clicks Connect next to a conferencing or calendar app in the getting-started step.
+    moment: before the request
+    conditions:
+      - "The Connect button is enabled: the app isn't already installed and has no uninstalled dependency."
+    path:
+      - apps/web/app/(use-page-wrapper)/getting-started/[[...step]]/page.tsx#ServerPage
+      - apps/web/modules/getting-started/[[...step]]/onboarding-view.tsx#OnboardingPage
+      - apps/web/components/getting-started/steps-views/ConnectCalendars.tsx#ConnectedCalendars
+      - apps/web/components/getting-started/components/AppConnectionItem.tsx#AppConnectionItem.render.onClick
+    certainty: sure
+  onboarding_completed:
+    fires_in: apps/web/components/getting-started/steps-views/UserProfile.tsx#UserProfile
+    trigger: "The person submits the final onboarding step (Finish and start) and saving their profile with completedOnboarding: true succeeds."
+    moment: after success
+    conditions:
+      - The updateProfile mutation succeeded (it sits in onSuccess).
+      - It fires after the default event types are created, only when the user has none, and before the profile refetch and redirect.
+    path:
+      - apps/web/app/(use-page-wrapper)/getting-started/[[...step]]/page.tsx#ServerPage
+      - apps/web/modules/getting-started/[[...step]]/onboarding-view.tsx#OnboardingPage
+      - apps/web/components/getting-started/steps-views/UserProfile.tsx#UserProfile.onSuccess
+    certainty: sure

@@ -1,0 +1,34 @@
+# Written by the Datalyze Tracking Agent's first audit; changed only in reviewed pull requests.
+# Anchors are path#Symbol (never line numbers). The registry is the source of truth.
+area: app_store
+surfaces:
+  - id: onboarding-personal-calendar
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/onboarding/personal/calendar/page.tsx#ServerPage
+    path: /onboarding/personal/calendar
+    actions:
+      - name: Connect a calendar app
+        importance: core
+        events: []
+      - name: Finish personal onboarding (continue)
+        importance: core
+        events: []
+      - name: Skip calendar connection for now
+        importance: secondary
+        events: []
+      - name: Go back to personal settings step
+        importance: incidental
+        events: []
+events:
+  event_type_app_switch_toggled:
+    fires_in: packages/app-store/_components/AppCard.tsx#AppCard
+    trigger: The person flips the enable/disable switch on an installed app's card (or a credential-owner app card) in an event type's Apps
+      settings.
+    moment: before the request
+    conditions:
+      - The app is installed or has a credential owner (otherwise the Install button shows instead of the switch)
+      - "The switch is not disabled: the app is enabled, the managed event type is not locked, and disableSwitch is not set"
+    path:
+      - packages/app-store/alby/components/EventTypeAppCardInterface.tsx#EventTypeAppCard
+      - packages/app-store/_components/AppCard.tsx#AppCard.onCheckedChange
+    certainty: sure

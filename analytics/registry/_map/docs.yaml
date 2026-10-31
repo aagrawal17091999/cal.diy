@@ -1,0 +1,13 @@
+# Written by the Datalyze Tracking Agent's first audit; changed only in reviewed pull requests.
+# Anchors are path#Symbol (never line numbers). The registry is the source of truth.
+area: docs
+surfaces:
+  - id: mdxpath
+    kind: route
+    anchor: apps/docs/app/[[...mdxPath]]/page.tsx#Page
+    path: /[[...mdxPath]]
+    actions:
+      - name: Read a documentation page
+        importance: incidental
+        events: []
+events: {}

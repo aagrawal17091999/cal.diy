@@ -1,0 +1,97 @@
+# Written by the Datalyze Tracking Agent's first audit; changed only in reviewed pull requests.
+# Anchors are path#Symbol (never line numbers). The registry is the source of truth.
+area: ui
+surfaces:
+  - id: event-types
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/(main-nav)/event-types/page.tsx#Page
+    path: /event-types
+    actions:
+      - name: Create an event type
+        importance: core
+        events: []
+      - name: Filter event types by team or group
+        importance: secondary
+        events: []
+      - name: Search event types
+        importance: secondary
+        events: []
+      - name: Copy or share an event type link
+        importance: secondary
+        events: []
+      - name: Duplicate an event type
+        importance: secondary
+        events: []
+      - name: Hide or show an event type
+        importance: secondary
+        events: []
+      - name: Delete an event type
+        importance: secondary
+        events: []
+      - name: Reorder event types
+        importance: incidental
+        events: []
+  - id: auth-setup
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/auth/setup/page.tsx#ServerPage
+    path: /auth/setup
+    actions:
+      - name: Create the admin account
+        importance: core
+        events: []
+      - name: Choose a license and finish setup
+        importance: core
+        events: []
+      - name: Enable apps during setup
+        importance: secondary
+        events: []
+  - id: event-types-type
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/event-types/[type]/page.tsx#ServerPage
+    path: /event-types/[type]
+    actions:
+      - name: Edit and save event type settings
+        importance: core
+        events: []
+      - name: Configure availability and scheduling for an event type
+        importance: secondary
+        events: []
+      - name: Configure event type apps and integrations
+        importance: secondary
+        events: []
+      - name: Configure event type workflows and webhooks
+        importance: secondary
+        events: []
+      - name: Delete an event type
+        importance: secondary
+        events: []
+      - name: Hide or show an event type
+        importance: secondary
+        events: []
+      - name: Preview or copy the booking link
+        importance: incidental
+        events: []
+  - id: settings-admin-apps-category
+    kind: route
+    anchor: apps/web/app/(use-page-wrapper)/settings/(admin-layout)/admin/apps/[category]/page.tsx#Page
+    path: /settings/admin/apps/[category]
+    actions:
+      - name: Enable or disable an app
+        importance: secondary
+        events: []
+      - name: Set an app's keys
+        importance: secondary
+        events: []
+      - name: Browse apps by category
+        importance: incidental
+        events: []
+events:
+  settings_sidebar_button_clicked:
+    fires_in: packages/ui/components/navigation/tabs/VerticalTabItem.tsx#VerticalTabItem
+    trigger: The person clicks an item in the settings sidebar.
+    moment: before the request
+    conditions:
+      - The sidebar item was given trackingMetadata
+    path:
+      - packages/ui/components/navigation/tabs/VerticalTabItem.tsx#VerticalTabItem.onClick
+    certainty: sure

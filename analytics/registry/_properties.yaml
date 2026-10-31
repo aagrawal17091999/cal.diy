@@ -1,0 +1,100 @@
+# Shared event-property vocabulary. A property used on any event must exist here.
+# Adding a name is a deliberate vocabulary change, visible in the PR diff. Prefer reusing one.
+synonyms:
+  placement: entry_point
+  came_from: entry_point
+  character_count: char_count
+  file_format: file_type
+properties:
+  app_slug:
+    type: string
+    example: UNCONFIRMED
+    used_by: 2
+  app_title:
+    type: string
+    example: UNCONFIRMED
+    used_by: 1
+  app_type:
+    type: string
+    example: UNCONFIRMED
+    used_by: 2
+  enabled:
+    type: boolean
+    example: true | false
+    used_by: 1
+  error_message:
+    type: string
+    example: UNCONFIRMED
+    used_by: 1
+  from:
+    type: string
+    example: signup | ""
+    used_by: 1
+  has_dependency:
+    type: boolean
+    example: "false"
+    used_by: 1
+  has_prepopulated_username:
+    type: boolean
+    example: true | false
+    used_by: 2
+  has_token:
+    type: boolean
+    example: true | false
+    used_by: 5
+  is_conferencing:
+    type: boolean
+    example: true | false
+    used_by: 1
+  is_org_invite:
+    type: boolean
+    example: true | false
+    used_by: 5
+  is_premium_username:
+    type: boolean
+    example: true | false
+    used_by: 2
+  is_redirect:
+    type: boolean
+    example: true | false
+    used_by: 1
+  item_name:
+    type: string
+    example: UNCONFIRMED
+    used_by: 1
+  onboarding_v3_enabled:
+    type: boolean
+    example: true | false
+    used_by: 1
+  org_slug:
+    type: string
+    example: UNCONFIRMED
+    used_by: 5
+  parent_name:
+    type: string
+    example: UNCONFIRMED
+    used_by: 1
+  plan_type:
+    type: string
+    example: personal | team | organization
+    used_by: 2
+  slug:
+    type: string
+    example: UNCONFIRMED
+    used_by: 2
+  step:
+    type: string
+    example: user-settings | user-profile (full list UNCONFIRMED)
+    used_by: 2
+  step_index:
+    type: numeric
+    example: "0"
+    used_by: 2
+  username_taken:
+    type: boolean
+    example: true | false
+    used_by: 1
+  was_skipped:
+    type: boolean
+    example: true | false
+    used_by: 1

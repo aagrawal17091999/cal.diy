@@ -242,3 +242,7 @@ For detailed information, see the `agents/` directory:
 - **[agents/rules/](agents/rules/)** - Modular engineering rules
 - **[agents/commands.md](agents/commands.md)** - Complete command reference
 - **[agents/knowledge-base.md](agents/knowledge-base.md)** - Domain knowledge and business rules
+
+<!-- datalyze:start (written by the Datalyze Tracking Agent) -->
+Analytics tracking follows the "Analytics tracking" section of @AGENTS.md.
+<!-- datalyze:end -->
